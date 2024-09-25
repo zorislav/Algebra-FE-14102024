@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+div {
+  background-color: #969600;
+  margin: 1em auto;
+  padding: 1em;
+  width: 25%;
+}
+
+div:first-child {
+  -webkit-animation: fade 2s ease-in-out infinite;
+          animation: fade 2s ease-in-out infinite;
+}
+
+div:nth-child(2) {
+  -webkit-animation: fade 4s linear 2s infinite ;
+          animation: fade 4s linear 2s infinite ;
+}
+
+div:nth-child(3) {
+  -webkit-animation: fade 0.5s ease-in  infinite;
+          animation: fade 0.5s ease-in  infinite;
+}
+
+div:nth-child(4) {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+div:nth-child(4):hover {
+  background-color: #960000;
+}
+
+div:nth-child(5) {
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+}
+
+div:nth-child(5):hover {
+  width: 80%;
+}
+
+div:nth-child(6) {
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+div:nth-child(6):hover {
+  -webkit-transform: translate(150px, 0);
+          transform: translate(150px, 0);
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
