@@ -1,0 +1,121 @@
+CSS - Parcijalni ispit
+
+1. Kreirati html5 dokument osnovne strukture imena index.html
+
+2. U dokumentu postaviti meta podatke
+	- charset
+	- viewport
+	- http-equiv
+
+3. Postaviti naslov dokumenta "CSS Ispit"
+
+4. U dokumentu kreirati slijedece elemente:
+
+    <div class="wrapper">
+        <div>C</div>
+        <div>S</div>
+        <div>S</div>
+    </div>
+
+5. Kreirati datoteku style.scss sa slijedećim pravilima
+
+@import "abstracts/mixins";
+@import "base/reset";
+@import "base/colors";
+
+body {
+  background: url(../images/blur-clean.jpg) no-repeat center center/cover fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: $color1;
+  text-align: center;
+}
+
+.wrapper {
+  @include flex-container;
+  div {
+    border: 4px solid $color1;
+    flex-basis: 24%;
+    font-size: 8vw;
+    font-weight: bold;
+    padding: 5%;
+    position: relative;
+    top: -80vh;
+    &:first-child {
+      @include animation("slide-down 1.5s ease-in-out forwards");
+      background: $color2;
+    }
+    &:nth-child(2) {
+      @include animation("slide-down 1.5s ease-in-out 1.5s forwards");
+      background: $color3;
+    }
+    &:last-child {
+      @include animation("slide-down 1.5s ease-in-out 3s forwards");
+      background: $color4;
+    }
+  }
+}
+
+@include keyframes(slide-down) {
+  0% {
+    top: -80vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+6. Kreirati datoteku abstracts/_mixins.scss sa slijedećim pravilima
+
+@mixin flex-container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+@mixin keyframes($animation-name) {
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  animation: #{$str};
+}
+
+
+7. Kreirati datoteku base/_colors.scss sa slijedećim pravilima
+
+$color1: white;
+$color2: rgba(51, 51, 51, 0.85);
+$color3: rgba(136, 0, 0, 0.5);
+$color4: rgba(255, 153, 51, 0.5);
+
+8. Kreirati datoteku base/_reset.scss sa slijedećim pravilima
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
+9. U VS Code pomocu Live SASS kompajlirati style.sass u style.css
