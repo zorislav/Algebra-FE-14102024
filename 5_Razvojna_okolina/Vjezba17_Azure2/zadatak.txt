@@ -1,0 +1,5 @@
+U ovoj vježbi potrebno je napraviti minimalnu promjenu na aplikaciji koju ste u prethodnoj vježbi deployali na Misrosoft Azure servis. Na primjer, umjesto Hello World, neka prikazuje Bok, Algebra!
+
+Nakon što napravite ovu promjenu, potrebno ju je ponovno postaviti na Microsoft Azure server (ponoviti korak 8. iz prethodne vježbe). 
+
+Literatura: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejs#create-a-project-zip-file
