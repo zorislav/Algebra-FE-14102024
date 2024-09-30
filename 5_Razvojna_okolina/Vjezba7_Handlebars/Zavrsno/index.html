@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Yellow Pokemons</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js"></script>
+  </head>
+  <body>
+	<script id="pokemon-list" type="text/x-handlebars-template">
+		<table>
+			<tr>
+				<th>#</th>
+				<th>Ime</th>
+			</tr>
+			{{#each pokemon}}
+		  		<tr>
+					<td>{{@index}}</td>
+					<td><a href="{{this.url}}">{{this.name}}</a></td>
+				</tr>
+			{{/each}}
+		</table>
+	</script>
+	<div id="result"></div>
+	<script src="script.js"></script>
+  </body>
+</html>
