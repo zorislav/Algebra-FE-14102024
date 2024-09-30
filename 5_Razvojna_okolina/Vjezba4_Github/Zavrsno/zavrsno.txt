@@ -1,0 +1,1 @@
+Zavrsno stanje treba biti repozitorij na GitHubu koji reflektira lokalni direktorij "Pocetno stanje"
