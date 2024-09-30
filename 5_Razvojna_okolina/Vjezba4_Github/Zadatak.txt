@@ -1,0 +1,4 @@
+1.	Napraviti github.com account
+2.	Na githubu napraviti novi private repozetorij
+3.	Povezati repozitorij iz prošle vježbe s github repozitorijem (git remote add origin <repository_url>
+4.	Potrebno je poslati sve podatke iz lokalnog git repozetorija na github (git push -u origin master)
