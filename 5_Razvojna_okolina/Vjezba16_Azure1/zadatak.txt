@@ -1,0 +1,81 @@
+U ovoj vježbi potrebno je deployati aplikaciju na Microsoft Azure servis.
+
+1. Kreirati Microsoft Azure account:
+
+https://azure.microsoft.com/en-us/free/
+
+Ako već nemate Microsoft account, morat ćete prvo kreirati njega.
+
+2. Instalirati Azure CLI:
+
+https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest
+
+3. Ulogirati se u Azure preko Azure CLI:
+
+```
+az login
+```
+
+4. Kreirati resource group za novu web aplikaciju:
+
+```
+az group create --name <group-name> --location "East US"
+```
+
+5. Kreirati plan za plaćanje (payment plan) za novu web aplikaciju (plan će biti besplatan - free):
+
+```
+az appservice plan create --name <plan-name> --resource-group <group-name> --sku FREE
+```
+
+6. Kreirati aplikaciju za navedenu grupu i navedeni plan plaćanja:
+
+```
+az webapp create --resource-group <group-name> --plan <plan-name> --name <app-name>
+```
+
+Zamijeniti <app-name> izraz s imenom buduće aplikacije.
+
+Po kreiranju aplikacije, u konzoli će se ispisati JSON objekt koji opisuje kreiranu aplikaciju.
+
+Obratite pozornost na atribut "defaultHostName" - pisati će URL u obliku <my-app-name>.azurewebsites.net - slobodno navigirajte na tu stranicu.
+
+7. Postaviti Node.js okolinu za novonastalu aplikaciju:
+
+```
+az webapp config appsettings set --resource-group <group-name> --name <app-name> --settings WEBSITE_NODE_DEFAULT_VERSION=12
+```
+
+8. Navigirati na stranicu:
+
+https://<my-app-name>.scm.azurewebsites.net/ZipDeployUI
+
+Na toj stranici se nalazi sučelje preko kojeg možemo uploadati svoju aplikaciju.
+
+9. Build folder JavaScript aplikacije potrebno je pretvoriti u zip i uploadati ga na navedenoj web stranici (jednostavno drag-and-drop zip foldera na navedenu web stranicu).
+
+Build folder jednostavne JavaScript aplikacije može biti cijeli root folder te aplikacije.
+
+Build folder React aplikacije je root/build, a automatski se kreira nakon poziva `npm run build` naredbe.
+
+10. Pričekati dok se na stranici ne pokaže tekst "Deployment successful".
+
+11. Refreshati svoju web stranicu (na URL-u zapisanom u defaultHostName).
+
+Vaša web stranica sada prikazuje zadnje uploadano stanje
+
+Kao primjer aplikacije koju možete deployati na Azure, možete koristiti TODO aplikaciju koju ste kreirali tokom programa JavaScripta.
+
+Kao jednostavniji primjer, možete isprobati aplikaciju sa službenih Azure stranica:
+
+https://github.com/Azure-Samples/nodejs-docs-hello-world/archive/master.zip
+
+To je jednostavna Node.js aplikacija koja na ekranu ispisuje Hello World. Build folder u ovoj aplikaciji je cijeli root folder. 
+
+Ukoliko želite obrisati resource što ste kreirali u sklopu resource grupe, koristite:
+
+```
+az group delete --name <group-name>
+```
+
+Literatura: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejs#create-a-project-zip-file
