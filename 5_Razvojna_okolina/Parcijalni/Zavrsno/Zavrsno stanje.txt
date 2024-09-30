@@ -1,0 +1,1 @@
+Zavrsno stanje se moze pronaci na GitHub repozitoriju, u branchu "algebra-training": https://github.com/algebra-training/parcijalni-ispit/tree/algebra-training
