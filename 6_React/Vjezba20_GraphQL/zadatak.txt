@@ -1,0 +1,5 @@
+U ovoj vježbi potrebno je napraviti sljedeće:
+    1. Napraviti novu React aplikaciju
+	2. Instalirati Apollo, biblioteku za React Graphql
+	3. Napraviti upit prema GraphQL serveru (url servera: https://48p1r2roz4.sse.codesandbox.io/)
+	4. Ispisati listu s rezultatima na ekranu
