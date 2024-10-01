@@ -1,0 +1,4 @@
+Izrada nove aplikacije:
+	npx create-react-app parcijalni
+	cd parcijalni
+	npm start
