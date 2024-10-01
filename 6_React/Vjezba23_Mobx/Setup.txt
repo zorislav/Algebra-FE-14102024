@@ -1,0 +1,15 @@
+npx create-react-app mobx-test
+cd mobx-test
+
+npm run eject
+npm i --save mobx mobx-react
+npm i --save-dev @babel/plugin-proposal-decorators
+
+
+
+add to package.json, under "babel"
+"plugins": [
+  ["@babel/plugin-proposal-decorators", { "legacy": true }]
+]
+
+npm start
