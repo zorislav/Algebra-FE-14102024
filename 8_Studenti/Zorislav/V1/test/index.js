@@ -1,2 +1,2 @@
 // Test
-console.log("Bok");
+console.log("Bok ti");
