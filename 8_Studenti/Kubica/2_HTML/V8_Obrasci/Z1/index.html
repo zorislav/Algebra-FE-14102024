@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrasci</title>
+  </head>
+  <body>
+    <form
+      name="prijava"
+      method="post"
+      enctype="multipart/form-data"
+      autocomplete="on"
+    >
+      <div>
+        <label for="ime">Ime i prezime *</label> <br />
+        <input type="text" id="ime" required placeholder="Vase ime i prezime" />
+      </div>
+      <br />
+      <div>
+        <label for="email">E-mail adresa *</label> <br />
+        <input
+          type="email"
+          id="email"
+          required
+          placeholder="Upisite valjanu e-mail adresu"
+          size="30"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="tel">Kontakt broj telefona</label> <br />
+        <input type="telefon" id="tel" required />
+      </div>
+      <br />
+      <div>
+        <label for="rodjenje">Datum rodenja</label> <br />
+        <input type="date" required />
+      </div>
+      <br />
+      <div>
+        <label>Koje jezike govorite?</label> <br />
+        <label for="eng">Engleski</label>
+        <input type="checkbox" name="" id="eng" />
+        <label for="tal">Talijanski</label>
+        <input type="checkbox" name="" id="tal" />
+        <label for="njem">Njemacki</label>
+        <input type="checkbox" name="" id="njem" />
+        <label for="fra">Francuski</label>
+        <input type="checkbox" name="" id="fra" />
+        <label for="spa">Spanjolski</label>
+        <input type="checkbox" name="" id="spa" />
+      </div>
+      <br />
+      <div>
+        <label>Da li ste do sada korisitili usluge nase tvrtke?</label>
+        <br />
+        <label for="da">Da</label>
+        <input type="radio" value="da" />
+        <label for="da">Da</label>
+        <input type="radio" value="da" />
+      </div>
+      <br />
+      <div>
+        <label for="zivotopis">Prilozite zivotopis</label> <br />
+        <input type="file" name="" id="zivotopis" required />
+      </div>
+      <br />
+      <div>
+        <input name="reset_btn" type="reset" value="Poništi" />
+        <input name="submit_btn" type="submit" value="Prijavi se" />
+      </div>
+    </form>
+  </body>
+</html>
