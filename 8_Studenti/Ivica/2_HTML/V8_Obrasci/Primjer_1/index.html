@@ -19,16 +19,17 @@
                     required>
 
             </p>
+            <!--label for i input id moraju uvijek biti isti-->
             <p>
-                <label for>E-mail adresa:</label><br>
+                <label for="email">E-mail adresa:</label><br>
                 <input id="email"
                     type="email"
                     size="20"
                     maxlength="20"
-                    placeholder="@" name="e-mail">
+                    placeholder="ime@mail" name="e-mail">
             </p>
             <p>
-                <label for="tel">Telefon</label>
+                <label for="tel">Telefon:</label>
                 <br>
                 <input id="tel" type="tel" name="telbr"
                     placeholder="091/1234-567"
@@ -37,12 +38,12 @@
             </p>
 
             <p>
-                <label for="pwd">Zaporka</label>
-                <input id="pasword" type="password" name="pasword" size="20"
-                    maxlength="20">
+                <label for="pasword">Zaporka:</label>
+                <input id="pasword" type="password" placeholder="upisi zaporku"
+                    name="pasword" size="20" maxlength="20">
             </p>
             <p>
-                <label for>Boja</label>
+                <label for="boja">Boja</label>
                 <input id="boja" type="color" name="boja">
             </p>
 
@@ -60,7 +61,7 @@
                 <label for="o2">2</label>
                 <input type="radio" name="ocjena" id="o2" value="2">
                 <label for="o3">3</label>
-                <input type="radio" name="ocjena" id="o3" value="3">
+                <input type="radio" name="ocjena " id="o3" value="3">
                 <label for="o4">4</label>
                 <input type="radio" name="ocjena" id="o4" value="4">
                 <label for="o5">5</label>
@@ -74,28 +75,30 @@
             </p>
 
             <p>
-                <label for>Odaberite datum</label>
+                <label for="datum">Odaberite datum</label>
                 <br>
                 <input type="date" id="datum" name="datum">
             </p>
 
             <p>
-                <label for="komentar">Upisite vas komentar</label>
+                <label for="komentar">Upisite vas komentar:</label>
                 <br>
-                <textarea name="komentar" id="komentar" rows="5" cols="30"
-                    maxlength="100"></textarea>
+                <textarea name="komentar" id="komentar" rows="7" cols="30"
+                    maxlength="120"></textarea>
             </p>
 
             <p>
                 <label for="grad">Odaberite grad</label>
                 <br>
                 <select name="grad" id="grad">
-                    <option value="London">London</option>
-                    <option value="paris">Paris</option>
-                    <option value="Rim" selected>Rim</option>
+                    <option value="London" selected>London</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Rim">Rim</option>
+                    <option value="Zagreb">Zagreb</option>
+                    <option value="Beograd">Beograd</option>
                 </select>
             </p>
-
+            <!--u istom form elementu ne smiju biti labeli i id-i sa istim imenom-->
             <p>
                 <label for="grad2">Upisite ili odaberite grad:</label>
                 <br>
