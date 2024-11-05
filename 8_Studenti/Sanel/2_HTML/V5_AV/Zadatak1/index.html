@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Multimedijski sadržaj u HTML-u</title>
+</head>
+<body>
+    <h1>Multimedijski sadržaj u HTML-u</h1><br>
+    <h2>Audio</h2>
+    <h3>Podržani audio formati:</h3>
+    <ul>
+        <li>mp3</li>
+        <li>wav</li>
+        <li>ogg</li>
+    </ul>
+    <audio controls>
+        <source src="in3s.mp3" type="audio/mp3">
+        <source src="in3s.wav" type="audio/wav">
+        <source src="in3s.ogg" type="audio/ogg">
+        Vaš browser ne podrzava audio element 
+    </audio>
+    <br>
+    <h2>Video</h2>
+    <h3>Podržani video formati:</h3>
+    <ul>
+        <li>mp4</li>
+        <li>webM</li>
+        <li>ogg</li>
+    </ul>
+    <video width="320" height="240" controls loop autoplay>
+        <source src="mountains.mp4" type="video/mp4">
+        <source src="mountains.webM" type="video/webM">
+        <source src="mountains.ogg" type="video/ogg">
+    </video>
+</body>
+</html>
