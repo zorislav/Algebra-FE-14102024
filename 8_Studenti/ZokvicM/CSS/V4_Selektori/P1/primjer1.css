@@ -1,0 +1,22 @@
+body {
+  color: #333;
+  font-size: 20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+
+
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+h2 {
+  color: chartreuse;
+  font-size: 28px;
+}
+h3 {
+  color: darkblue;
+}
+
+/* ovako se piše komentar u css-u */
