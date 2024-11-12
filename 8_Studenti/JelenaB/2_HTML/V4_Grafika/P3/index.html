@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="600"
+      height="200"
+      style="background-color: chocolate"
+    ></canvas>
+    <script>
+      var canvasElement = document.getElementById("myCanvas");
+      var context = canvasElement.getContext("2d");
+      context.fillStyle = "#0f0";
+      context.fillRect(10, 10, 100, 100);
+    </script>
+  </body>
+</html>
+<!--dz samo prva dva zadatka-->
