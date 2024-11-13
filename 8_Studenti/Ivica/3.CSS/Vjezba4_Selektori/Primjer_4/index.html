@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selektori atributa</title>
+    <!--link rel="stylesheet" href="style.css"-->
+    <style>
+body {
+    color: #333;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+[title] {
+    text-decoration: underline solid red;
+}
+[title="Prvi odlomak"] {
+    font-weight: bold;
+}
+[title*=odlomak] {
+color: darkgreen;
+}
+[title~="odlomak"] {
+text-transform: uppercase;
+}
+[title^="odlomak"] {
+font-style: italic;
+}
+[title|="odlomak"] {
+font-family: 'Courier New', Courier, monospace;
+}
+[title$="odlomak"] {
+color: darkorange;
+}
+    </style>
+</head>
+
+<body>
+    <h1 title="Naslov stranice">Glavni naslov</h1>
+    <h2>Naslov druge razine</h2>
+    <h3>Naslov trece razine</h3>
+    
+    <p title="Prvi odlomak">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+    </p>
+    <p title="odlomak-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+    </p>
+    <p title="odlomak 3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <em>Accusamus 
+            doloremque magni consequatur natus tenetur</em>  sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. <strong>libero magnam <span>sapiente</span> fugiat Ipsum!</strong> 
+    </p>
+    
+    <p title="odlomakbla">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+    </p>
+    <p >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        <strong>Lorem ipsum dolor sit amet <span title="span">consectetur</span> adipisicing elit. Accusamus 
+            doloremque magni consequatur</strong>
+         natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus 
+        doloremque magni consequatur natus tenetur sit nesciunt voluptas 
+        mollitia obcaecati consequuntur nam, libero magnam sapiente fugiat 
+        aliquid vel corrupti rerum. Ipsum!
+    </p>
+    
+</body>
+</html>
