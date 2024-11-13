@@ -1,0 +1,23 @@
+body {
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
+h1 {
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  color: #f93;
+  font-size: 28px;
+}
+
+h3 {
+  color: #090;
+}
+
+h4 {
+  color: rgb(102, 94, 218);
+}

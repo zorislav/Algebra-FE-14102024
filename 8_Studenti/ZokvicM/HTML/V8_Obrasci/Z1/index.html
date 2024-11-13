@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrasci Zadatak</title>
+  </head>
+  <body>
+    <form
+      name="ObrazacZadatak"
+      action=""
+      method="post"
+      enctype="multipart/form-data"
+      autocomplete="off"
+    >
+      <p>
+        <label for="ime">Ime i prezime:</label><br />
+        <input
+          id="ime"
+          name="imeiprezime"
+          type="text"
+          size="30"
+          maxlength="20"
+          placeholder="vaše ime"
+          required
+        />
+      </p>
+      <p>
+        <label for="email">Email:</label><br />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          size="30"
+          maxlength="20"
+          placeholder="@"
+        />
+      </p>
+      <p>
+        <label for="numero">HandyNummer:</label><br />
+        <input
+          type="tel"
+          name="Telephono"
+          id="numero"
+          size="30"
+          maxlength="20"
+          placeholder="+385"
+        />
+      </p>
+      <p>
+        <label for="zaporka">Zaporka:</label><br />
+        <input
+          type="password"
+          name="Zaporka"
+          id="zaporka"
+          size="30"
+          maxlength="15"
+        />
+      </p>
+
+      <p>
+        <label for="boja">Boja</label>
+        <input id="boja" name="boja" type="color" />
+      </p>
+
+      <p>
+        <label for="obavijesti">Ne želim se pretplatiti na newsletter?!</label>
+        <input
+          id="obavijesti"
+          name="newsletter"
+          type="checkbox"
+          value="true"
+          checked
+        />
+      </p>
+
+      <p>
+        <label for="Radio">Muzika</label>
+        <input id="Radio" name="Muzika1" type="radio" />
+        <br />
+        <label for="Radio">Maybe Muzika</label>
+        <input id="Radio" name="Muzika2" type="radio" />
+        <br />
+        <label for="Radio">No Muzika</label>
+        <input id="Radio" name="Muzika3" type="radio" />
+        <br />
+      </p>
+
+      <p>
+        <label for="datum">Dan u godini</label><br>
+        <input id="datum" name="datum" type="date" min="1984-12-31" max="2024-12-31">
+    </p>
+    
+    </form>
+  </body>
+</html>
