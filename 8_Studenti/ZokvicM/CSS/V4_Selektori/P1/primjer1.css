@@ -12,11 +12,28 @@ h1 {
   text-align: center;
 }
 h2 {
-  color: chartreuse;
+  color: rgb(0, 183, 255);
   font-size: 28px;
 }
 h3 {
   color: darkblue;
 }
 
+h4 {
+  color: crimson;
+}
+p {
+  text-align: justify;
+}
+
+em {
+  color: rgb(201, 34, 137);
+
+}
+strong {
+  text-decoration: wavy underline red;
+}
+span {
+  font-weight: normal;
+}
 /* ovako se piše komentar u css-u */
