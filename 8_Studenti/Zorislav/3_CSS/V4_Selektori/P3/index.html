@@ -4,8 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selektori HTML Elemenata</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Selektori ID atributa</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+    body {
+      color: #333;
+      font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .crveno {
+      color: red;
+    }
+
+    .plavo {
+      color: blue;
+    }
+
+    .podcrtano {
+      text-decoration: underline wavy green;
+    }
+
+    .neistaknuto {
+      font-weight: normal;
+    }
+
+    .istaknuto {
+      font-weight: bold;
+    }
+
+    #prviodlomak {
+      color: #060;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    #zadnjiodlomak {
+      font-size: 0.75em;
+      text-align: center;
+      color: yellow;
+    }
+  </style>
 </head>
 
 <body>
@@ -13,7 +52,7 @@
   <h2>Naslov druge razine</h2>
   <h3>Naslov trece razine</h3>
   <h4>Naslov cetvrte razine</h4>
-  <p>
+  <p id="prviodlomak">
     Ipsum irure aliquip veniam exercitation voluptate consectetur est exercitation laboris est. Aliqua aute laboris
     commodo et magna. Id culpa do do velit aute ad elit reprehenderit. Dolore dolor proident sint tempor veniam
     exercitation duis dolore voluptate minim eiusmod ad est sit. Reprehenderit adipisicing labore anim dolore ea. Lorem
@@ -29,7 +68,9 @@
     Ipsum irure aliquip veniam exercitation voluptate consectetur est exercitation laboris est. Aliqua aute laboris
     commodo et magna. <em>Id culpa do do velit aute ad elit reprehenderit.</em> Dolore dolor proident sint tempor veniam
     exercitation duis dolore voluptate minim eiusmod ad est sit. Reprehenderit adipisicing labore anim dolore ea. Lorem
-    voluptate amet magna adipisicing. <strong>Sunt quis <span>incididunt</span> velit velit in.</strong>
+    voluptate amet magna adipisicing. <strong>Sunt quis <span>incididunt</span>
+      velit velit
+      in.</strong>
   </p>
   <h2>Naslov druge razine</h2>
   <h3>Naslov trece razine</h3>
@@ -46,11 +87,12 @@
     exercitation duis dolore voluptate minim eiusmod ad est sit. Reprehenderit adipisicing labore anim dolore ea. Lorem
     voluptate amet magna adipisicing. Sunt quis incididunt velit velit in.
   </p>
-  <p>
+  <p class="plavo" id="zadnjiodlomak">
     Ipsum irure aliquip veniam exercitation voluptate consectetur est exercitation laboris est. Aliqua aute laboris
     commodo et magna. <em>Id culpa do do velit aute ad elit reprehenderit.</em> Dolore dolor proident sint tempor veniam
     exercitation duis dolore voluptate minim eiusmod ad est sit. Reprehenderit adipisicing labore anim dolore ea. Lorem
-    voluptate amet magna adipisicing. <strong>Sunt quis <span>incididunt</span> velit velit in.</strong>
+    voluptate amet magna adipisicing. <strong>Sunt quis <span>incididunt</span> velit velit
+      in.</strong>
   </p>
 </body>
 
