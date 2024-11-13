@@ -3,58 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selektori HTML Elemenata</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Selektori atributa</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        body
+        {
+         color: #333; 
+         font-size: 20px;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }   
+       
+         /*[title]{} Selektori atributa*/
+        [title] {
+            text-decoration: underline solid red;
+         }/* svi title elementi */
+
+        [title="Prvi odlomak"] {
+            font-weight: bold;
+        }/*samo title "Prvi odlomak"*/
+
+        [title*="odlomak"] {
+            color: darkgreen;
+        } /*svi koji sadrze "odlomak*/
+        [title~="odlomak"] {
+            text-transform: uppercase;
+        }
+        [title^="odlomak"]{
+            font-style: italic;
+        } /*svi koji na pocetku imaju title "odlomak*/
+        [title|="odlomak"]{
+            font-family: 'Courier New', Courier, monospace;
+        } /*svi koji su odvojeni sa "-"*/
+        [title$="odlomak"]{
+            color: darkorange;
+        } /*elementi koji na kraju imaju "odlomak"*/
+     </style>
 </head>
 <body>
-    <h1>Glavni naslov</h1>
+    <h1 title="Naslov stranice">Glavni naslov</h1>
     <h2>Naslov druge razine</h2>
     <h3>Naslov trece razine</h3>
-    <h4>Naslov cetvrte razine</h4>
-    <p>
+    <p title="Prvi odlomak">
         Est ullamco officia aute ipsum nisi. Id officia quis deserunt anim aliqua laborum tempor.
         Laboris nulla laborum exercitation veniam commodo voluptate irure ut quis laborum culpa non nisi consequat. 
         Nulla aliquip minim proident consectetur. Fugiat officia cupidatat commodo incididunt in velit labore pariatur mollit commodo mollit nulla eu adipisicing.
         Laborum dolore laboris irure deserunt consequat do consequat non ipsum. Cupidatat sit dolor duis dolor elit ad consectetur ipsum laborum dolor id.
         Adipisicing irure sunt mollit elit id.Ipsum irure consectetur laborum sint ex aliquip eiusmod duis qui nostrud anim non culpa. 
     </p>
-    <p>
+    <p title="odlomak-2">
+        Est ullamco officia aute ipsum nisi. Id officia quis deserunt anim aliqua laborum tempor.
+        Laboris nulla laborum exercitation veniam commodo voluptate irure ut quis laborum culpa non nisi consequat. 
+        Nulla aliquip minim proident consectetur. Fugiat officia cupidatat commodo incididunt in velit labore pariatur mollit commodo mollit nulla eu adipisicing.
+        Laborum dolore laboris irure deserunt consequat do consequat non ipsum. Cupidatat sit dolor duis dolor elit ad consectetur ipsum laborum dolor id.
+        Adipisicing irure sunt mollit elit id.Ipsum irure consectetur laborum sint ex aliquip eiusmod duis qui nostrud anim non culpa. 
+    </p> 
+    <p title="odlomak 3">
         Est ullamco officia aute ipsum nisi. Id officia quis deserunt anim aliqua laborum tempor.
         Laboris nulla laborum exercitation veniam commodo voluptate irure ut quis laborum culpa non nisi consequat. 
         Nulla aliquip minim proident consectetur. Fugiat officia cupidatat commodo incididunt in velit labore pariatur mollit commodo mollit nulla eu adipisicing.
         Laborum dolore laboris irure deserunt consequat do consequat non ipsum. <em>Cupidatat sit dolor duis dolor elit ad consectetur ipsum laborum dolor id</em>.
         Adipisicing irure sunt mollit elit id.<strong>Ipsum irure <span>consectetur laborum</span> sint ex aliquip eiusmod duis qui nostrud anim non culpa</strong>. 
     </p>
-    <p>
-        Est ullamco officia aute ipsum nisi. Id officia quis deserunt anim aliqua laborum tempor.
-        Laboris nulla laborum exercitation veniam commodo voluptate irure ut quis laborum culpa non nisi consequat. 
-        Nulla aliquip minim proident consectetur. Fugiat officia cupidatat commodo incididunt in velit labore pariatur mollit commodo mollit nulla eu adipisicing.
-        Laborum dolore laboris irure deserunt consequat do consequat non ipsum. Cupidatat sit dolor duis dolor elit ad consectetur ipsum laborum dolor id.
-        Adipisicing irure sunt mollit elit id.Ipsum irure consectetur laborum sint ex aliquip eiusmod duis qui nostrud anim non culpa. 
-    </p>    
-    <h2>Naslov druge razine</h2>
-    <h3>Naslov trece razine</h3>
-    <h4>Naslov cetvrte razine</h4>
-    <p>
+    <p title="odlomakbla">
         Est ullamco officia aute ipsum nisi. Id officia quis deserunt anim aliqua laborum tempor.
         Laboris nulla laborum exercitation veniam commodo voluptate irure ut quis laborum culpa non nisi consequat. 
         Nulla aliquip minim proident consectetur. Fugiat officia cupidatat commodo incididunt in velit labore pariatur mollit commodo mollit nulla eu adipisicing.
         Laborum dolore laboris irure deserunt consequat do consequat non ipsum. Cupidatat sit dolor duis dolor elit ad consectetur ipsum laborum dolor id.
         Adipisicing irure sunt mollit elit id.Ipsum irure consectetur laborum sint ex aliquip eiusmod duis qui nostrud anim non culpa. 
     </p>
-    <p>
-        Est ullamco officia aute ipsum nisi. Id officia quis deserunt anim aliqua laborum tempor.
-        Laboris nulla laborum exercitation veniam commodo voluptate irure ut quis laborum culpa non nisi consequat. 
-        Nulla aliquip minim proident consectetur. Fugiat officia cupidatat commodo incididunt in velit labore pariatur mollit commodo mollit nulla eu adipisicing.
-        Laborum dolore laboris irure deserunt consequat do consequat non ipsum. <em>Cupidatat sit dolor duis dolor elit ad consectetur ipsum laborum dolor id</em>.
-        Adipisicing irure sunt mollit elit id.<strong>Ipsum irure <span>consectetur laborum</span> sint ex aliquip eiusmod duis qui nostrud anim non culpa</strong>. 
-    </p>
-    <p>
-        Est ullamco officia aute ipsum nisi. Id officia quis deserunt anim aliqua laborum tempor.
+        <p>
+        Est ullamco officia aute ipsum nisi. <strong>Id officia quis <span title="span">deserunt</span> anim aliqua laborum tempor.</strong> 
         Laboris nulla laborum exercitation veniam commodo voluptate irure ut quis laborum culpa non nisi consequat. 
         Nulla aliquip minim proident consectetur. Fugiat officia cupidatat commodo incididunt in velit labore pariatur mollit commodo mollit nulla eu adipisicing.
         Laborum dolore laboris irure deserunt consequat do consequat non ipsum. Cupidatat sit dolor duis dolor elit ad consectetur ipsum laborum dolor id.
         Adipisicing irure sunt mollit elit id.Ipsum irure consectetur laborum sint ex aliquip eiusmod duis qui nostrud anim non culpa. 
-    </p>        
+    </p>   
 </body>
 </html>

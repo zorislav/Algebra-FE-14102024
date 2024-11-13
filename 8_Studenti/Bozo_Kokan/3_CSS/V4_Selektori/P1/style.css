@@ -21,3 +21,20 @@ h3{
 h4{
     color: rgb(102, 94, 218);
 }
+
+p{
+    text-align: justify;
+}
+
+em{
+    color: red;
+    /* font-style: normal; */
+}
+
+strong{
+    text-decoration: underline wavy red;
+}
+
+span{
+    font-weight: normal;
+}
