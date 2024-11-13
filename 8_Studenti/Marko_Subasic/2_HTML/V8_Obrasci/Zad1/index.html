@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrasci</title>
+</head>
+
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        <label for="name">Ime i prezime: *</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email: *</label>
+        <input type="email" id="email" name="email" placeholder="Unesite valjanu email adresu" required><br><br>
+
+        <label for="phone">Telefon:</label>
+        <input type="tel" id="phone" name="phone"
+            placeholder="+385"><br><br>
+
+        <label for="birthdate">Datum rođenja:</label>
+        <input type="date" id="birthdate" name="birthdate"><br><br>
+
+        <label for="newsletter">Pretplatite se na newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter"><br><br>
+
+        <label>Spol:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Muško</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Žensko</label><br><br>
+
+        <label for="file">Odaberite datoteku:</label>
+        <input type="file" id="file" name="file"><br><br>
+
+        <input type="submit" value="Pošalji">
+        <input type="reset" value="Resetiraj">
+    </form>
+</body>
+
+</html>
