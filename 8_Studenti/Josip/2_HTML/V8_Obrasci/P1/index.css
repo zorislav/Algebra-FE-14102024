@@ -1,0 +1,12 @@
+.tipka {
+  background-color: black;
+  color: aliceblue;
+  border-radius: 10px;
+  border: 0px;
+}
+
+.tipka:hover {
+  cursor: pointer;
+  background-color: aliceblue;
+  color: black;
+}
