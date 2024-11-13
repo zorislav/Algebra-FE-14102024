@@ -20,3 +20,16 @@ h3 {
 h4 {
     color: red;
 }
+p {
+    text-align: justify;
+}
+em {
+    color: red;
+    font-style: normal;
+}
+strong {
+    text-decoration: underline wavy red;
+}
+span {
+    font-weight: normal;
+}

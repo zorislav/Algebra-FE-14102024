@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selektori HTML Elemenata</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Selektori ID atributa</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        body {
+            color: #333;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .crveno {
+            color: red;
+        }
+        .podcrtano {
+            text-decoration: underline wavy green;
+            color: yellow;
+        }
+        .neistaknuto {
+            font-weight: normal;
+        }
+        .istaknuto {
+            font-weight: bold;
+        }
+        #prviOdlomak {
+            color: #060;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #zadnjiOdlomak {
+            text-align: center;
+        }
+     </style>
 </head>
 <body>
     <h1>Glavni naslov</h1>
@@ -12,7 +40,7 @@
     <h3>Naslov treće razine</h3>
     <h4>Naslov četvrte razine</h4>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
+    <p id="prviOdlomak">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
         Veritatis tempora itaque aliquam nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus! 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
         Veritatis tempora itaque aliquam nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus!
@@ -40,7 +68,7 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
         Veritatis tempora itaque aliquam nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus! 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
-        Veritatis tempora itaque aliquam nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus!
+        Veritatis tempora itaque aliquam nam placeat, <span>id laborum sit</span> aspernatur maxime, alias sequi, neque natus!
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
         Veritatis tempora itaque aliquam nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus!</p>
         
@@ -48,13 +76,13 @@
         Veritatis tempora itaque aliquam nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus! 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
         Veritatis tempora itaque aliquam nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
+        Lorem ipsum dolor sit <span>amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus</span> deserunt itaque temporibus.
         Veritatis tempora itaque aliquam nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus!</p>
         
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
+    <p id="zadnjiOdlomak">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
         Veritatis tempora itaque aliquam nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus! 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
-        Veritatis tempora itaque aliquam nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus!
+        Veritatis tempora <span>itaque aliquam</span> nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus!
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas sint suscipit, necessitatibus deserunt itaque temporibus.
         Veritatis tempora itaque aliquam nam placeat, id laborum sit aspernatur maxime, alias sequi, neque natus!</p>
 </body>
