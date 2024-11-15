@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obrasci</title>
+  </head>
+  <body>
+    <form action="" method="">
+      <p>
+        <label for="ime">Ime i prezime*</label><br />
+        <input
+          id="ime"
+          type="text"
+          name="ime i prezime"
+          placeholder="Vaše ime i prezime"
+          maxlenght="30"
+          size="30"
+        />
+      </p>
+
+      <p>
+        <label for="e mail">E mail adresa*</label><br />
+        <input
+          id="e mail"
+          type="email"
+          name="email"
+          placeholder="Vaša e mail adresa"
+          maxlenght="30"
+          size="30"
+        />
+      </p>
+
+      <p>
+        <label for="kontakt">Kontakt broj*</label><br />
+        <input
+          id="kontakt"
+          type="text"
+          name="text"
+          placeholder="099/1111-111"
+          maxlength="30"
+          size="30"
+        />
+      </p>
+
+      <p>
+        <label for="datum">Datum rođenja</label><br />
+        <input id="datum" type="date" name="datum" />
+      </p>
+
+      <p>
+        Koje jezike govorite? <br />
+        <label for="jezik1">Engleski</label>
+        <input id="jezik1" type="checkbox" name="jezik" value="Engleski" />
+
+        <label for="jezik2">Talijanski</label>
+        <input id="jezik2" type="checkbox" name="jezik" value="Talijanski" />
+
+        <label for="jezik3">Španjolski</label>
+        <input id="jezik3" type="checkbox" name="jezik" value="Španjolski" />
+
+        <label for="jezik4">Njemački</label>
+        <input id="jezik4" type="checkbox" name="jezik" value="Njemački" />
+
+        <label for="jezik5">Francuski</label>
+        <input id="jezik5" type="checkbox" name="jezik" value="Francuski" />
+      </p>
+
+      <p>Da li ste do sada koristili usluge naše tvrtke?<br /></p>
+      <label for="da">Da</label>
+      <input id="da" type="radio" name="usluga" value="1" />
+
+      <label for="ne">Ne</label>
+      <input id="ne" type="radio" name="usluga" value="2" />
+
+      <p>
+        <label for="datoteka">Priložite životopis</label><br />
+        <input id="datoteka" type="file" />
+      </p>
+      <p>
+        <input type="reset" value="Poništi" />
+        <input type="submit" value="Prijavi se" />
+      </p>
+    </form>
+  </body>
+</html>
