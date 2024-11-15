@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selektori pseudo klase</title>
+
+    <style>
+      body {
+        color: #333;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      header {
+        color: red;
+      }
+
+      footer {
+        color: orange;
+      }
+
+      p:first-child {
+        text-decoration: underline wavy red;
+      }
+
+      p:last-child {
+        font-size: 14px;
+      }
+
+      p:nth-of-type(2n + 1) {
+        color: darkturquoise;
+      }
+
+      p:first-of-type {
+        font-weight: bold;
+      }
+
+      p:last-of-type {
+        text-transform: uppercase;
+      }
+
+      /*p:nth-child(1n + 3) {
+        color: yellowgreen;
+      }*/
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Zaglavlje</h1>
+      <p>Odlomak 1</p>
+    </header>
+    <section>
+      <p>Odlomak 1</p>
+      <p>Odlomak 2</p>
+      <p>Odlomak 3</p>
+      <p>Odlomak 4</p>
+      <p>Odlomak 5</p>
+    </section>
+
+    <section>
+      <h1>Sekcija 2</h1>
+      <p>Odlomak 1</p>
+      <p>Odlomak 2</p>
+      <p>Odlomak 3</p>
+      <p>Odlomak 4</p>
+      <p>Odlomak 5</p>
+    </section>
+    <footer>
+      <p>Odlomak 1</p>
+      <p>Odlomak 2</p>
+      <p>Odlomak 3</p>
+    </footer>
+  </body>
+</html>

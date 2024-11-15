@@ -3,15 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Selektori HTML Elemenata</title>
+    <title>Selektori ID atributa</title>
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        color: #333;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .crveno {
+        color: #f00;
+      }
+
+      .plavo {
+        color: blue;
+      }
+
+      .podcrtano {
+        text-decoration: underline wavy green;
+      }
+
+      .neistaknuto {
+        font-weight: normal;
+      }
+
+      .istaknuto {
+        font-weight: bold;
+      }
+
+      #prviodlomak {
+        color: #060;
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+
+      #zadnjiodlomak {
+        text-align: center;
+        font-size: 0.75;
+        color: yellow;
+      }
+    </style>
   </head>
+
   <body>
     <h1>Glavni naslov</h1>
     <h2>Naslov druge razine</h2>
     <h3>Naslov trece razine</h3>
     <h4>Naslov cetvrte razine</h4>
 
+    <p id="prviodlomak">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nihil saepe
+      libero, sapiente aut debitis, perferendis, corrupti esse dolorem ducimus
+      cupiditate asperiores voluptates maxime. Modi quam voluptates enim
+      eligendi fuga!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Eius nihil saepe libero, sapiente aut debitis, perferendis, corrupti esse
+      dolorem ducimus cupiditate asperiores voluptates maxime. Modi quam
+      voluptates enim eligendi fuga!Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Eius nihil saepe libero, sapiente aut debitis,
+      perferendis, corrupti esse dolorem ducimus cupiditate asperiores
+      voluptates maxime. Modi quam voluptates enim eligendi fuga!
+    </p>
+
+    <h2>Naslov druge razine</h2>
+    <h3>Naslov trece razine</h3>
+    <h4>Naslov cetvrte razine</h4>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nihil saepe
+      libero, sapiente aut debitis, perferendis, corrupti esse dolorem ducimus
+      cupiditate asperiores voluptates maxime. Modi quam voluptates enim
+      eligendi fuga!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Eius nihil saepe libero, >sapiente aut debitis, perferendis, corrupti esse
+      dolorem ducimus cupiditate asperiores voluptates maxime. Modi quam
+      voluptates enim eligendi fuga!Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Eius nihil saepe libero, sapiente aut debitis,
+      perferendis, corrupti esse dolorem ducimus cupiditate asperiores
+      voluptates maxime. Modi quam voluptates enim eligendi fuga! >
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nihil saepe
+      libero, sapiente aut debitis, perferendis, corrupti esse dolorem ducimus
+      cupiditate asperiores voluptates maxime. Modi quam voluptates enim
+      eligendi fuga!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Eius nihil saepe libero, sapiente aut debitis, perferendis, corrupti esse
+      dolorem ducimus cupiditate asperiores voluptates maxime. Modi quam
+      voluptates enim eligendi fuga!ipsum dolor sit amet consectetur adipisicing
+      elit. Eius nihil saepe libero, sapiente aut debitis,perferendis, corrupti
+      esse dolorem ducimus cupiditate asperiores voluptates maxime. Modi quam
+      voluptates enim eligendi fuga! >
+    </p>
+
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nihil saepe
       libero, sapiente aut debitis, perferendis, corrupti esse dolorem ducimus
@@ -20,7 +103,7 @@
       Eius nihil saepe libero, sapiente aut debitis, perferendis, corrupti esse
       dolorem ducimus cupiditate asperiores voluptates maxime. Modi quam
       voluptates enim eligendi fuga!Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. <em>Eius nihil saepe libero, sapiente aut debitis,</em>
+      adipisicing elit. Eius nihil saepe libero, sapiente aut debitis,
       perferendis, corrupti esse dolorem ducimus cupiditate asperiores
       voluptates maxime. Modi quam voluptates enim eligendi fuga!
     </p>
@@ -41,37 +124,7 @@
       voluptates maxime. Modi quam voluptates enim eligendi fuga!
     </p>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nihil saepe
-      libero, sapiente aut debitis, perferendis, corrupti esse dolorem ducimus
-      cupiditate asperiores voluptates maxime. Modi quam voluptates enim
-      eligendi fuga!Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Eius nihil saepe libero, sapiente aut debitis, perferendis, corrupti esse
-      dolorem ducimus cupiditate asperiores voluptates maxime. Modi quam
-      voluptates enim eligendi fuga!<span>Lorem</span> ipsum dolor sit amet
-      consectetur adipisicing elit.
-      <em>Eius nihil saepe libero, sapiente aut debitis,</em> perferendis,
-      corrupti esse dolorem ducimus cupiditate asperiores voluptates
-      maxime.<strong> Modi quam voluptates enim eligendi fuga!</strong>
-    </p>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nihil saepe
-      libero, sapiente aut debitis, perferendis, corrupti esse dolorem ducimus
-      cupiditate asperiores voluptates maxime. Modi quam voluptates enim
-      eligendi fuga!Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Eius nihil saepe libero, sapiente aut debitis, perferendis, corrupti esse
-      dolorem ducimus cupiditate asperiores voluptates maxime. Modi quam
-      voluptates enim eligendi fuga!<span>Lorem</span> ipsum dolor sit amet
-      consectetur adipisicing elit. Eius nihil saepe libero, sapiente aut
-      debitis, perferendis, corrupti esse dolorem ducimus cupiditate asperiores
-      voluptates maxime. Modi quam voluptates enim eligendi fuga!
-    </p>
-
-    <h2>Naslov druge razine</h2>
-    <h3>Naslov trece razine</h3>
-    <h4>Naslov cetvrte razine</h4>
-    <p>
+    <p class="plavo" id="zadnjiodlomak">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nihil saepe
       libero, sapiente aut debitis, perferendis, corrupti esse dolorem ducimus
       cupiditate asperiores voluptates maxime. Modi quam voluptates enim
@@ -82,20 +135,6 @@
       adipisicing elit. Eius nihil saepe libero, sapiente aut debitis,
       perferendis, corrupti esse dolorem ducimus cupiditate asperiores
       voluptates maxime. Modi quam voluptates enim eligendi fuga!
-    </p>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nihil saepe
-      libero, sapiente aut debitis, perferendis, corrupti esse dolorem ducimus
-      cupiditate asperiores voluptates maxime. Modi quam voluptates enim
-      eligendi fuga!Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Eius nihil saepe libero, sapiente aut debitis, perferendis, corrupti esse
-      dolorem ducimus cupiditate asperiores voluptates maxime. Modi quam
-      voluptates enim eligendi fuga!Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Eius nihil saepe libero, sapiente aut debitis,
-      perferendis, corrupti esse dolorem ducimus cupiditate asperiores
-      voluptates maxime.
-      <strong>Modi quam voluptates enim eligendi fuga!</strong>
     </p>
   </body>
 </html>
