@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pristupačnost</title>
+    <style>
+      #progressBarContainer {
+        width: 160px;
+        height: 6px;
+        background-color: lightgoldenrodyellow;
+        border: 1px solid grey;
+        border-radius: 6px;
+      }
+      #progressBar {
+        background-color: blueviolet;
+        width: 20%;
+        height: 100%;
+        border-radius: 6px 0 0 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" role="button">Gumb link</a>
+    <button>Link</button>
+    <br />
+    <hr />
+    <br />
+    <progress value="56" max="100">Loading...</progress>
+    <br />
+    <hr />
+    <br />
+    <div id="progressBarContainer">
+      <div
+        id="progressBar"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="20"
+      ></div>
+      
+    </div>
+  </body>
+</html>
