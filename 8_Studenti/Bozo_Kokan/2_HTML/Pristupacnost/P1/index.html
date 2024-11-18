@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pristupacnost</title>
+    <style>
+       #progressBarContainer
+        {
+            width: 160px;
+            height: 6px;
+            background-color: lightgrey;
+            border: 1px solid grey;
+            border-radius: 6px;
+        }
+        #progressBar
+        {
+            background-color: blue;
+            width: 20%;
+            height: 100%;
+            border-radius: 6px 0px 0px 6px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" role="button">Button Link</a>
+    <button>Button Link</button>
+    <br>
+    <hr>
+    <br>
+    <progress value="50" max="100"></progress>
+    <br>
+    <hr>
+    <br>
+    <div id="progressBarContainer">
+        <div id="progressBar" role="progressbar" aria-valuemin="0" aria-valuenow="20" aria-valuemax="100"></div>
+    </div>
+</body>
+</html>

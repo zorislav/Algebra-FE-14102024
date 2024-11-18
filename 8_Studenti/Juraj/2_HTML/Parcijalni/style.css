@@ -1,0 +1,18 @@
+#ime-prezime {
+    border-radius: 6px;
+    background-color: bisque;
+    border: none;
+}
+#e-mail {
+    border-radius: 6px;
+    background-color: bisque;
+    border: none;
+}
+#poruka {
+    border-radius: 6px;
+    background-color: bisque;
+    border: none;
+}
+input[type=submit] {
+    border-radius: 6px;
+}
