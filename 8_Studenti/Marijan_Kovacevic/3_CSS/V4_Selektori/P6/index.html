@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Selektori pseudo klase</title>
+
     <style>
       body {
         color: #333;
         font-size: 20px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
+
       header {
         color: red;
       }
@@ -21,26 +23,15 @@
       p:first-child {
         text-decoration: underline wavy red;
       }
+
       p:last-child {
         font-size: 14px;
       }
 
-      /* drugo dijete od roditelja */
       p:nth-child(2) {
         font-family: "Courier New", Courier, monospace;
       }
 
-      /* svaki treći p je označen plavom */
-      p:nth-child(2n + 1) {
-        color: blue;
-      }
-
-      /* svaki drugi p je označen rozom */
-      p:nth-child(2n) {
-        color: hotpink;
-      }
-
-      /* prvi element unutar elementa roditelja koji je tog tipa */
       p:first-of-type {
         font-weight: bold;
       }
@@ -78,8 +69,6 @@
       <p>Odlomak 1</p>
       <p>Odlomak 2</p>
       <p>Odlomak 3</p>
-      <p>Odlomak 4</p>
-      <p>Odlomak 5</p>
     </footer>
   </body>
 </html>
