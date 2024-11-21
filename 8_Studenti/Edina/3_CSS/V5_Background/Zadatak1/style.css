@@ -1,0 +1,13 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ccc;
+  font-size: 16px;
+  background: url(pattern.png) center center/cover no-repeat fixed,
+    url(fire.png) center/25% 20% no-repeat fixed,
+    url(blossom.jpg) center center/cover no-repeat fixed;
+}
+
+h1 {
+  text-align: center;
+  background-color: #333;
+}

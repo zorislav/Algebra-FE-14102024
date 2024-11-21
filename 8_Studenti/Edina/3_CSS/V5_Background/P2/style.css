@@ -1,0 +1,35 @@
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #ddd;
+  background-image: url(butterfly.png);
+
+  /* možemo staviti repeat-x ili repeat-y kako želimo da se 
+  slika ponavlja po x-osi ili po y-osi */
+  background-repeat: no-repeat;
+
+  /* možemo staviti auto ili cover (da bude po cijeloj pozadini) ili 
+  contain (da se slika prilagodi velicini elementa */
+  background-size: 25%;
+
+  background-position: center center;
+
+  /* može i opcija scroll pa bi se slika pomicala s tekstom */
+  background-attachment: fixed;
+
+  /* background-blend-mode: overlay; ako želim da slika bude svjetlija*/
+
+  /* background: #ddd url(butterfly.png) no-repeat center center/25% fixed; 
+  OVO JE ALTERNATIVA DA NE PIŠEMO SVE ODVOJENO NEGO OVAKO KOMBINIRAJUĆE PRAVILO*/
+}
+
+div {
+  height: 300px;
+  width: 300px;
+  background-color: red;
+  background-image: url(butterfly.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
