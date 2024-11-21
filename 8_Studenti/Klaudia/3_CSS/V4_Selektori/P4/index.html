@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selektori atributa</title>
+    <style>
+        body{
+            color: #333;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        }
+        [title]{
+            text-decoration: underline solid red;
+        }
+        [title="Prvi odlomak"]{
+            font-weight: bold;
+        }
+        [title*=odlomak]{
+            color: darkgreen;
+        }
+        [title~="odlomak"]{
+            text-transform: uppercase;
+        }
+        [title^="odlomak"]{
+            font-style: italic;
+        }
+        [title|="odlomak"]{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        [title$="odlomak"]{
+            color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <h1 title="Naslov stranice">Glavni naslov</h1>
+    <h2>Naslov druge razine</h2>
+    <h3>Naslov treće razine</h3>
+    <p title="Prvi odlomak">
+        Adipisicing consequat laborum enim esse dolor consectetur irure deserunt ullamco do occaecat et. 
+        Commodo mollit deserunt non proident aliquip labore. Commodo eu eiusmod enim enim. Dolore ullamco 
+        qui Lorem enim eu et esse qui ea in labore labore. Cillum irure deserunt ex culpa laborum duis et 
+        et occaecat tempor nisi sit sint laboris. Qui ut mollit esse esse dolore Lorem cillum commodo irure veniam.
+    </p>
+    <p title="odlomak-2">
+        Adipisicing consequat laborum enim esse dolor consectetur irure deserunt ullamco do occaecat et. 
+        Commodo mollit deserunt non proident aliquip labore. Commodo eu eiusmod enim enim. Dolore ullamco 
+        qui Lorem enim eu et esse qui ea in labore labore. Cillum irure deserunt ex culpa laborum duis et 
+        et occaecat tempor nisi sit sint laboris. Qui ut mollit esse esse dolore Lorem cillum commodo irure veniam.
+    </p>
+    <p title="odlomak 3">
+        Adipisicing consequat laborum enim esse dolor consectetur irure deserunt ullamco do occaecat et. 
+        Commodo mollit deserunt non proident aliquip labore. Commodo eu eiusmod enim enim. Dolore ullamco 
+        qui Lorem enim eu et esse qui ea in labore labore. <em>Cillum irure deserunt ex culpa laborum</em> duis et 
+        et occaecat tempor nisi sit sint laboris. <strong>Qui ut <span>mollit</span> esse esse dolore</strong> Lorem cillum commodo irure veniam.
+    </p>
+    <p title="odlomakbla">
+        Adipisicing consequat laborum enim esse dolor consectetur irure deserunt ullamco do occaecat et. 
+        Commodo mollit deserunt non proident aliquip labore. Commodo eu eiusmod enim enim. Dolore ullamco 
+        qui Lorem enim eu et esse qui ea in labore labore. Cillum irure deserunt ex culpa laborum duis et 
+        et occaecat tempor nisi sit sint laboris. Qui ut mollit esse esse dolore Lorem cillum commodo irure veniam.
+    </p>
+    <p>
+        Adipisicing consequat laborum enim esse dolor consectetur irure deserunt ullamco do occaecat et. 
+        Commodo mollit <strong>deserunt non <span title="span">proident</span> aliquip labore.</strong> Commodo eu eiusmod enim enim. Dolore ullamco 
+        qui Lorem enim eu et esse qui ea in labore labore. Cillum irure deserunt ex culpa laborum duis et 
+        et occaecat tempor nisi sit sint laboris. Qui ut mollit esse esse dolore Lorem cillum commodo irure veniam.
+    </p>
+</body>
+</html>
