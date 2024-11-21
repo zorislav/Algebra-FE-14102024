@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <form action="https://server.hr" method="get">
+      <p>
+        <label for="">Ime i Prezime</label><br />
+        <input
+          id="ime"
+          type="text"
+          size="30"
+          maxlength="20"
+          placeholder="ime i prezime"
+          name="ime"
+        />
+      </p>
+      <p>
+        <label for="email">E-mail Adresa</label><br />
+        <input
+          id="email"
+          type="email"
+          size="20"
+          maxlength="20"
+          placeholder="@"
+          name="email"
+        />
+      </p>
+      <p>
+        <label for="tel">Telefon</label>
+        <input
+          type="tel"
+          id="tel"
+          name="telbr"
+          placeholder="099/1111-111"
+          size="20"
+          maxlength="20"
+        />
+      </p>
+      <p>
+        <label for="pwd">Zaporka</label>
+        <input
+          id="pwd"
+          type="password"
+          name="password"
+          size="20"
+          maxlength="20"
+        />
+      </p>
+      <p>
+        <label for="boja">Boja</label><br />
+        <input id="boja" type="color" name="boja" />
+      </p>
+      <p>
+        <label for="obavijesti">Zelim primati obavijesti</label>
+        <input type="checkbox" id="obavijesti" name="obavijesti" checked />
+      </p>
+      <p>
+        Ocijenite usluge nase tvrtke
+        <br />
+        <label for="o1">1</label>
+        <input type="radio" name="ocijana" id="o1" value="1" />
+        <label for="o2">2</label>
+        <input type="radio" name="ocijana" id="o2" value="2" />
+        <label for="o3">3</label>
+        <input type="radio" name="ocijana" id="o3" value="3" />
+        <label for="o4">4</label>
+        <input type="radio" name="ocijana" id="o4" value="4" />
+        <label for="o5">5</label>
+        <input type="radio" name="ocijana" id="o5" value="5" />
+      </p>
+      <p>
+        <label for="dok">Odaberite dokument</label><br />
+        <input type="file" id="dok" name="dokument" />
+      </p>
+      <p>
+        <label for="datum">Odaberite datum</label><br />
+        <input type="date" id="datum" name="datum" />
+      </p>
+      <p>
+        <label for="komentar">Upisite vas komentar</label><br />
+        <textarea
+          name="komentar"
+          id="komentar"
+          rows="5"
+          class="30"
+          maxlength="100"
+        ></textarea>
+      </p>
+      <p>
+        <label for="grad">Odaberite Grad</label><br />
+        <select name="grad" id="grad">
+          <option value="London">London</option>
+          <option value="Pariz">Pariz</option>
+          <option value="Rim">Rim</option>
+        </select>
+      </p>
+      <p>
+        <label for="grad2">Upisite ili odaberite grad</label><br />
+        <input type="text" id="grad2" name="grad2" list="gradovi" />
+        <datalist id="gradovi">
+          <option value="London"></option>
+          <option value="Pariz"></option>
+          <option value="Rim"></option>
+        </datalist>
+      </p>
+      <input type="reset" value="Ponisti obrazac" />
+      <input type="submit" value="Posalji podatke" />
+      <button class="tipka" type="reset">Ponisti</button>
+    </form>
+  </body>
+</html>
