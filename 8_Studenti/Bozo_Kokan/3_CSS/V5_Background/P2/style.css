@@ -1,0 +1,23 @@
+body
+{
+    /*
+    font-family: Tahoma, sans-serif;
+    background-color: #ddd;
+    color: #333;
+    font-size: 16px;
+    background-image: url(butterfly.png);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 25%;
+    background-position: center center;
+    background-blend-mode:overlay;  transparentno 
+    */
+    background: #ddd url(butterfly.png) center center/25% no-repeat fixed;
+    background-blend-mode:overlay;
+}
+/* image transparentnost
+img
+{
+    opacity: 0.2;
+} 
+    */
