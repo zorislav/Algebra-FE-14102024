@@ -1,0 +1,41 @@
+body {
+  color: #333;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  color: #f93;
+  font-size: 28px;
+}
+
+h3 {
+  color: #090;
+  font-size: 24px;
+}
+
+h4 {
+  color: purple;
+  font-size: 20px;
+}
+
+p {
+  text-align: justify;
+}
+
+em {
+  color: #f00;
+}
+
+strong {
+  text-decoration: underline wavy red;
+}
+
+span {
+  font-weight: normal;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selektori pseudo klase</title>
+    <style>
+      body {
+        color: #333;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none; /* ako ne želim da opcije imaju underline */
+      }
+      a:visited {
+        color: #999;
+      }
+
+      a:hover {
+        color: #f96;
+      }
+      a:active {
+        color: aquamarine;
+      }
+      a:focus {
+        color: #f0f;
+      }
+      button:hover {
+        color: blue;
+        cursor: pointer;
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">Opcija 1</a></li>
+      <li><a href="#">Opcija 2</a></li>
+      <li><a href="#">Opcija 3</a></li>
+      <li><a href="#">Opcija 4</a></li>
+      <li><a href="#">Opcija 5</a></li>
+      <li><a href="#">Opcija 6</a></li>
+    </ul>
+
+    <p>Moj tekst</p>
+
+    <button>Moja tipka</button>
+  </body>
+</html>
