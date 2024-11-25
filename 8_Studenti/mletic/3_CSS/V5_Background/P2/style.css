@@ -1,0 +1,11 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ddd;
+  font-size: 16px;
+  color: #333;
+  background-image: url(butterfly.png);
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position: center center;
+  background-attachment: fixed;
+}
