@@ -21,7 +21,7 @@ p {
 .inlineBlock {
     display: inline-block;
 }
-.inlineBlockBox {
+.box {
     width: 300px;
     height: 100px;
     margin: 20px;
