@@ -1,16 +1,15 @@
-
 h1 {
-  color: crimson;
+  color: red;
 }
+
 h2 {
-  color: darkmagenta;
+  color: blueviolet;
 }
+
 h3 {
-  color: rgb(25, 124, 360)
+  color: rgb(0, 150, 0);
 }
+
 p {
-  color: hotpink;
-}
-p.element {
   color: #666;
 }

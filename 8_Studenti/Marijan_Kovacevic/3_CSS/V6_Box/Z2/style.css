@@ -1,59 +1,29 @@
-/* <body> 
-  		font-family: Tahoma, sans-serif;
-  		font-size: 16px;
-  		color: #333;
-  		margin: 0;
-
-	<div> koji je dijete od <body>
-		background-color: #eee;
-  		border: 20px solid #999;
-  		height: 800px;
-  		margin: 2em auto;
-  		width: 800px;
-
-
-	<div> koji zadnje dijete od <div>
-  		background: #69f;
-  		margin-left: auto;
-  		margin-right: 0;
-
-	<div> koji je prvo dijete od <div>
-  		background: #f66; */
-
 body {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
   color: #333;
   margin: 0;
 }
 
-.bc {
-  background-color: #eee;
-}
-.b1 {
-  border: 20px solid #999;
-}
-.h {
+body > div {
+  width: 800px;
   height: 800px;
-}
-.m1 {
+  background-color: #eee;
+  border: 20px solid #999;
   margin: 2em auto;
 }
-.w {
-  width: 800px;
-}
-.bg {
-  background: #69f;
-}
-.m2 {
-  margin-left: auto;
-  margin-right: 0;
-}
-.bg1 {
-  background: #f66;
-}
-.h2
-{
+
+div > div {
+  width: 50%;
   height: 50%;
 }
-.w2 {
-  width: 50%;
+
+div > div:first-child {
+  background-color: #f66;
+}
+
+div > div:last-child {
+  background: #69f;
+  margin-right: 0;
+  margin-left: auto;
 }
