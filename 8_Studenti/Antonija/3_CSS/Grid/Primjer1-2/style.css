@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-item {
+  border: 1px solid #666;
+  padding: 1em;
+  margin: 1em;
+  background-color: #eee;
+  width: 32%;
+  height: 100px;
+  margin-bottom: 2px;
+}
+
+.flex-item.flex-item:nth-child(4n + 1) {
+  flex-basis: 100%;
+}
