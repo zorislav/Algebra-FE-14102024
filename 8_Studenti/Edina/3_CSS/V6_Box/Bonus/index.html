@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box sizing</title>
+    <style>
+      /* CSS Reset pravila  */
+
+      /* ovo dole sa zvjezdicom je reset pravilo zato što je 
+        standardno content-box i ima uvijek neke margine, 
+        a mi smo svim elementima stavili border-box i margine 0px npr 
+        i mi onda kasnije sami pišemo svoja pravila kako želimo */
+
+      * {
+        /* zvjezdica * selektira sve elemente u dokumentu, to je univerzalni selektor */
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      :root {
+        background-color: blueviolet;
+      }
+
+      html {
+        background-color: hotpink;
+      }
+
+      /*:root i html označavaju krovni ISTI element ali :root 
+      (selektor pseudo klase) ima veću specifičnost od html selektora */
+
+      /* CSS Reset pravila  */
+
+      div {
+        width: 500px;
+        height: 500px;
+        background-color: pink;
+        border: 10px solid purple;
+        padding: 20px;
+        margin: 5px;
+        box-sizing: inherit; /* nasljeđuje postavke od roditelja (body-a) */
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

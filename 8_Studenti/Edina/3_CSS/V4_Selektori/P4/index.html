@@ -9,31 +9,41 @@
     <style>
       body {
         color: #333;
-        font-size: 20px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
       }
 
+      /* Atribut bez obzira na vrijednost */
       [title] {
         text-decoration: underline solid red;
       }
 
+      /* Atribut sa točnom vrijednosti */
       [title="Prvi odlomak"] {
         font-weight: bold;
       }
+
+      /* navedani izraz nalazi se bilo gdje u vrijednosti atributa */
       [title*="odlomak"] {
         color: darkgreen;
       }
 
+      /* navedani izraz nalazi se u vrijednosti atributa odvojen razmakom  */
       [title~="odlomak"] {
         text-transform: uppercase;
       }
+
+      /* navedani izraz nalazi se na početku vrijednosti atributa  */
       [title^="odlomak"] {
         font-style: italic;
       }
+
+      /* navedani izraz nalazi se na početku vrijednosti atributa odvojen znakom '-' */
       [title|="odlomak"] {
         font-family: "Courier New", Courier, monospace;
       }
 
+      /* navedani izraz nalazi se na završetku vrijednosti atributa  */
       [title$="odlomak"] {
         color: darkorange;
       }
