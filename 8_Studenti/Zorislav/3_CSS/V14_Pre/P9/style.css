@@ -4,14 +4,14 @@ body {
   background-color: #eee;
   color: #333;
   font-family: Tahoma, sans-serif;
-  content: "di si?";
 }
 
 div {
   margin: 0 0 1em 0;
-  padding: 1em;
-  background: #333;
+  padding: 0;
+  background-color: #333;
   color: #eee;
+  height: 20px;
 }
 
 .col-8:before {
@@ -44,4 +44,8 @@ div {
 
 .col-1:before {
   content: "1";
+}
+
+.col-8:after {
+  content: "X";
 }/*# sourceMappingURL=style.css.map */

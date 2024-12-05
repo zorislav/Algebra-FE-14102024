@@ -23,7 +23,7 @@ body {
 .menu {
   margin: 1em;
   padding: 1em;
-  background: #eee;
+  background-color: #eee;
 }
 
 ul {
@@ -35,7 +35,7 @@ ul li {
 
 a {
   margin: 0;
-  padding: 5px 2em;
+  padding: 2px 2em;
   color: rgba(255, 153, 51, 0.75);
   font-weight: bold;
   text-decoration: none;
