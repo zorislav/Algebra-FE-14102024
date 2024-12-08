@@ -22,7 +22,7 @@ div {
 }
 
 .col-3 {
-  width: 33.33333%;
+  width: 33.3333333333%;
 }
 
 .col-4 {
@@ -34,14 +34,13 @@ div {
 }
 
 .col-6 {
-  width: 16.66667%;
+  width: 16.6666666667%;
 }
 
 .col-7 {
-  width: 14.28571%;
+  width: 14.2857142857%;
 }
 
 .col-8 {
   width: 12.5%;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
