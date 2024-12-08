@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #333;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+.menu {
+  margin: 1em;
+  padding: 1em;
+  background-color: #eee;
+}
+
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline;
+}
+
+a {
+  margin: 0;
+  padding: 2px 2em;
+  color: rgba(255, 153, 51, 0.75);
+  font-weight: bold;
+  text-decoration: none;
+}
+a:visited {
+  color: #333;
+}
+a:hover {
+  color: rgba(136, 0, 0, 0.75);
+}
+a:active {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
