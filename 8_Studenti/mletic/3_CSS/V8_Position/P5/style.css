@@ -1,0 +1,17 @@
+div {
+  width: 200px;
+  height: 200px;
+}
+.box1 {
+  background-color: cadetblue;
+}
+.box2 {
+  background-color: orange;
+  position: sticky;
+  /* right: 100px; */
+  top: 100px;
+}
+
+body {
+  margin: 0;
+}
