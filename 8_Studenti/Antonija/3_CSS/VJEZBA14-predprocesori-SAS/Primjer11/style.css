@@ -3,27 +3,19 @@ html {
   font-size: 16px;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
-body,
-ul {
+body, ul {
   margin: 0;
   padding: 0;
-}
-
-body {
-  color: #333;
-  font-family: Tahoma, Verdana, sans-serif;
 }
 
 .menu {
   margin: 1em;
   padding: 1em;
-  background: #eee;
+  background-color: #eee;
 }
 
 ul {
@@ -35,8 +27,8 @@ ul li {
 
 a {
   margin: 0;
-  padding: 5px 2em;
-  color: rgba(255, 153, 51, 0.75);
+  padding: 2px 2em;
+  color: #eee;
   font-weight: bold;
   text-decoration: none;
 }
@@ -48,4 +40,9 @@ a:hover {
 }
 a:active {
   color: red;
+}
+
+body {
+  color: #333;
+  font-family: Tahoma, Verdana, sans-serif;
 }/*# sourceMappingURL=style.css.map */
