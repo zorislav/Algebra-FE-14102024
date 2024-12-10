@@ -1,0 +1,12 @@
+@mixin spacing($margin-top, $margin-right, $margin-bottom, $margin-left, $padding-top, $padding-right, $padding-bottom, $padding-left)
+{
+    margin: $margin-top,$margin-right,$margin-bottom,$margin-left;
+    padding: $padding-top,$padding-right,$padding-bottom,$padding-left;
+}
+
+@mixin flexbox
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

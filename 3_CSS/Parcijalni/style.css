@@ -22,7 +22,7 @@ p {
 }
 
 body {
-  background: url(blur-clean.jpg) no-repeat center center/cover fixed;
+  background: url(../images/blur-clean.jpg) no-repeat center center/cover fixed;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   text-align: center;
@@ -64,4 +64,4 @@ body {
   100% {
     top: 0;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
