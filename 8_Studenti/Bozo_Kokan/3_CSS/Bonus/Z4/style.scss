@@ -1,0 +1,121 @@
+@import "./abstract/colors";
+@import "./abstract/mixins";
+@import "./base/reset";
+
+body
+{
+    margin: 1em auto;
+    padding: 0 2em;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    max-width: 60vw;
+    color: $font-color-main;
+}
+
+header
+{    
+    text-align: center;
+    justify-content: space-between;
+    padding: 2em;
+
+    p 
+    {
+        padding: 2em;
+    }
+    .Logo
+{
+    img 
+    {
+    width: 15%;
+    position: relative;
+    }
+
+}
+}
+
+.flexbox
+{
+    @include flexbox;
+    flex-direction: row;
+}
+
+main
+{
+    .flexbox 
+    {
+        p
+        {
+            font-style: italic;
+            font-size: 2.7em;
+            flex-basis: 48%;
+        }
+        div 
+        {
+            flex-basis: 48%;
+            img 
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.p1
+{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    font-size: 1.2em;
+}
+
+ul
+{
+    list-style: decimal;
+}
+
+.instructions
+{
+    li 
+    {
+        font-size: 1.5em;
+        text-align: justify;
+        padding: 1em;
+        justify-content: space-between;
+    }
+    li:first-of-type 
+    {
+        width: 50%;
+        height: 200%;
+    }
+}
+
+aside 
+{
+    text-align: justify;
+    margin: 0;
+    padding: 1.5em;
+    border: 3.5px solid $ingrediants-background-color;
+    position: absolute;
+    transform: translate(135%, -10%);
+}
+
+footer
+{
+    text-align: center;
+    padding: 2em;
+    a 
+    {
+        text-decoration: none;
+        color:$color2;
+        font-size: 1.5em;
+    }
+
+    a:visited 
+    {
+        color: $color1;
+    }
+
+    a:hover 
+    {
+        font-weight: bold;
+    }
+}
