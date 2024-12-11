@@ -83,17 +83,19 @@ main
             object-fit: cover;
         }
       }
-      li:nth-of-type(3) 
+      li:nth-of-type(3), li:nth-of-type(10)
       {
        grid-column: 1 / 3; /* start at column 1 and finish at column 3*/
       }
     }
+
     .item-content 
     {
-        padding: 24px;
+        padding: 25px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 100%;
         
         h2 
         {
@@ -102,7 +104,12 @@ main
     }
     .actions 
     {
-        text-align:right;
+        text-align: right;
+
+        a 
+        {
+            color: $color5;
+        }
     }
 }
 

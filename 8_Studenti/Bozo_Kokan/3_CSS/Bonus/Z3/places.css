@@ -63,20 +63,24 @@ main ul li img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main ul li:nth-of-type(3) {
+main ul li:nth-of-type(3), main ul li:nth-of-type(10) {
   grid-column: 1/3; /* start at column 1 and finish at column 3*/
 }
 main .item-content {
-  padding: 24px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }
 main .item-content h2 {
   margin: 0;
 }
 main .actions {
   text-align: right;
+}
+main .actions a {
+  color: rgb(22, 211, 228);
 }
 
 footer {
