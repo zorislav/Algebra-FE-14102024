@@ -26,12 +26,10 @@ section {
   margin: 2em auto;
   width: 80%;
 }
-
 section article {
   margin: 1em;
   border-radius: 20px;
 }
-
 section article:last-child {
   margin: 0;
   border-radius: 0 30px;
@@ -43,5 +41,4 @@ section .odlomak {
 
 footer {
   margin: 1em 0 2em 5em;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
