@@ -52,7 +52,6 @@ main li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .item-content h2 {

@@ -1,7 +1,7 @@
-@import "abstract/variables";
-@import "abstract/mixin";
-@import "base/reset";
-@import "base/typography";
+@import "abstract/_variables";
+@import "abstract/_mixin";
+@import "base/_reset";
+@import "base/_typography";
 body 
   {
     background-color: $background;

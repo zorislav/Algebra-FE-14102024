@@ -1,0 +1,96 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 1em auto;
+  padding: 0 2em;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+  max-width: 60vw;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  justify-content: space-between;
+  padding: 2em;
+}
+header p {
+  padding: 2em;
+}
+header .Logo img {
+  width: 15%;
+  position: relative;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+main .flexbox p {
+  font-style: italic;
+  font-size: 2.7em;
+  flex-basis: 48%;
+}
+main .flexbox div {
+  flex-basis: 48%;
+}
+main .flexbox div img {
+  width: 100%;
+}
+
+.p1 {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  font-size: 1.2em;
+}
+
+ul {
+  list-style: decimal;
+}
+
+.instructions li {
+  font-size: 1.5em;
+  text-align: justify;
+  padding: 1em;
+  justify-content: space-between;
+}
+.instructions li:first-of-type {
+  width: 50%;
+  height: 200%;
+}
+
+aside {
+  text-align: justify;
+  margin: 0;
+  padding: 1.5em;
+  border: 3.5px solid #e8cfa9;
+  position: absolute;
+  transform: translate(135%, -10%);
+}
+
+footer {
+  text-align: center;
+  padding: 2em;
+}
+footer a {
+  text-decoration: none;
+  color: red;
+  font-size: 1.5em;
+}
+footer a:visited {
+  color: rgb(71, 64, 173);
+}
+footer a:hover {
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */
