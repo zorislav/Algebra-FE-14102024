@@ -1,0 +1,21 @@
+@use "../base/colors";
+
+@mixin div-color {
+  $i: 1;
+  @each $color in $div-colors {
+    &:nth-child(#{$i}) {
+      background-color: nth($color, 2);
+    }
+    $i: $i + 1;
+  }
+}
+
+@mixin keyframes($animation-name) {
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  animation: #{$str};
+}
