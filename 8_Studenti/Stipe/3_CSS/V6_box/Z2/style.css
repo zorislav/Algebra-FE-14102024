@@ -1,0 +1,22 @@
+.div{
+    border: 20px solid #333;  
+    width: 800px;
+    height: 800px;
+    margin: auto auto;
+    background-color: antiquewhite;
+   
+}
+
+.div1{
+    width: 50%;
+    height: 50%;
+    background-color: aqua;
+}
+
+.div2 {
+    background: #69f;
+    width: 50%;
+    height: 50%;
+    float: right;
+}
+

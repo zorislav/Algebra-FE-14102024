@@ -1,0 +1,64 @@
+body{
+    font-family:  Verdana, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+.border {
+    border: 6px solid #675f5f;
+}
+
+.width{
+    width: 200px;
+}
+
+.width1{
+    width:500px;
+}
+
+.height1{
+    height:180px
+}
+
+.height{
+    height: 300px;
+}
+
+.margin-auto{
+    margin: 100px auto
+}
+
+.padding{
+    text-align: justify;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+
+.background-color{
+    color: #333;
+    background-color: #c0bbbb;
+
+}
+
+.border-style{
+    border: 6px dashed #333;
+
+}
+
+.margin2{
+    /*margin-top:20px;*/
+    margin-left: auto;
+   /* margin-right:50px;
+    margin-bottom: 30px;*/
+}
+
+.border2{
+    border-right: 6px double #333;
+}
+
+.border3{
+    border-top: 6px dashed #333;
+    border-bottom:6px dotted #333;
+}
+
