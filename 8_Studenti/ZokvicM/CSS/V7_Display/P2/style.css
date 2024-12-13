@@ -1,0 +1,28 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  border: 1px solid;
+  padding: 1em;
+}
+
+li {
+  display:inline-block;
+  width: 18%;
+  background-color: aquamarine;
+}
+
+p {
+  display: inline-block; 
+  width: 22%;
+  border: 1px solid;
+  padding: 20px;
+  text-align: justify;
+
+}
