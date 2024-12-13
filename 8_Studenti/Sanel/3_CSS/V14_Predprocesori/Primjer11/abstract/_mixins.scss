@@ -1,0 +1,22 @@
+@mixin spacing($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin linx($link, $visit, $hover, $active) {
+    a {
+        @include spacing(0, 2px 2em);
+        color: $link;
+        font-family: bold;
+        text-decoration: none;
+        &:visited {
+            columns: $visit;
+        }
+        &:hover {
+            color: $hover;
+        }
+        &:active {
+            color: $active;
+        }
+    }
+}

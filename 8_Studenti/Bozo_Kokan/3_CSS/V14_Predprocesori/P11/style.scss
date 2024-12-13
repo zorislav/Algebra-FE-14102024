@@ -1,0 +1,27 @@
+@import "./base/colors";
+@import "./base/reset";
+@import "./base/typography";
+@import "./abstract/mixins";
+
+body
+{
+    color: $color2;
+    font-family: $sans-serif;
+}
+
+.menu 
+{
+    @include spacing(1em, 1em);
+    background-color: $color1;
+}
+
+ul 
+{
+    list-style: none;
+    li 
+    {
+        display: inline;
+    }
+}
+
+@include linx($color4, $color2, $color3, red);

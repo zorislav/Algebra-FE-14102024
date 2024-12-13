@@ -1,0 +1,86 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+.b1 {
+  border: 5px solid #666;
+}
+
+.m1 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p1 {
+  padding: 2em;
+}
+
+.w1 {
+  width: 300px;
+}
+
+.b2 {
+  border: 5px dashed #666;
+}
+
+.m2 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.p2 {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.w2 {
+  width: 25%;
+}
+
+.b3 {
+  border-right: 8px double #666;
+}
+
+.m3 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.p3 {
+  padding-top: 5px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  padding-left: 50px;
+}
+
+.w3 {
+  width: 30em;
+}
+
+.b4 {
+  border-top: 4px dashed #666;
+  border-bottom: 6px dotted #333;
+}
+
+.m4 {
+  margin: auto;
+}
+
+.p4 {
+  padding: 10px;
+}
+
+.w4 {
+  width: 80%;
+}

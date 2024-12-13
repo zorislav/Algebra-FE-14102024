@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selektori Class Atributa</title>
+    <style>
+      body {
+        color: #333;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      [title] {
+        text-decoration: underline solid red;
+      }
+      [title="Prvi odlomak"] {
+        font-weight: bold;
+      }
+      [title*="odlomak"] {
+        color: darkgreen;
+      }
+      [title~="odlomak"] {
+        text-transform: uppercase;
+      }
+      [title^="odlomak"] {
+        font-style: italic;
+      }
+      [title|="odlomak"] {
+        font-family: "Courier New", Courier, monospace;
+      }
+      [title$="odlomak"] {
+        color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 title="Naslov stranice">Glavni naslov</h1>
+    <h2>Naslov druge razine</h2>
+    <h3>Naslov trece razine</h3>
+    <h4>Naslov cetvrte razine</h4>
+    <p title="Prvi odlomak">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+      consequuntur odio quo, magnam enim minima, ex consequatur eius neque magni
+      ab tempora voluptatibus! Cupiditate quae, repudiandae error facere
+      repellendus necessitatibus.Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Atque consequuntur odio quo, magnam enim minima, ex
+      consequatur eius neque magni ab tempLorem ipsum dolor sit amet consectetur
+      adipisicing elit. Atque consequuntur odio quo, magnam enim minima, ex
+      consequatur eius neque magni ab tempora voluptatibus! Cupiditate quae,
+      repudiandae error facere repellendus necessitatibus.
+    </p>
+    <p title="odlomak-2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+      consequuntur odio quo, magnam enim minima, ex consequatur eius neque magni
+      ab tempora voluptatibus! Cupiditate quae, repudiandae error facere
+      repellendus necessitatibus.Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Atque consequuntur odio quo, magnam enim minima, ex
+      consequatur eius neque magni ab tempLorem ipsum dolor sit amet consectetur
+      adipisicing elit. Atque consequuntur odio quo, magnam enim minima, ex
+      consequatur eius neque magni ab tempora voluptatibus! Cupiditate quae,
+      repudiandae error facere repellendus necessitatibus.
+    </p>
+    <p title="odlomak 3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+      consequuntur odio quo, magnam enim minima, ex consequatur eius neque magni
+      ab tempora voluptatibus! Cupiditate quae, repudiandae error facere
+      repellendus necessitatibus.Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Atque consequuntur odio quo, magnam enim minima, ex
+      consequatur eius neque magni ab tempLorem ipsum dolor sit amet consectetur
+      adipisicing elit. Atque consequuntur odio quo, magnam enim minima, ex
+      consequatur eius neque magni ab tempora voluptatibus! Cupiditate quae,
+      repudiandae error facere repellendus necessitatibus.
+    </p>
+    <p title="odlomakbla">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+      consequuntur odio quo, magnam enim minima, ex consequatur eius neque magni
+      ab tempora voluptatibus! Cupiditate quae, repudiandae error facere
+      repellendus necessitatibus.Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Atque consequuntur odio quo, magnam enim minima, ex
+      consequatur eius neque magni ab tempLorem ipsum dolor sit amet consectetur
+      adipisicing elit. Atque consequuntur odio quo, magnam enim minima, ex
+      consequatur eius neque magni ab tempora voluptatibus! Cupiditate quae,
+      repudiandae error facere repellendus necessitatibus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+      consequuntur odio quo, magnam enim minima, ex consequatur eius neque magni
+      ab tempora
+      <strong
+        >voluptatibus! <span title="span"> Cupiditate</span> quae, repudiandae
+        error</strong
+      >
+      facere repellendus necessitatibus.Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Atque consequuntur odio quo, magnam enim minima, ex
+      consequatur eius neque magni ab tempLorem ipsum dolor sit amet consectetur
+      adipisicing elit. Atque consequuntur odio quo, magnam enim minima, ex
+      consequatur eius neque magni ab tempora voluptatibus! Cupiditate quae,
+      repudiandae error facere repellendus necessitatibus.
+    </p>
+  </body>
+</html>

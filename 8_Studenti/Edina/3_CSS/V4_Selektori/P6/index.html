@@ -10,6 +10,50 @@
         font-size: 20px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
       }
+      header {
+        color: red;
+      }
+
+      footer {
+        color: orange;
+      }
+
+      p:first-child {
+        text-decoration: underline wavy red;
+      }
+      p:last-child {
+        font-size: 14px;
+      }
+
+      /* drugo dijete od roditelja */
+      p:nth-child(2) {
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      /* svaki treći p  (ali moraju biti djeca roditelja, ne potomci)
+      je označen plavom */
+      p:nth-child(2n + 1) {
+        color: blue;
+      }
+
+      /* svaki drugi p je označen rozom */
+      p:nth-child(2n) {
+        color: hotpink;
+      }
+
+      /* prvi element unutar elementa roditelja koji je tog tipa */
+      p:first-of-type {
+        font-weight: bold;
+      }
+
+      p:last-of-type {
+        text-transform: uppercase;
+      }
+
+      /* svaki treći p (ne moraju biti djeca već svi potomci) je označen tirkiznom */
+      p:nth-of-type(2n + 1) {
+        color: darkturquoise;
+      }
     </style>
   </head>
   <body>
@@ -18,19 +62,22 @@
       <p>Odlomak 1</p>
     </header>
     <section>
+      <p>Odlomak 1</p>
       <p>Odlomak 2</p>
       <p>Odlomak 3</p>
       <p>Odlomak 4</p>
       <p>Odlomak 5</p>
     </section>
     <section>
-      <h1>Sekcija 1</h1>
+      <h1>Sekcija 2</h1>
+      <p>Odlomak 1</p>
       <p>Odlomak 2</p>
       <p>Odlomak 3</p>
       <p>Odlomak 4</p>
       <p>Odlomak 5</p>
     </section>
     <footer>
+      <p>Odlomak 1</p>
       <p>Odlomak 2</p>
       <p>Odlomak 3</p>
       <p>Odlomak 4</p>

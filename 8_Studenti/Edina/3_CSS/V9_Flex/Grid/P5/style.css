@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+header,
+footer,
+main,
+section,
+article,
+aside {
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+
+header,
+footer {
+  background-color: pink;
+  height: 10vh;
+  margin: auto;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  min-height: 80vh; /*view height - jedinica koja se odnosi na velicinu
+                      prikaznog područja, dok je postotak % jedinica koja se 
+                      odnosi na velicinu elementa roditelja */
+}
+
+aside {
+  flex-basis: 32%;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-direction: column;
+  flex-basis: 66%;
+}
+
+article {
+  flex-basis: 24%;
+  /* flex-basis je po potrebi ili width ili height, ovisno o tome 
+  jel flex-direction row ili column (ako je row, onda je width i obratno)*/
+  width: 49%;
+}

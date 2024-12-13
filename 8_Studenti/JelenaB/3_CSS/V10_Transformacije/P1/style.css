@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  width: 20rem;
+  height: 10rem;
+  background-color: orange;
+  border: #333 1px solid;
+  margin: 4em auto;
+}
+
+.translate {
+  transform: translate(10rem, -1.3rem);
+}
+
+.rotate {
+  transform: rotate(30deg);
+}
+
+.scale {
+  transform: scale(0.5, 0.3);
+}
+
+.skew {
+  transform: skew(20deg);
+}
