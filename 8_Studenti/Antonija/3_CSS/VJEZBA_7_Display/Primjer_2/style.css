@@ -1,0 +1,30 @@
+body {
+  font-family: tahoma, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  border: 1px solid #ccc;
+  padding: 1em;
+}
+
+li {
+  display: inline-block;
+  width: 19%;
+  background-color: #ffc;
+}
+
+p {
+  display: inline-block;
+  width: 22%;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+margina {
+
+  margin-left: -6px;
+}

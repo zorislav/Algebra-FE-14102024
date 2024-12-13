@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selektori atributa</title>
+    <!--<link rel="stylesheet" href="style.css" />-->
+    <style>
+      body {
+        color: #333;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      [title] {
+        text-decoration: underline solid red;
+      }
+
+      [title="Prvi odlomak"] {
+        font-weight: bold;
+      }
+
+      [title*="odlomak"] {
+        color: darkgreen;
+      }
+
+      [title~="odlomak"] {
+        text-transform: uppercase;
+      }
+
+      [title^="odlomak"] {
+        font-style: italic;
+      }
+
+      [title|="odlomak"]  {
+        font-family: 'Courier New', Courier, monospace;
+      }
+
+      [title$="odlomak"] {
+        color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 title="Naslov stranice">Glavni naslov</h1>
+    <h2>Naslov druge razine</h2>
+    <h3>Naslov treće razine</h3>
+    <p title="Prvi odlomak">
+      Ea dolor sunt laborum ullamco deserunt nisi. Consequat enim esse
+      consectetur voluptate minim. Ullamco veniam voluptate nostrud irure sint
+      officia ea nostrud excepteur est. Ullamco proident consequat et occaecat
+      nulla dolor exercitation esse veniam. Officia nostrud ex duis laborum eu
+      ad eiusmod duis id. Mollit reprehenderit tempor voluptate esse incididunt
+      do nostrud voluptate duis ullamco. Veniam ut nulla quis exercitation nulla
+      aliquip eiusmod elit.
+    </p>
+    <p title="odlomak-2">
+      Ea dolor sunt laborum ullamco deserunt nisi. Consequat enim esse
+      consectetur voluptate minim. Ullamco veniam voluptate nostrud irure sint
+      officia ea nostrud excepteur est. Ullamco proident consequat et occaecat
+      nulla dolor exercitation esse veniam. Officia nostrud ex duis laborum eu
+      ad eiusmod duis id. Mollit reprehenderit tempor voluptate esse incididunt
+      do nostrud voluptate duis ullamco. Veniam ut nulla quis exercitation nulla
+      aliquip eiusmod elit.
+    </p>
+    <p title="odlomak 3">
+      Ea dolor sunt laborum ullamco deserunt nisi. Consequat enim esse
+      consectetur voluptate minim. Ullamco veniam voluptate nostrud irure sint
+      officia ea nostrud excepteur est. Ullamco proident consequat et occaecat
+      nulla dolor exercitation esse veniam. Officia nostrud ex duis laborum eu
+      ad eiusmod duis id. Mollit reprehenderit tempor voluptate esse incididunt
+      do nostrud voluptate duis ullamco.<strong>Veniam ut nulla quis <span>exercitation</span>
+      nulla aliquip eiusmod lit.</strong>
+    </p>
+    <p title="odlomakbla">
+      Ea dolor sunt laborum ullamco deserunt nisi. Consequat enim esse
+      consectetur voluptate minim. Ullamco veniam voluptate nostrud irure sint
+      officia ea nostrud excepteur est. Ullamco proident consequat et occaecat
+      nulla dolor exercitation esse veniam. Officia nostrud ex duis laborum eu
+      ad eiusmod duis id. Mollit reprehenderit tempor voluptate esse incididunt
+      do nostrud voluptate duis ullamco. Veniam ut nulla quis exercitation nulla
+      aliquip eiusmod elit.
+    </p>
+    <p>
+      Ea dolor sunt laborum ullamco deserunt nisi. Consequat enim esse
+      consectetur voluptate minim. <strong>Ullamco veniam voluptate nostrud irure sint
+      <span title="span">officia</span> ea nostrud excepteur est.</strong>  Ullamco proident consequat et occaecat
+      nulla dolor exercitation esse veniam. Officia nostrud ex duis laborum eu
+      ad eiusmod duis id. Mollit reprehenderit tempor voluptate esse incididunt
+      do nostrud voluptate duis ullamco. Veniam ut nulla quis exercitation nulla
+      aliquip eiusmod elit.
+    </p>
+  </body>
+</html>

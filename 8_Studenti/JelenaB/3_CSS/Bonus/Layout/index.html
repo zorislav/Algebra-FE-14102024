@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moja tvrtka - layout primjer</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      img {
+        width: 9rem;
+      }
+
+      header div {
+        display: flex;
+        align-items: center;
+      }
+
+      #naslov {
+        font-size: 3rem;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      }
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0px;
+        justify-content: space-between;
+      }
+
+      li {
+        padding: 0.5rem;
+      }
+
+      li:hover {
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .in-flex-cont {
+        display: flex;
+      }
+
+      .out-flex-cont {
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem 1rem;
+      }
+
+      div div div {
+        width: 3rem;
+        height: 3rem;
+        border: 1px solid black;
+        background-color: lightblue;
+        text-align: center;
+        padding: 0.9rem 0rem;
+      }
+
+      table {
+        display: flex;
+        margin: 0.5rem;
+      }
+
+      tbody {
+        display: block;
+        width: 100%;
+      }
+      tr {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 1rem;
+      }
+      td {
+        width: 30%;
+        height: 3rem;
+        border: 1px solid black;
+        background-color: lightblue;
+        text-align: center;
+        justify-content: space-between;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="logo.avif" alt="Logo" />
+        <p id="naslov">Moja Tvrtka!</p>
+      </div>
+      <nav>
+        <ul>
+          <li>Opcija 1</li>
+          <li>Opcija 2</li>
+          <li>Opcija 3</li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <div class="out-flex-cont">
+      <div class="in-flex-cont">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+      <div class="in-flex-cont">
+        <div>4</div>
+        <div>5</div>
+      </div>
+    </div>
+    <hr />
+    <table>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+  </body>
+</html>

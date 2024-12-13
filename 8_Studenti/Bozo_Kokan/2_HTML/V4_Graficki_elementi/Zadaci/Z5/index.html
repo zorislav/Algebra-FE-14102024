@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas
+    id="Canvas1"
+    width="200"
+    height="200">        
+    </canvas>
+    <script>
+        var MojCanvas = document.getElementById("Canvas1");
+        var ctx = MojCanvas.getContext("2d");
+        var centarX = MojCanvas.width / 2;
+        var centarY = MojCanvas.height / 2;
+        var radius = 45;
+
+        ctx.beginPath();
+        ctx.rect(10, 10, 180, 180);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.strokeStyle = "gray";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.arc(centarX, centarY, radius, 0, 2 * Math.PI)
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.strokeStyle = "gray"
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.rect(75, 75, 50, 50);
+        ctx.fillStyle = "purple";
+        ctx.fill();
+        ctx.strokeStyle = "gray";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+    </script>
+</body>
+</html>
