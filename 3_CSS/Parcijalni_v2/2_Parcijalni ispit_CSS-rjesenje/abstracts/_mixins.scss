@@ -6,12 +6,12 @@
   width: 100vw;
 }
 
-@mixin keyframes($animation-name) {
+@mixin keyframes($animation-name){
   @keyframes #{$animation-name} {
     @content;
   }
 }
 
-@mixin animation($str) {
+@mixin animation($str){
   animation: #{$str};
 }
