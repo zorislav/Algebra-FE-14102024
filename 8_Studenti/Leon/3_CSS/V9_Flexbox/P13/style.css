@@ -11,6 +11,7 @@ body {
 .wrapper {
   border: 1px dashed #666;
   padding: 1em;
+  height: 600px;
 }
 
 .wrapper div {
@@ -18,8 +19,8 @@ body {
   border: 1px solid #666;
   padding: 1em;
   text-align: center;
-  width: 300px;
   margin: 1em;
+  /* width: 300px; */
 }
 
 .flex-container {
@@ -28,7 +29,13 @@ body {
   display: flex; /* display:flex | inline-flex */
 }
 
+.flex-item {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .flex-item:nth-child(3) {
-  -ms-flex-negative: 3;
-      flex-shrink: 3; /* default = 1 */
+  -ms-flex-item-align: end;
+      align-self: flex-end; /* align-self: auto | flex-start | flex-end | center | baseline | stretch */
 }

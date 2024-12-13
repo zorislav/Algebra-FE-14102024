@@ -18,7 +18,7 @@ body {
   border: 1px solid #666;
   padding: 1em;
   text-align: center;
-  width: 300px;
+  /* width: 300px; */
   margin: 1em;
 }
 
@@ -28,7 +28,14 @@ body {
   display: flex; /* display:flex | inline-flex */
 }
 
+.flex-item {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .flex-item:nth-child(3) {
-  -ms-flex-negative: 3;
-      flex-shrink: 3; /* default = 1 */
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 600px;
+          flex: 1 1 600px; /* flex: <'flex-grow'> || <'flex-shrink'> || <'flex-basis'> */
 }
