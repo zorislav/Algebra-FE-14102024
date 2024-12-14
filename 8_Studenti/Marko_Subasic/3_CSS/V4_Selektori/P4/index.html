@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selektori atributa</title>
+    <style>
+        body {
+            color: #333;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        [title] {
+            text-decoration: underline solid red;
+        }
+
+        [title="Prvi odlomak"] {
+            font-weight: bold;
+        }
+
+        [title*="odlomak"] {
+            color: darkgreen;
+        }
+
+        [title~="odlomak"] {
+            text-transform: uppercase;
+        }
+
+        [title^="odlomak"] {
+            font-style: italic;
+        }
+
+        [title|="odlomak"] {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        [title$="odlomak"] {
+            color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 title="Naslov stranice">Glavni naslov</h1>
+    <h2>Naslov druge razine</h2>
+    <h3>Naslov trece razine</h3>
+    <p title="Prvi odlomak">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis sequi officia blanditiis, ut, nisi
+        voluptas aliquid magnam quae beatae ipsum eius dolores deserunt facilis. Provident eius, nisi sunt deserunt et
+        nesciunt inventore voluptate. Doloremque.
+    </p>
+    <p title="odlomak-2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis sequi officia blanditiis, ut, nisi
+        voluptas aliquid magnam quae beatae ipsum eius dolores deserunt facilis. Provident eius, nisi sunt deserunt et
+        nesciunt inventore voluptate. Doloremque.
+    </p>
+    <p title="odlomak 3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde atque recusandae assumenda cumque eveniet possimus
+        ab expedita,<em> maiores libero ratione voluptates at iure.</em> Maxime praesentium placeat adipisci mollitia
+        dolore
+        itaque omnis voluptatem incidunt sint,<strong> delectus necessitatibus
+            <span>dolorem consequuntur architecto </span>nostrum.</strong>
+    </p>
+    <p title="odlomakbla">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis sequi officia blanditiis, ut, nisi
+        voluptas aliquid magnam quae beatae ipsum eius dolores deserunt facilis. Provident eius, nisi sunt deserunt et
+        nesciunt inventore voluptate. Doloremque.
+    </p>
+    <p>
+
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, eveniet delectus tempora repudiandae ratione
+        facilis unde autem itaque cumque, cum,<strong> nobis sint <span title="span">nisi neque debitis
+            </span>reprehenderit ducimus</strong> quaerat nesciunt?
+        Doloribus nisi illum hic accusamus odio.
+    </p>
+</body>
+
+</html>
