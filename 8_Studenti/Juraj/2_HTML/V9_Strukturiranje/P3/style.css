@@ -1,0 +1,21 @@
+html {
+    font-family: sans-serif;
+  }
+  input {
+    border: 3px solid grey;
+    border-radius: 20px;
+    background-color: bisque;
+  }
+ label {
+    font-style: oblique;
+ }
+ input[type="radio"],
+ input[type="checkbox"] {
+   height: 1.5em;
+   width: 1.5em;
+   vertical-align: middle;
+ }
+ 
+ input[type="radio"] {
+   border-radius: 50%;
+ }

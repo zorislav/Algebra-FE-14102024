@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pristupacnost</title>
+    <style>
+      #progressBarContainer {
+        width: 160px;
+        height: 6px;
+        border: 2px rgb(15, 168, 117);
+        color: gray;
+        border-radius: 10px;
+        background-color: aqua;
+        padding: 3px;
+      }
+
+      #progressBar {
+        content: "";
+        display: block;
+        background: orange;
+        width: 50%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="#">Button link</a>
+      <button>Button link</button>
+      <!--button triggera event u javi, dok prethodno ne triggera -->
+    </div>
+    <hr />
+    <progress value="20" max="100"></progress>
+    <hr />
+    <div id="progressBarContainer">
+      <div
+        id="progressBar"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuenow="50"
+        aria-valuemax="100"
+      ></div>
+    </div>
+  </body>
+</html>

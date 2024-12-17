@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selektori atributa</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <style>
+    body {
+      color: #333;
+      font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    [title] {
+      text-decoration: underline solid red;
+    }
+
+    [title="Prvi odlomak"] {
+      font-weight: bold;
+    }
+
+    [title*="odlomak"] {
+      color: darkgreen;
+    }
+
+    [title~="odlomak"] {
+      text-transform: uppercase;
+    }
+
+    [title^="odlomak"] {
+      font-style: italic;
+    }
+
+    [title|="odlomak"] {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    [title$="odlomak"] {
+      color: darkorange;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 title="Naslov stranice">Glavni naslov</h1>
+  <h2>Naslov druge razine</h2>
+  <h3>Naslov trece razine</h3>
+  <p title="Prvi odlomak">
+    Ipsum irure aliquip veniam exercitation voluptate consectetur est exercitation laboris est. Aliqua aute laboris
+    commodo et magna. Id culpa do do velit aute ad elit reprehenderit. Dolore dolor proident sint tempor veniam
+    exercitation duis dolore voluptate minim eiusmod ad est sit. Reprehenderit adipisicing labore anim dolore ea. Lorem
+    voluptate amet magna adipisicing. Sunt quis incididunt velit velit in.
+  </p>
+  <p title="odlomak-2">
+    Ipsum irure aliquip veniam exercitation voluptate consectetur est exercitation laboris est. Aliqua aute laboris
+    commodo et magna. Id culpa do do velit aute ad elit reprehenderit. Dolore dolor proident sint tempor veniam
+    exercitation duis dolore voluptate minim eiusmod ad est sit. Reprehenderit adipisicing labore anim dolore ea. Lorem
+    voluptate amet magna adipisicing. Sunt quis incididunt velit velit in.
+  </p>
+  <p title="odlomak 3">
+    Ipsum irure aliquip veniam exercitation voluptate consectetur est exercitation laboris est. Aliqua aute laboris
+    commodo et magna. <em>Id culpa do do velit aute ad elit reprehenderit.</em> Dolore dolor proident sint tempor veniam
+    exercitation duis dolore voluptate minim eiusmod ad est sit. Reprehenderit adipisicing labore anim dolore ea. Lorem
+    voluptate amet magna adipisicing. <strong>Sunt quis <span>incididunt</span>
+      velit velit
+      in.</strong>
+  </p>
+  <p title="odlomakbla">
+    Ipsum irure aliquip veniam exercitation voluptate consectetur est exercitation laboris est. Aliqua aute laboris
+    commodo et magna. Id culpa do do velit aute ad elit reprehenderit. Dolore dolor proident sint tempor veniam
+    exercitation duis dolore voluptate minim eiusmod ad est sit. Reprehenderit adipisicing labore anim dolore ea. Lorem
+    voluptate amet magna adipisicing. Sunt quis incididunt velit velit in.
+  </p>
+  <p>
+    Ipsum irure aliquip veniam exercitation voluptate consectetur est exercitation laboris est. Aliqua aute laboris
+    commodo et magna. <strong>Id culpa do do velit <span title="span">aute</span> ad elit reprehenderit.</strong> Dolore
+    dolor proident sint tempor veniam
+    exercitation duis dolore voluptate minim eiusmod ad est sit. Reprehenderit adipisicing labore anim dolore ea. Lorem
+    voluptate amet magna adipisicing. Sunt quis incididunt velit velit in.
+  </p>
+</body>
+
+</html>

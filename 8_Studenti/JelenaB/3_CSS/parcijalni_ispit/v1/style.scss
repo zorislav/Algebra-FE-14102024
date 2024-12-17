@@ -1,0 +1,49 @@
+@import "abstracts/mixins";
+@import "base/reset";
+@import "base/colors";
+
+body {
+  background: url(img/blur-clean.jpg) no-repeat center/cover fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex: 100%;
+  justify-content: space-between;
+}
+
+div {
+  width: 20vh;
+  height: 30vh;
+  flex: 0 24%;
+  @include div-color();
+  text-align: center;
+  color: $font-color;
+  padding: 5%;
+  position: relative;
+  font-size: 2.5rem;
+  padding-top: 10vh;
+  top: -80vh;
+  margin: 10vh;
+}
+
+div:first-child {
+  animation: slide-down 1.5s ease-in-out forwards;
+}
+div:nth-child(2) {
+  animation: slide-down 1.5s ease-in-out 1.5s forwards;
+}
+div:last-child {
+  animation: slide-down 1.5s ease-in-out 3s forwards;
+}
+
+@keyframes slide-down {
+  0% {
+    top: -80vh;
+  }
+  100% {
+    top: 20vh;
+  }
+}
