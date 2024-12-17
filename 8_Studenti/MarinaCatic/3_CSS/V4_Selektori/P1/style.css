@@ -17,3 +17,15 @@ h3 {
 h4 {
     color: rgb(102, 94, 218);
 }
+em {
+    color: red;
+}
+p {
+    text-align: justify;
+}
+strong {
+    text-decoration: underline wavy red;
+}
+span {
+    font-weight: normal;
+}
