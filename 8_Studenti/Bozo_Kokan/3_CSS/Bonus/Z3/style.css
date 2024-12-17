@@ -1,0 +1,111 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  color: rgb(68, 68, 68);
+  background: url(./images/places/ocean.jpg) center center/cover fixed;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+header nav ul li {
+  font-size: 20px;
+  padding: 15px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 251, 0);
+}
+header nav ul li a:hover {
+  padding: 12px;
+  border-radius: 6px;
+  color: rgb(68, 68, 68);
+  background-color: rgb(255, 251, 0);
+}
+header .Logo {
+  padding: 10px;
+  font-size: 50px;
+  font-family: "Oleo Script", sans-serif;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  color: rgb(245, 243, 160);
+}
+header .Logo a {
+  padding: 10px;
+  text-decoration: none;
+}
+header .Logo a:visited {
+  color: rgb(245, 243, 160);
+}
+
+main {
+  padding: 24px 12px;
+  text-align: center;
+}
+main section {
+  width: 900px;
+  padding: 50px 0;
+  margin: 0 auto;
+  background-color: rgba(68, 68, 68, 0.75);
+  color: white;
+}
+main section h2 {
+  font-size: 50px;
+}
+main section p {
+  font-size: 24px;
+}
+main section a {
+  background-color: rgb(255, 251, 0);
+  color: rgb(68, 68, 68);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgb(68, 68, 68);
+}
+main h3 {
+  text-align: center;
+  font-size: 40px;
+}
+main ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+main ul li {
+  padding: 15px;
+  flex-basis: 25%;
+}
+main ul li img {
+  height: 250px;
+  width: 400px;
+}
+main ul li p {
+  color: black;
+}
+main ul li p strong {
+  color: rgb(136, 41, 41);
+}
+
+footer {
+  background-color: rgb(68, 68, 68);
+}
+footer div {
+  padding: 36px 0;
+  text-align: center;
+}
+footer div img {
+  height: 100px;
+  width: 100px;
+  padding: 15px;
+}/*# sourceMappingURL=style.css.map */
