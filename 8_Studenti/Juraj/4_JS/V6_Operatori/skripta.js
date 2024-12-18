@@ -51,3 +51,16 @@ const.vozilo = new Car('Fiat', 'Punto');
 console.log(vozilo);
 
 console.log(vozilo instanceof Car);
+
+// delete
+
+const employee = {
+    firstName: 'John';
+    lastName: 'Wick';
+};
+
+console.log(employee);
+
+delete employee.lastName;
+
+console.log(employee);
