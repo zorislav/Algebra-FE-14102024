@@ -11,13 +11,13 @@
 // }
 // console.log(varOne);
 
-var broj = 2;
+var broj = 3;
 
-while (broj < 20) 
+while (broj <= 20) 
 {
     broj++; 
 
-    if (broj % 9 == 0) {
+    if (broj % 9 !== 0) {
         continue;
     }
     console.log(broj);
