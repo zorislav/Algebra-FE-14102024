@@ -28,3 +28,26 @@ let totalPrice = price + (price * taxRate);
 let formattedPrice = totalPrice.toFixed(2);
 
 console.log("Total:", formattedPrice);
+
+
+//bonus dio
+
+console.log(void 1);
+
+//typeof
+
+console.log(typeof "Bok");
+
+//instanceof
+
+function Car (make, model) {
+this.tip = make;
+this.model = model;
+
+}
+
+const.vozilo = new Car('Fiat', 'Punto');
+
+console.log(vozilo);
+
+console.log(vozilo instanceof Car);
