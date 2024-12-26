@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontekstualni selektori</title>
+    <style>
+      body {
+        color: #333;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.3rem;
+      }
+      section p {
+        color: green;
+      }
+      footer section p {
+        font-family: "Courier New", Courier, monospace;
+      }
+      section > p {
+        text-decoration: line-through red;
+      }
+    </style>
+  </head>
+  <body>
+    <body>
+      <header>
+        <h2>Zaglavlje</h2>
+        <p>Odlomak 1</p>
+      </header>
+      <main>
+        <section>
+          <h1>Sekcija</h1>
+          <div>
+            <p>Odlomak 1</p>
+            <p>Odlomak 2</p>
+            <p>Odlomak 3</p>
+            <p>Odlomak 4</p>
+          </div>
+
+          <article>
+            <p>Odlomak 1</p>
+            <p>Odlomak 2</p>
+            <p>Odlomak 3</p>
+            <p>Odlomak 4</p>
+          </article>
+        </section>
+        <section>
+          <h1>Sekcija</h1>
+          <p>Odlomak 1</p>
+          <p>Odlomak 2</p>
+          <p>Odlomak 3</p>
+          <p>Odlomak 4</p>
+        </section>
+        <article>
+          <h1>Objava</h1>
+          <p>Odlomak 1</p>
+          <p>Odlomak 2</p>
+          <p>Odlomak 3</p>
+          <p>Odlomak 4</p>
+        </article>
+      </main>
+      <footer>
+        <h1>Podnožje</h1>
+        <section>
+          <h1>Sekcija</h1>
+          <p>Odlomak 1</p>
+          <p>Odlomak 2</p>
+          <p>Odlomak 3</p>
+        </section>
+        <section>
+          <h1>Sekcija</h1>
+          <p>Odlomak 1</p>
+          <p>Odlomak 2</p>
+          <p>Odlomak 3</p>
+        </section>
+      </footer>
+    </body>
+  </body>
+</html>

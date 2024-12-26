@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selektori atributa</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        body {
+            color: #333;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        [title] {
+            text-decoration: underline solid red;
+        }
+        [title="prvi odlomak"] {
+            font-weight: bold;
+        }
+        [title*="odlomak"] {
+            color: darkgreen;
+        }
+        [title~="odlomak"] {
+            text-transform: uppercase;
+        }
+        [title^="odlomak"] {
+            font-style: italic;
+        }
+        [title|="odlomak"] {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        [title$="odlomak"] {
+            color: orange;
+        }
+     </style>
+</head>
+<body>
+    <h1 title="Naslov stranice">Glavni naslov</h1>
+    <h2>Naslov druge razine</h2>
+    <h3>Naslov trece razine</h3>
+    <p title="prvi odlomak">
+        Magna ad reprehenderit consectetur magna in in elit eu occaecat. Dolor mollit id et aute do ut id cillum anim ut. 
+        Qui culpa irure cupidatat commodo deserunt eiusmod cillum voluptate non enim commodo excepteur incididunt anim. 
+        Tempor eiusmod pariatur ea irure incididunt id in. Adipisicing dolor sunt veniam deserunt eiusmod exercitation reprehenderit 
+        velit. Do ut labore pariatur qui ex sunt sunt eu ipsum ea. Consectetur ex sunt elit reprehenderit nostrud aute culpa eiusmod 
+        adipisicing dolore aute incididunt. Cupidatat culpa eu sunt et esse cillum mollit duis anim. Incididunt occaecat elit adipisicing 
+        dolore sit sunt enim id deserunt cupidatat laborum exercitation Lorem. Fugiat consequat deserunt nulla excepteur qui pariatur 
+        et non officia quis laboris voluptate.
+    </p>
+    <p title="odlomak-2">
+        Magna ad reprehenderit consectetur magna in in elit eu occaecat. Dolor mollit id et aute do ut id cillum anim ut. 
+        Qui culpa irure cupidatat commodo deserunt eiusmod cillum voluptate non enim commodo excepteur incididunt anim. 
+        Tempor eiusmod pariatur ea irure incididunt id in. <em>Adipisicing dolor sunt veniam deserunt eiusmod</em> exercitation reprehenderit 
+        velit. Do ut labore pariatur qui ex sunt sunt eu ipsum ea. Consectetur ex sunt elit reprehenderit nostrud aute culpa eiusmod 
+        adipisicing dolore aute incididunt. Cupidatat culpa eu sunt et esse cillum mollit duis anim. Incididunt occaecat elit adipisicing 
+        dolore sit sunt enim id deserunt cupidatat laborum exercitation Lorem. Fugiat consequat deserunt nulla excepteur qui pariatur 
+        et non officia quis laboris voluptate.
+    </p>
+    <p title="odlomak 3">
+        Magna ad reprehenderit consectetur magna in in elit eu occaecat. Dolor mollit id et aute do ut id cillum anim ut. 
+        Qui culpa irure cupidatat commodo deserunt eiusmod cillum voluptate non enim commodo excepteur incididunt anim. 
+        Tempor eiusmod pariatur ea irure incididunt id in. Adipisicing dolor sunt veniam deserunt eiusmod exercitation reprehenderit 
+        velit. Do ut labore pariatur qui ex sunt sunt eu ipsum ea. Consectetur ex sunt elit reprehenderit nostrud aute culpa eiusmod 
+        adipisicing dolore aute incididunt. Cupidatat culpa eu sunt et esse cillum mollit duis anim. Incididunt occaecat elit adipisicing 
+        dolore sit sunt enim id deserunt cupidatat laborum exercitation Lorem. Fugiat consequat deserunt nulla excepteur qui pariatur 
+        <strong>et non <span>officia</span> quis laboris voluptate.</strong>
+    </p>
+    <p title="odlomakbla">
+        Magna ad reprehenderit consectetur magna in in elit eu occaecat. Dolor mollit id et aute do ut id cillum anim ut. 
+        Qui culpa irure cupidatat commodo deserunt eiusmod cillum voluptate non enim commodo excepteur incididunt anim. 
+        Tempor eiusmod pariatur ea irure incididunt id in. Adipisicing dolor sunt veniam deserunt eiusmod exercitation reprehenderit 
+        velit. Do ut labore pariatur qui ex sunt sunt eu ipsum ea. Consectetur ex sunt elit reprehenderit nostrud aute culpa eiusmod 
+        adipisicing dolore aute incididunt. Cupidatat culpa eu sunt et esse cillum mollit duis anim. Incididunt occaecat elit adipisicing 
+        dolore sit sunt enim id deserunt cupidatat laborum exercitation Lorem. Fugiat consequat deserunt nulla excepteur qui pariatur 
+        et non officia quis laboris voluptate.
+    </p>
+    <p>
+        Magna ad reprehenderit consectetur magna in in elit eu occaecat. Dolor mollit id et aute do ut id cillum anim ut. 
+        Qui culpa irure cupidatat commodo deserunt eiusmod cillum voluptate non enim commodo excepteur incididunt anim. 
+        Tempor eiusmod pariatur ea irure incididunt id in. Adipisicing dolor sunt veniam deserunt eiusmod exercitation reprehenderit 
+        velit. Do ut labore pariatur qui ex sunt sunt eu ipsum ea. Consectetur ex sunt elit reprehenderit nostrud aute culpa eiusmod 
+        adipisicing dolore aute incididunt. <strong>Cupidatat <span title="span">culpa</span> eu sunt et esse</strong> cillum mollit duis anim. Incididunt occaecat elit adipisicing 
+        dolore sit sunt enim id deserunt cupidatat laborum exercitation Lorem. Fugiat consequat deserunt nulla excepteur qui pariatur 
+        et non officia quis laboris voluptate.
+    </p>
+</body>
+</html>
