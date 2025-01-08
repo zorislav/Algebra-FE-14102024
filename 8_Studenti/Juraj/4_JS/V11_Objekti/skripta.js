@@ -58,3 +58,29 @@ console.log(jsonAdresa);
 
 var adresaObjekt = JSON.parse(jsonAdresa);
 console.log(adresaObjekt);
+
+var Osoba = {
+	ime: "Perica",
+	prezime: "Horvat",
+	age: 55,
+	toJSON: function() {
+		return this.ime + " - " + this.prezime;
+	}
+};
+
+console.log(JSON.stringify(Osoba));
+
+var Osoba2 = {
+	ime: "Perica",
+	prezime: "Horvat",
+	toString: function () {
+		return "Ja sam " + this.ime + " " + this.prezime;
+	},
+};
+
+console.log(Osoba2.toString());
+
+var datum = new Date();
+
+console.log(datum.toString());
+console.log(datum.toLocaleString());
