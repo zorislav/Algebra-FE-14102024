@@ -50,3 +50,11 @@ for (key in auto) {
 
 console.log('Boja mog ' + auto.brend.tip + ' auta je ' + auto.boja);
 console.log(JSON.stringify(auto));
+
+// Bonus
+
+var jsonAdresa = '{"ulica":"Ilica","broj":"21","grad":"Zagreb"}';
+console.log(jsonAdresa);
+
+var adresaObjekt = JSON.parse(jsonAdresa);
+console.log(adresaObjekt);
