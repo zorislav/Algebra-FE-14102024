@@ -1,0 +1,26 @@
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  border: 1px solid #ccc;
+}
+
+li {
+  display: inline-block;
+  width: 19%;
+  background-color: #ffc;
+}
+p {
+  display: inline-block;
+  width: 24%;
+  border: 1px solid #ccc;
+  padding: 5;
+}
+.margina {
+  margin-left: -6px;
+}
