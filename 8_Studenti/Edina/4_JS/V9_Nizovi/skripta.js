@@ -17,10 +17,10 @@ names.push("Edina");
 console.log(names);
 
 // 3. Koristeći petlju, napravite iteraciju kroz
-// ovaj niz te nakon išto ispišete "Jane" izađite iz petlje.
+// ovaj niz te nakon što ispišete "Jane" izađite iz petlje.
 
 for (var i = 0; i <= names.length - 1; i++) {
-  console.log(names);
+  console.log(names[i]);
   if (names[i] === "Jane") {
     break;
   }
