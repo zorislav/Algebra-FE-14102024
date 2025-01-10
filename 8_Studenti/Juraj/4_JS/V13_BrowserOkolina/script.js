@@ -27,6 +27,25 @@ window.location.replace("http://www.google.com");
 
 // 	- Napišite naredbu koja otvara konfirmacijski prozor u browseru vezan uz politiku cookija
 
-window.confirm("Da ili ne");
-
+var rezultat = window.confirm("Allow cookies?");
+console.log(rezultat);
 // 	- Napišite jednostavnu console.log funkciju koja se izvršava 2 sekunde nakon što je pozvana
+
+window.setTimeout(function() {
+    console.log("I am late");
+}, 2000);
+
+
+//Bonus
+
+if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position){
+        console.log("Duzina: ", position.coords.longitude);
+        console.log("Sirina: ", position.coords.latitude);
+    });
+} else {
+    console.log("Geolocation disabled")
+}
+
+
+
