@@ -9,6 +9,13 @@ function isUnique(str) {
     // console.log(_.uniq(str));
 }
 
+//jedan kraći primjer:
+
+// function isUnique2(str) {
+//     return new Set(str).size == str.length;
+// }
+
+
 console.log(isUnique(password));
 
 for(var i=0; i < password.length; i++){
