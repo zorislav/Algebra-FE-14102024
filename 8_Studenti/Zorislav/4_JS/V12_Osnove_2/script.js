@@ -6,6 +6,10 @@ function isUnique(str) {
   return _.uniq(str).length == str.length;
 }
 
+// function isUnique2(str){
+//   return new Set(str).size == str.length;
+// }
+
 console.log(isUnique(password));
 
 // 2. Napisati funkciju koja provjerava da li su svi znakovi brojke
