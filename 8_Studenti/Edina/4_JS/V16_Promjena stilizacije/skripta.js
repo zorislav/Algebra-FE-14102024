@@ -24,14 +24,15 @@ console.log(marginLeft);
 
 // 	- animirajte veličinu margine body elementa od pocetne do 30px i natrag u ponavljajućoj petlji
 
-var marginNum = parseInt(marginLeft); //ova metoda parseInt konvertira STRING u INTEGER (8px u broj 8 konvertira)
+var marginNum = parseInt(marginLeft); //ova metoda parseInt konvertira STRING u INTEGER (broj) (8px u broj 8 konvertira)
 var reverse = false;
 
 function frame() {
   if (reverse) {
+    //ako je reverse true
     marginNum--;
   } else {
-    marginNum++;
+    marginNum++; //ako je reverse false
   }
   if (marginNum === 30) {
     reverse = true;
@@ -41,11 +42,12 @@ function frame() {
     reverse = false;
   }
 
-  body.style.margin = marginNum + "px";
+  body.style.margin = marginNum + "px"; //ovaj body je var = body koji smo u prethodnom zadatku definirali
 }
 
 var mojInterval = setInterval(frame, 2000); // setInterval izvršava funkciju frame svake  2 sekunde
 
 var mojTimeout = setTimeout(function () {
+  //setTimeout obustavlja setInterval nakon 10 sekundi
   clearInterval(mojInterval);
 }, 10000);

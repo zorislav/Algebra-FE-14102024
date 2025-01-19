@@ -1,14 +1,14 @@
-// var button = document.getElementById("btn");
+//2. nacin (kao svojstvo na elementu)
 
-// function onClickHandler() {
-//   console.log("Opet sam kliknuo");
-// }
+var button = document.getElementById("btn");
 
-// // button.onClick = onClickHandler;
+function onClickHandler() {
+  console.log("Opet sam kliknuo");
+}
 
-//2. nacin
+button.onClick = onClickHandler;
 
-//3.nacin:
+//3.nacin: (addEventListener)
 
 var button = document.getElementById("btn");
 

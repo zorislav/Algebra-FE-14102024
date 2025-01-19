@@ -15,8 +15,6 @@ var quotes = [
 // (naputak: koristite metode globalnog Object objekta).
 // Nadite prototip tog prototipa. Ispisite ih.
 
-// Object.getPrototypeOf(Object);  ovako nalazimo prototip GLAVNOG objekta
-
 var Prototip1 = Object.getPrototypeOf(character); // ovako nalazimo prototip character objekta
 console.log(Prototip1);
 
@@ -32,6 +30,7 @@ Prototip1.getQuote = function () {
   return Math.floor(Math.random() * quotes.length); // ovaj Math.random radi slučajan odabir između 0 i 1 a Math.floor te brojeve pretvara u cjelobrojne brojeve
 };
 
+console.log(Prototip1);
 console.log(quotes[character.getQuote]);
 
 //bonus - tu smo pristupili DIREKTNO PROTOTIPU OBJEKTA CHARACTER i nismo išli preko GLOBALNOG OBJEKTA
