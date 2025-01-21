@@ -1,12 +1,24 @@
-var character = {
-  name: 'Eleven',
-  show: 'Stranger Things',
-  portrayedBy: 'Millie Bobby Brown'
+// 1.
+a = 78;
+var b = 034;
+delete a;
+delete window.b;
+myObject = {property1:1, property2:2, property1:1};
+
+// 2.
+const users = [
+  { name: 'Fabio', surname: 'Biondi' },
+  { name: 'Mario', surname: 'Rossi' },
+];
+
+const user = { name: 'Lorenzo', surname: 'Verdi' };
+
+
+// 3.
+for (let i = 0; i < 10; i++) {
+ setTimeout(function() {
+   console.log('The number is ' + i);
+ }, 1000);
 }
 
-const quotes = [
-	'I\'m going to my friends. I\'m going home.', 
-	'Pure fuel! PURE FUEL! WOO!', 
-	'See? Zoomer.', 
-	'Bitchin.'
-];
+console.log(i);
