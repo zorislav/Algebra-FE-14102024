@@ -39,6 +39,7 @@ export var Exercise = (function () {
       return steps;
     },
     walk: function () {
+      //ova funkcija izvršava funkciju increaseSteps na ovom mjestu
       increaseSteps();
     },
   };
