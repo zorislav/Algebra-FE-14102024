@@ -12,3 +12,5 @@ Dog.prototype.getName = function() {
 const dog = new Dog('Skippy');
 
 console.log(dog.getName());
+
+
