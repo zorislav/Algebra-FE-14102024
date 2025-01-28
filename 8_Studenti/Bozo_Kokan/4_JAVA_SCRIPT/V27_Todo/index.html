@@ -10,20 +10,23 @@
     <header>
         <h1>My tasks</h1>
         <div class="button-group">
-        <button disabled>All</button>
-        <button>Active</button>
-        <button>Completed</button>
+        <button id="button-all" disabled>All</button>
+        <button id="button-active">Active</button>
+        <button id="button-completed">Completed</button>
         </div>
     </header>
 
     <main>
         <div id="section-todo">
-        <input type="text">
-        <input type="submit" value="add">
-        <ul></ul>            
+            <div id="section-input">
+                <input type="text" id="input-text" placeholder="Add todo">
+                <input type="submit" value="Add" id="input-add">
+            </div>
+        <ul class="ul-todo"></ul>            
         </div>
-
-        <button>Clear completed</button>
+        <div id="section-clear-completed">
+            <button id="button-clear-completed">Clear completed</button>
+        </div>
     </main>    
     <script src="script.js"></script>
 </body>
