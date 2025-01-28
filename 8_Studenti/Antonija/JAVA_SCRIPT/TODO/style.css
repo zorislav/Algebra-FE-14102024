@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  font-size: 48px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: rgb(68, 69, 68);
+}
+
+.button-group {
+  font-size: 0;
+}
+
+.button-group button {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(68, 69, 68);
+  border: 1px solid rgb(68, 69, 68);
+  background-color: rgb(204, 207, 204);
+  padding: 10px 24px;
+  cursor: pointer;
+}
+
+.button-groupbutton: not(: last-child) {
+  border-right: none;
+}
+
+.button-group button:disabled {
+  background-color: rgb(68, 69, 68);
+  color: rgb(204, 207, 204);
+}
+
+.button-group button:not(:disabled):hover {
+  background-color: rgb(175, 175, 173);
+  cursor: pointer;
+}
+
+#section-todo{
+  border: 1px solid rgb(68,69,68);
+  width: 60%;
+  margin: 50px auto 0 auto;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgb(175, 175, 173);
+}
