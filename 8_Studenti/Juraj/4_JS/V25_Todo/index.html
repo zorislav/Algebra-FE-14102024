@@ -9,20 +9,27 @@
 		<header class="header">
 			<h1>My tasks</h1>
             <div class="button-group">
-                <button disabled class="btn">All</button>
-                <button>Active</button>
-                <button>Completed</button>
+                <button id="button-all" disabled class="btn">All</button>
+                <button id="button-active">Active</button>
+                <button id="button-completed">Completed</button>
             </div>
             
 		</header>
 		<main>
-            <div id="section-todo">
-                <input placeholder="Add todo" autofocus>
-                <button class="addButton">Add</button>
-                <ul class="todoList"></ul>
-            </div>
+           
+        <div id="section-todo">
           
-            <button>Clear completed</button>
+            <div id="section-input">
+                <input id="input-text" type="text" placeholder="Add todo" autofocus/>
+                <input id="input-add" type="submit" value="Add">
+            </div>
+            
+            <ul class="ul-todo"></ul>
+        </div>
+        
+        <div id="section-clear-completed">
+            <button id="button-clear-completed">Clear completed</button>
+        </div>
 		</main>
         <script src="script.js"></script>
 	</body>
