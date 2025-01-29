@@ -6,6 +6,7 @@
     const allButton = document.querySelector("#button-all");
     const activeButton = document.querySelector("#button-active");
     const completedButton = document.querySelector("#button-completed");
+    const clearAllCompletedButton = document.querySelector("#button-clear")
 
     function addListItem() {
       let text = input.value;
@@ -66,12 +67,11 @@
 
     function showAll() {
       const listItems = list.getElementsByTagName("li");
+
       for (let i = 0; i < listItems.length; i++) {
-        const check = listItems[i].getElementsByTagName("input");
-        if (check[0].checked) {
-          listItems[i].style.display = "";
-        }
+        listItems[i].style.display = "";
       }
+
       allButton.disabled = true;
       activeButton.disabled = false;
       completedButton.disabled = false;
@@ -107,11 +107,23 @@
       completedButton.disabled = true;
     }
 
+    function removeAllCompleted(){
+      const listItems = list.getElementsByTagName("li");
+
+      for(let i = listItems.length-1; i >=0; i--){
+        const check = listItems[i].getElementsByTagName("input");
+        if(check[0].checked){
+          listItems[i].remove();
+        }
+      }
+    }
+
     this.addEventListeners = function () {
       addButton.addEventListener("click", addListItem);
       allButton.addEventListener("click", showAll);
       activeButton.addEventListener("click", showActive);
       completedButton.addEventListener("click", showCompleted);
+      clearAllCompletedButton.addEventListener("click", removeAllCompleted);
     };
   }
 
