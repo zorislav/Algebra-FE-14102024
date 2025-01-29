@@ -10,6 +10,7 @@ const list = document.querySelector("ul");
 const allButton = document.querySelector("#button-all");
 const activeButton = document.querySelector("#button-active");
 const completedButton = document.querySelector("#button-complete");
+const clearAllCompletedButton = document.querySelector("#button-clear-completed");
 
 
         function internaFunkcija(){}
@@ -120,16 +121,32 @@ const completedButton = document.querySelector("#button-complete");
                     listItems[i].style.display = "";
                 }
             }
+
             allButton.disabled = false;
             activeButton.disabled = false;
             completedButton.disabled = true;
+
+            function removeAllCompleted(){
+                const listItems = list.getElementsByTagName("li");
+
+                for(let i = listItems.length-1; i > 0; i--){
+                    const check = listItems[i].getElementsByTagName("input");
+                    if(check[0].checked){
+                        listItems[i].remove();
+                    }else{
+                        listItems[i].style.display = "";
+                    }
+                }
+            }
+
+
 
             this.addListeners = function(){
                 addButton.addEventListener("click", addListItem);
                 allButton.addEventListener("click", showAll);
                 activeButton.addEventListener("click", showActive);
                 completedButton.addEventListener("click", showCompleted);
-
+                clearAllCompletedButton.addEventListener("click", removeAllCompleted);
             };
 
             
