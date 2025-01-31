@@ -5,9 +5,11 @@
 // console.log(brojac);
 // console.log("Kraj");
 
-name = 'James'
+var name1 = 'James'
 
-const person = {first: name}
+var name2 = 10;
+
+const person = {first: name1}
 
 console.log(person)
 
