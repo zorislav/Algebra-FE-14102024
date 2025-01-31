@@ -1,4 +1,4 @@
-//1. Dodajte Dog funkciji varijablu "name" koja se
+//1. Dodajte Dog konstruktor funkciji varijablu "name" koja se
 //  postavlja pri kreiranju objekta i označava ime psa.
 // Defaultna vrijednost imena psa je "Rex".
 
@@ -20,7 +20,7 @@ console.log(dog.name); //tu će biti Skippy
 console.log(dog2.name); // tu će biti Rex jer nemamo ulazni parametar
 console.log(dog.bark()); //tu odmah izvršavamo fukciju koja vraća Wuf wuf
 
-// 3. Dodajte Dog funkciji metodu koja vraća postavljeno ime psa.
+// 3. Dodajte Dog konstruktor funkciji metodu koja vraća postavljeno ime psa.
 // Pozovite ju iz novostvorenog objekta i ispisite rezultat.
 
 Dog.prototype.getName = function () {
