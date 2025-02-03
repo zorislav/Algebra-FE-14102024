@@ -1,0 +1,15 @@
+{
+  "name": "mojdanaspaket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jure1988",
+  "license": "ISC",
+  "description": "demo npm modul",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
