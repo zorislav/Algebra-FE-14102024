@@ -1,0 +1,16 @@
+{
+  "name": "mojdanasnjipaket",
+  "version": "1.0.0",
+  "description": "Demo npm modul",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Edina",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
