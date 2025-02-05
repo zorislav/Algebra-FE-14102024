@@ -1,22 +1,26 @@
-import jsonp from 'jsonp'
+export const fetchData = async (inputElValue) => {
 
-function parseSong(song) {
-  if (song) {
-    return {
-      title: song.trackName,
-      artist: song.artistName,
-    }
+  const url = `https://itunes.apple.com/search?term=${inputElValue}&media=music`;
+
+  try {
+
+    const response = await fetch(url);
+    const data = await response.json();
+  
+    const returnData = data.results.map(result => {
+      return {
+        artist: result.artistName,
+        song: result.trackName
+      }
+    });
+  
+    return returnData;
+
+  } catch (error) {
+
+    console.log(error);
+    return [];
+
   }
-}
 
-function parseSongs(songs) {
-	return songs.map(parseSong).filter(Boolean);
-}
-
-export function fetchSongs(term) {
-  return new Promise(resolve => {
-    jsonp(`https://itunes.apple.com/search?term=${term}&entity=song`, (err, res) => {
-      resolve(parseSongs(res.results))
-    })
-  });
 }
