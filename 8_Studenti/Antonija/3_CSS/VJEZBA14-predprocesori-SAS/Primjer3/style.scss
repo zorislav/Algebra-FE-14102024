@@ -1,0 +1,63 @@
+$color1: #eee;
+$color2: #333;
+$color3: #800;
+$font1: tahoma, sans-serif;
+$font2: courier, monospace;
+
+body {
+  background-color: $color1;
+  color: $color2;
+  font-family: $font1;
+}
+
+@mixin align-element($display, $txt, $space) {
+  display: $display;
+  margin: $space;
+  text-align: $txt;
+}
+
+header {
+  a {
+    @include align-element(block, center, 1em auto);
+
+    background-color: $color2;
+    padding: 10px;
+    width: 300px;
+    color: $color1;
+  }
+}
+
+@mixin flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section {
+  @include flex-container();
+  background-color: $color3;
+  padding: 1em;
+  article{
+    flex-basis: 48%;
+    background-color: $color1;
+    a{
+  @include align-element(inline-block,right,1em 50px)}
+  }
+}
+
+@mixin a-button {
+  a{
+  background-color: $color2;
+  color: $color1;
+  padding: 10px;
+  margin: 1em;
+  &:hover {
+    background-color: $color3;
+  }
+  }
+}
+
+
+footer{
+  @include a-button();
+}

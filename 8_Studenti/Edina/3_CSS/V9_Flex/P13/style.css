@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.flex-container {
+  display: flex;
+  border: 1px dashed #666;
+  padding: 1em;
+  height: 600px;
+  align-items: flex-start; /*on se primjenjuje na flex container*/
+}
+
+.flex-item {
+  border: 1px solid #666;
+  background-color: #eee;
+  text-align: center;
+  margin: 1em;
+  padding: 1em;
+  width: 150px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.flex-item:nth-child(3) {
+  align-self: flex-end; /*on se primjenjuje na flex item */
+}

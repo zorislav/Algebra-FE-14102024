@@ -1,0 +1,17 @@
+body {
+  margin: 0px;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+
+body div:nth-child(1) {
+  background-color: cadetblue;
+}
+
+body div:nth-child(2) {
+  background-color: orange;
+  position: static;
+}
