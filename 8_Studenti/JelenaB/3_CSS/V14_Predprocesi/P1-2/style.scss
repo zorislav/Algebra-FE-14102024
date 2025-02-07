@@ -1,0 +1,19 @@
+$base_color: #333;
+$base_font: Tahoma;
+$acent_color: #800;
+
+body {
+  font: $base_font;
+  color: $base_color;
+}
+
+h1 {
+  color: $acent_color;
+}
+
+article {
+  border: $acent_color 1px solid;
+  a {
+    color: $acent_color;
+  }
+}
