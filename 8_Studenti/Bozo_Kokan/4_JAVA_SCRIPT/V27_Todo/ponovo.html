@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vjezba</title>
+</head>
+<body>
+    <div id="parent">
+        <p id="child">Tu sam</p>
+    </div>
+    <script>
+        const parentEl = document.querySelector("#parent");
+        const childEl = document.querySelector("#child");
+        const newEl = document.createElement("section");
+        parentEl.insertBefore(newEl, childEl);
+        const newTxt = document.createTextNode("Bok");
+        parentEl.appendChild(newTxt);
+        // .parentElement vs .parentNode
+    </script>
+</body>
+</html>

@@ -6,6 +6,8 @@
     const allButton = document.querySelector("#button-all");
     const activeButton = document.querySelector("#button-active");
     const completedButton = document.querySelector("#button-completed");
+    const clearAllCompletedButton = document.querySelector("#button-clear-completed");
+
 
     function addListItem() {
       let text = input.value;
@@ -110,11 +112,23 @@
       completedButton.disabled = true;
     }
 
+    function removeAllCompleted(){
+      const listItems = list.getElementsByTagName("li");
+    }
+
+    for(let i = 0; i < listItems.length; i++){
+      const check = listItems[i].getElementsByTagName("input");
+      if(check[0].checked){
+        listItems[i].remove();
+      }
+    }
+
     this.addListeners = function () {
       addButton.addEventListener("click", addListItem);
       allButton.addEventListener("click", showAll);
       activeButton.addEventListener("click", showActive);
       completedButton.addEventListener("click", showCompleted);
+      clearAllCompletedButton.addEventListener("click", removeAllCompleted);
     };
   }
 

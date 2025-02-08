@@ -46,7 +46,7 @@ console.log(allUsers);
    }, 1000);
    //console.log(i);
   }
-  //console.log(i);
+  console.log(i);
 
   // Bonus --- REST operator
 
