@@ -54,7 +54,7 @@ export default function main(){
       } else {
         noSongsMsg.style.display = "block";
       }  
-    }, 800);  
+    }, 2000);  
   }  
   inputElement.addEventListener("keyup", updateMusicList);
 }
