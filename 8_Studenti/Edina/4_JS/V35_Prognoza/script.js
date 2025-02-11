@@ -5,6 +5,8 @@ import {
   getWeatherData,
 } from "./utility/functions.js";
 
+import { tzMap } from "./utility/constants.js";
+
 document.addEventListener("DOMContentLoaded", main);
 
 async function main() {
@@ -20,6 +22,8 @@ async function main() {
   const currentWeatherItemsEl = document.getElementById(
     "current-weather-items"
   );
+  const currentTempEl = document.getElementById("current-temp");
+  const timeZoneEl = document.getElementById("time-zone");
 
   // Ev listener
   buttonEl.addEventListener("click", buttonElOnClick);
@@ -31,31 +35,22 @@ async function main() {
   let location = await getCurrentLocation();
   if (location.lat && location.lon) {
     inputLocationEl.innerHTML = "Current Location";
-    countryEl.innerHTML = `${location.lat} | ${location.lon}`;
   }
-
-  //ako nije uspjelo citanje lokacije:
 
   if (!location.lat && !location.lon) {
-    // ucitaj lokaciju iz localStorage location = ....
     location = getLocationFromLocalStorage();
   }
-
-  //ako i dalje nije uspjelo citanje lokacije, korisnik mora upisati lokaciju:
 
   if (!location.lat && !location.lon) {
     inputLocationEl.innerHTML = "No Location";
     alert("Please enter city name!");
     inputEl.focus();
   } else {
-    //if()
     if (location.city) {
       inputLocationEl.innerHTML = location.city;
     }
-    // dohvati podatke()
     const data = await getWeatherData(location.lat, location.lon);
-
-    // displayDate(vrijeme);
+    displayDate(data.timezone);
     showWeatherData(data);
   }
 
@@ -69,20 +64,19 @@ async function main() {
       const coordinates = await getCityLatLon(cityName);
       if (coordinates) {
         inputLocationEl.innerHTML = coordinates.city;
-        countryEl.innerHTML = `${coordinates.latitude} | ${coordinates.longitude}`;
         const data = await getWeatherData(
           coordinates.latitude,
           coordinates.longitude
         );
-        console.log(data);
-        // displayDate(vrijeme);
+        displayDate(data.timezone);
         showWeatherData(data);
+        inputEl.value = "";
       }
     }
   }
 
-  function displayDate() {
-    const mom = window.moment();
+  function displayDate(tzOff) {
+    const mom = tzOff ? window.moment().utcOffset(tzOff / 60) : window.moment();
 
     const day = mom.format("dddd");
     const date = mom.format("DD");
@@ -96,36 +90,58 @@ async function main() {
 
   function showWeatherData(data) {
     let humidity = data.main.humidity;
-    let pressure = 0;
-    let wind_speed = 0;
-    let sunrise = 0;
-    let sunset = 0;
+    let pressure = data.main.pressure;
+    let wind_speed = data.wind.speed;
+    let sunrise = data.sys.sunrise;
+    let sunset = data.sys.sunset;
+    let lat = data.coord.lat;
+    let lon = data.coord.lon;
+    let tzOff = data.timezone;
+
+    countryEl.innerHTML = `${lat} | ${lon}`;
+    timeZoneEl.innerHTML = tzMap.get(tzOff);
 
     currentWeatherItemsEl.innerHTML = `
-    <div class ="weather-item">
-    <div>Humidity</div>
-    <div>${humidity}</div>
-    </div>
+      <div class="weather-item">
+        <div>Humidity</div>
+        <div>${humidity}</div>
+      </div>
+      <div class="weather-item">
+        <div>Pressure</div>
+        <div>${pressure}</div>
+      </div>
+      <div class="weather-item">
+        <div>Wind Speed</div>
+        <div>${wind_speed}</div>
+      </div>
+      <div class="weather-item">
+        <div>Sunrise</div>
+        <div>${window
+          .moment(sunrise * 1000)
+          .utcOffset(tzOff / 60)
+          .format("HH:mm a")}</div>
+      </div>
+      <div class="weather-item">
+        <div>Sunset</div>
+        <div>${window
+          .moment(sunset * 1000)
+          .utcOffset(tzOff / 60)
+          .format("HH:mm a")}</div>
+      </div>
+    `;
 
-    <div class ="weather-item">
-    <div>Pressure</div>
-    <div>${pressure}</div>
-    </div>
+    let minTemp = data.main.temp_min;
+    let maxTemp = data.main.temp_max;
+    let currentDay = window.moment(data.dt * 1000).format("dddd");
+    let weatherIcon = data.weather[0].icon;
 
-    <div class ="weather-item">
-    <div>Wind speed</div>
-    <div>${wind_speed}</div>
-    </div>
-
-    <div class ="weather-item">
-    <div>Sunrise</div>
-    <div>${sunrise}</div>
-    </div>
-
-    <div class ="weather-item">
-    <div>Sunset</div>
-    <div>${sunset}</div>
-    </div>
+    currentTempEl.innerHTML = `
+      <img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="slika" />
+      <div class="other">
+        <div class="day">${currentDay}</div>
+        <div class="temp">Min: ${minTemp}&#176;C</div>
+        <div class="temp">Max: ${maxTemp}&#176;C</div>
+      </div>
     `;
   }
 }
