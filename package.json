@@ -11,5 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "eslint": "^9.19.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ju1988/Algebra-FE-14102024.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ju1988/Algebra-FE-14102024/issues"
+  },
+  "homepage": "https://github.com/Ju1988/Algebra-FE-14102024#readme"
 }
