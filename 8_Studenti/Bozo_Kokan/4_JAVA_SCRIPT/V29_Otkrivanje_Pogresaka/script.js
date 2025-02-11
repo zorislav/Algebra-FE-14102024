@@ -6,6 +6,8 @@
 // console.log("Kraj");
 
 var name1 = "James";
+var name2 = 10;
+
 const person = {
     first: name1
 };
@@ -14,7 +16,7 @@ console.log(person);
 
 const sayHelloLinting = (fName) => {
     console.log(`Hello linting, ${fName}`);
-}
+};
 
 // terminal npm install {package} --save-dev samo za development proces u build nece bit ukljucen
 // terminal npm install {package} ukljucuje se u build product

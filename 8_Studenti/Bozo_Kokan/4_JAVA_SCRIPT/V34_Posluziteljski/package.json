@@ -1,16 +1,15 @@
 {
-  "name": "v29_otkrivanje_pogresaka",
+  "name": "mojpaket",
   "version": "1.0.0",
-  "main": "script.js",
+  "description": "Demo npm module",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "eslint": "^9.19.0"
+    "lodash": "^4.17.21"
   }
 }
- 
