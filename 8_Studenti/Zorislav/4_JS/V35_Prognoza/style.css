@@ -120,3 +120,26 @@ main .today .temp {
   font-size: 18px;
   padding-top: 15px;
 }
+
+main .current-info .others .weather-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+
+  main .current-info-container {
+    flex-direction: column;
+  }
+
+  header .place-container {
+    margin-bottom: 20px;
+  }
+
+  main .current-info {
+    margin-bottom: 20px;
+  }
+}
