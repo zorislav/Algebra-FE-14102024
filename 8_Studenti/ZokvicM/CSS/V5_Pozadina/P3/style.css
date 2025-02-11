@@ -1,0 +1,16 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #ddd;
+}
+
+P:first-of-type {
+  background: #ffc url(light-bulb.png) center center/contain no-repeat;
+}
+P:nth-of-type(4) {
+  background: url(orange.png) right top/200px no-repeat,
+    url(butterfly.png) no-repeat left center/1000px,
+    url(coffee-cup.png) no-repeat center center/contain,
+    url(pattern.png) #ccf;
+}
