@@ -4,8 +4,8 @@ var mojeIme;
 
 var firstName, lastName, price, discount, fullPrice;
 
-var firstName =     "John";
-var lastName = "Doe"
+var firstName = "John";
+var lastName = "Doe";
 
 var price = 19.90;
 var discount = 0.10;
@@ -19,7 +19,7 @@ if (x == 1) {
 var a;
 	
 	if (a) {
-	var z = 44
+	var z = 44;
 		//return 0;
 	}
 

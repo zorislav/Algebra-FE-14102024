@@ -1,0 +1,58 @@
+body {
+    background-color: #eee;
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: #eee;
+}
+
+header {
+    text-align: center;
+    h1 {
+        color: violet;
+    }
+    p {
+        font-size: 20px;
+    }
+    a {
+        color: paleturquoise;
+    }
+}
+
+section {
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    p {
+        text-align: justify;
+    }
+    a {
+        color: rebeccapurple;
+    }
+    article {
+        background-color: violet;
+        p {
+            color: #eee;
+        }
+        a {
+            color: rebeccapurple;
+        }
+    }
+}
+
+footer {
+    h1 {
+        color: paleturquoise;
+    }
+    p {
+        font-size: 12px;
+    }
+    a {
+        color: palevioletred;
+        font-size: 20px;
+    }
+}
