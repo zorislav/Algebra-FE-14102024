@@ -1,6 +1,6 @@
 import { API_KEY } from "./constants.js";
 
-// Funkcija koja čita trenutnu lokaciju
+// Funkcija za trenutnu lokaciju
 export function getCurrentLocation() {
   const position = {
     lat: null,
@@ -33,7 +33,7 @@ export function getLocationFromLocalStorage() {
   return position;
 }
 
-// Za izabranu lokaciju procitaj koordinate
+// Za izabranu lokaciju navedi koordinate
 export async function getCityLatLon(cityName) {
   try {
     const response = await fetch(
@@ -50,7 +50,7 @@ export async function getCityLatLon(cityName) {
       city: retCity,
     };
 
-    // Spremi duzinu i sirinu u local storage
+    // Spremi latitude i longitude u local storage
     localStorage.setItem("latitude", retLat);
     localStorage.setItem("longitude", retLon);
     localStorage.setItem("city", retCity);
@@ -61,7 +61,7 @@ export async function getCityLatLon(cityName) {
   }
 }
 
-// Funkcija koja ucitava podatke za danu duzinu i sirinu i poziva funkciju koja prikazuje ucitane podatke
+// Funkcija koja učitava podatke za danu latitude i longitude i poziva funkciju koja prikazuje učitane podatke
 export async function getWeatherData(latitude, longitude) {
   try {
     const response = await fetch(

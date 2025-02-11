@@ -28,21 +28,21 @@ async function main() {
   // Prebaci fokus na input element
   inputEl.focus();
 
-  // Prikazi trenutni datum i vrijeme
+  // Prikaži trenutni datum i vrijeme
   displayDate();
 
-  // Procitaj lokaciju browsera
+  // Pročitaj lokaciju browsera
   let location = await getCurrentLocation();
   if (location.lat && location.lon) {
     inputLocation.innerHTML = "Current Location";
   }
 
-  // Ako lokacija nije procitana pokusaj procitati iz localStorage
+  // Ako lokacija nije pročitana pokušaj pročitati iz localStorage
   if (!location.lat && !location.lon) {
     location = getLocationFromLocalStorage();
   }
 
-  // Ako lokacija i dalje nije procitana prikazi poruku
+  // Ako lokacija i dalje nije pročitana prikaži poruku
   if (!location.lat && !location.lon) {
     inputLocation.innerHTML = "No Location";
     alert("Please enter city name!");
@@ -51,8 +51,10 @@ async function main() {
     if (location.city) {
       inputLocation.innerHTML = location.city;
     }
+    // dohvaćanje podataka
     const data = await getWeatherData(location.lat, location.lon);
     displayDate(data.timezone);
+    // display Date(vrijeme)
     showWeatherData(data);
   }
 
@@ -94,9 +96,9 @@ async function main() {
     dateEl.innerHTML = `${day}, ${date} ${month}`;
   }
 
-  // Funkcija koja prikazuje ucitane podatke
+  // Funkcija koja prikazuje učitane podatke
   function showWeatherData(data) {
-    // Izdvoji dio ucitanih podataka
+    // Izdvoji dio učitanih podataka
     let humidity = data.main.humidity;
     let pressure = data.main.pressure;
     let wind_speed = data.wind.speed;
@@ -106,11 +108,11 @@ async function main() {
 
     //let { humidity, pressure, sunrise, sunset, wind_speed } = data.current;
 
-    // Prikazi vremensku zonu, duzinu i sirinu
+    // Prikaži vremensku zonu, dužinu i širinu
     timezone.innerHTML = tzMap.get(data.timezone);
     countryEl.innerHTML = data.coord.lat + "N | " + data.coord.lon + "E";
 
-    // Prikazi vlagu, tlak, brzinu vjetra, vrijeme izlaska i zalaska sunca
+    // Prikaži vlagu, tlak, brzinu vjetra, vrijeme izlaska i zalaska sunca
     currentWeatherItemsEl.innerHTML = `
           <div class="weather-item">
               <div>Humidity</div>
@@ -135,7 +137,7 @@ async function main() {
           </div>
       `;
 
-    // Prikazi tekucu prognozu
+    // Prikazi tekuću prognozu
     const currentDay = window
       .moment(data.dt * 1000)
       .utcOffset(data.timezone / 60);
