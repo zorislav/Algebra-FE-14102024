@@ -45,3 +45,29 @@ export async function getCityLatLon(cityName) {
     alert("City not found!");
   }
 }
+
+export async function getWeatherData(latitude, longitude) {
+  try {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API_KEY}`
+    );
+    const responseData = await response.json();
+    return responseData;
+  } catch (error) {
+    alert(error);
+  }
+}
+
+export function getLocationFromLocalStorage() {
+  const position = {
+    lat: null,
+    lon: null,
+    city: null,
+  };
+
+  position.lat = localStorage.getItem("latitude");
+  position.lon = localStorage.getItem("longitude");
+  position.city = localStorage.getItem("city");
+
+  return position;
+}
