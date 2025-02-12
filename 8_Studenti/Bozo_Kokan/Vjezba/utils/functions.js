@@ -2,11 +2,16 @@ export function createButton(element) {
     const listaProizvod = element.querySelector(".info_proizvod");
 
     const dodajButton = document.createElement("button");
-    dodajButton.className = "dodaj_proizvod";  
+    const divButton = document.createElement("div");
+
+    divButton.className = "btn_style";
+
     dodajButton.textContent = "Dodaj Proizvod"; 
+    dodajButton.className = "dodaj_prozivod";
     dodajButton.addEventListener("click", dodajProizvod);  
 
-    listaProizvod.appendChild(dodajButton);
+    listaProizvod.appendChild(divButton);
+    divButton.appendChild(dodajButton);
 }
 
 export function dodajProizvod() {
@@ -37,7 +42,7 @@ export function dodajProizvod() {
     slikaProizvoda.className = "slika_proizvoda";
 
     const divInfoMarket = document.createElement("div");
-    divInfoMarket.className = "proizvod_info_market";
+    divInfoMarket.className = "proizvod_info_market_2";
 
     const saveButton = document.createElement("button");
     saveButton.className = "save_button";  // Class for styling
@@ -45,12 +50,10 @@ export function dodajProizvod() {
     
     ime.appendChild(unesiteIme);  
     proizvod.appendChild(ime);  
-    proizvod.appendChild(uploadImage); 
-    proizvod.appendChild(cijena);  
-    proizvod.appendChild(slikaProizvoda);  
-    proizvod.appendChild(divInfoMarket);  
+    proizvod.appendChild(uploadImage);  
+    proizvod.appendChild(divInfoMarket);
+    divInfoMarket.appendChild(cijena);  
     divInfoMarket.appendChild(saveButton);  
 
-    // Append the new product to the list
     listaProizvod.appendChild(proizvod);
 }
