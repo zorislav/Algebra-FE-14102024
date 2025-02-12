@@ -8,35 +8,37 @@ h1 {
   font-size: 48px;
   margin-top: 40px;
   margin-bottom: 20px;
+  color: rgb(68, 69, 68);
 }
 
-.btnGrupa {
+.button-group {
   font-size: 0;
 }
 
-.btnGrupa button {
+.button-group button {
   font-size: 16px;
   font-weight: bold;
-  border: 1px solid rgb(69, 69, 68);
-  color: rgb(69, 69, 68);
+  border: 1px solid rgb(68, 69, 68);
+  color: rgb(68, 69, 68);
   background-color: rgb(204, 207, 204);
   padding: 10px 24px;
 }
-.btnGrupa button:not(:last-child) {
+
+.button-group button:not(:last-child) {
   border-right: none;
 }
 
-.btnGrupa button:disabled {
+.button-group button:disabled {
   background-color: rgb(68, 69, 68);
   color: rgb(204, 207, 204);
 }
 
-.btnGrupa button:not(:disabled):hover {
+.button-group button:not(:disabled):hover {
   background-color: rgb(173, 175, 173);
   cursor: pointer;
 }
 
-#todo {
+#section-todo {
   border: 1px solid rgb(68, 69, 68);
   width: 60%;
   margin: 50px auto 0px auto;
@@ -51,7 +53,7 @@ h1 {
 #input-text {
   width: 70%;
   text-align: left;
-  border: 1px solid rgb(69, 69, 68);
+  border: 1px solid rgb(68, 69, 68);
 }
 
 #input-text:focus {
@@ -62,9 +64,9 @@ h1 {
   width: 30%;
   font-size: 16px;
   font-weight: bold;
-  color: rgb(68, 69, 79);
+  color: rgb(68, 69, 68);
   background-color: rgb(204, 207, 204);
-  padding: 5px 20px;
+  padding: 10px 24px;
   cursor: pointer;
   border: 1px solid rgb(68, 69, 68);
 }
@@ -73,25 +75,25 @@ h1 {
   background-color: rgb(173, 175, 173);
 }
 
-#button-clear {
+#button-clear-completed {
   border: 0;
-  color: rgb(68, 69, 79);
+  color: rgb(68, 69, 68);
   background-color: white;
   margin-top: 20px;
-  float: right;
+  /* float: right; */
 }
 
-#section-clear {
-  width: 60%;
-  margin: auto;
-}
+/* #section-clear-completed {
+  /* width: 60%;
+    margin: auto; */
+/* } */
 
-#button-clear:hover {
+#button-clear-completed:hover {
   font-weight: bold;
-  cursor: crosshair;
+  cursor: pointer;
 }
 
-#todo ul {
+#section-todo ul {
   padding-left: 0;
 }
 
@@ -106,7 +108,7 @@ h1 {
   margin: 20px;
   color: rgb(68, 69, 68);
   font-weight: bold;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .li-container {
@@ -114,6 +116,32 @@ h1 {
   justify-content: space-between;
 }
 
-.li-container-int input{
- margin: 20px; 
+.li-container-int input {
+  margin: 20px;
+}
+
+#bottom-toolbar {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+#bottom-buttons {
+  display: flex;
+}
+
+.firebase-button {
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid rgb(68, 69, 68);
+  color: rgb(68, 69, 68);
+  background-color: rgb(204, 207, 204);
+  padding: 10px 24px;
+  cursor: pointer;
+}
+
+.firebase-button:hover {
+  background-color: rgb(173, 175, 173);
 }
