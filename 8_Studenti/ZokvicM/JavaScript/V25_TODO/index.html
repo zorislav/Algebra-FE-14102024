@@ -10,18 +10,23 @@
     <header>
       <h1>Moji zadaci</h1>
       <div class="btnGrupa">
-        <button disabled>Sve</button>
-        <button>Aktivno</button>
-        <button>Izvršeno</button>
+        <button id="button-all" disabled>Sve</button>
+        <button id="button-active">Aktivno</button>
+        <button id="button-completed">Izvršeno</button>
       </div>
     </header>
     <main>
       <div id="todo">
-        <input type="text" />
-        <input type="submit" value="Dodaj" />
-        <ul></ul>
+        <div id="section-input">
+          <input id="input-text" type="text" placeholder="Upiši" />
+          <input id="input-add" type="submit" value="Dodaj" />
+        </div>
+        <ul class="ul-todo"></ul>
       </div>
-      <button>Izbriši sve! (izvršeno)</button>
+      <div id="section-clear">
+        <button id="button-clear">Izbriši sve! (izvršeno)</button>
+      </div>
     </main>
+    <script src="skripta.js"></script>
   </body>
 </html>
