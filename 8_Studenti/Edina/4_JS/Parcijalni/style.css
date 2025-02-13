@@ -38,6 +38,21 @@ h3 {
   height: 50px;
   border-radius: 50px;
   animation: spin 2s linear infinite;
+  margin: 50px auto;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border: 1px solid #979897;
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  background-color: #979897;
+  width: 70%;
 }
 
 @keyframes spin {
