@@ -6,18 +6,22 @@
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 4%;
 }
 
 header div {
     display: flex;
-    align-items: center;
+    flex-direction: column;  
+    flex-wrap: wrap;        
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;          
 }
 
 header img {
-    width: 15.5%;
+    width: 25%;
 }
 
 header h1 {
@@ -26,8 +30,17 @@ header h1 {
     flex-grow: 1;
 }
 
-header nav {
-    width: 22.5%;
+header div nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+header div nav button {
+    padding: 3.5%;
+    margin-left: 4%;
 }
 
 header nav ul {
@@ -67,6 +80,8 @@ main{
     flex-direction: column;
     margin: 3.5% 0;
     border: 2px solid #151518;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     position: relative;
     flex-grow: 1;
@@ -81,7 +96,8 @@ main{
 
 .kategorije button {
     margin: 6.5% 6%;
-    border-radius: 40%;
+    padding: 3%;
+    border-radius: 30%;
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: bolder;
@@ -108,6 +124,8 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .proizvod_flex {
@@ -124,7 +142,7 @@ main{
 }
 
 .proizvod {
-    margin: 1% 1%;
+    margin: 1%;
     padding: 1%;
     width: 28.21%;
     border: 1px solid #151518;
@@ -132,6 +150,7 @@ main{
 }
 
 .ime {
+    margin-top: 1%;
     font-size: 1.5rem;
     text-align: start;
     font-weight: bold;
@@ -145,8 +164,17 @@ main{
 }
 
 .proizvod_info_market {
+    margin-top: 1%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.proizvod_info_market_2 {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
 }
@@ -173,10 +201,131 @@ main{
 }
 
 .add_to_cart:hover {
+    cursor: pointer;
+    background-color: #151518;
+    color: #eee ;
+}
+
+.btn_style {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.dodaj_prozivod{
+    padding: 0.5%;
+    border-radius: 20%;
+    background-color: #53535c;
+    color: #eee;
+}
+
+.dodaj_prozivod:hover{
+    cursor: pointer;
     background-color: #151518;
     color: #eee ;
 }
 
 .save_button {
-    
+    padding: 0 2%;
+    border-radius: 20%;
+    background-color: #53535c;
+    color: #eee;  
+    width: 25%;
+    margin-top: 5.5%;
+}
+
+.save_button:hover {
+    cursor: pointer;
+    background-color: #151518;
+    color: #eee ;    
+}
+
+.input_ime_proizvoda {
+    margin-top: 1%;
+}
+
+.upload_image {
+    margin-top: 5.5%;
+}
+
+.input_cijena {
+    margin-top: 5.5%;
+}
+
+@media (max-width: 768px) {
+    header {
+        margin: auto;   
+        justify-content: center;
+        align-items: center;  
+    }
+
+    header div {
+        display: flex;
+        flex-direction: column;  
+        flex-wrap: wrap;        
+        justify-content: center; 
+        align-items: center;     
+        text-align: center;          
+    }
+
+    header div img {
+        width: 200px;
+    }
+
+    header div h1 {
+        width: 100%;
+    }
+
+    header div nav {
+        margin-top: 5%;
+        width: 100%;
+        height: 100%;
+        button {
+            margin-top: 4%;
+        }
+    }
+
+    .kategorija_flex {
+        width: 100%;
+        margin-top: 5%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .kategorije {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1%;
+    }
+
+    .kategorije button {
+        margin: 1.5%;
+        padding: 0.8%;
+    }
+
+    .proizvod {
+        width: 45%;
+    }
+}
+
+@media (max-width: 425px) {
+    .lista_proizvoda {
+        justify-content: center;
+        align-items: center;
+    }
+    .proizvod {
+        padding: 7%;
+        margin-top: 5%;
+        width: 75%;
+    }
+}
+
+@media (max-width: 375px) {
+    header div nav {
+        display: flex;
+        flex-direction: column;
+    }
 }
