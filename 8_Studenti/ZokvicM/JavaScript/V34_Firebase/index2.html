@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO Aplikacija - Firebase</title>
+    <link rel="stylesheet" href="stil.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Moji zadaci</h1>
+      <div class="btnGrupa">
+        <button id="button-all" disabled>Sve</button>
+        <button id="button-active">Aktivno</button>
+        <button id="button-completed">Izvršeno</button>
+      </div>
+    </header>
+    <main>
+      <div id="todo">
+        <div id="section-input">
+          <input id="input-text" type="text" placeholder="Upiši" />
+          <input id="input-add" type="submit" value="Dodaj" />
+        </div>
+        <ul class="ul-todo"></ul>
+      </div>
+      <div id="bottom-toolbar">
+        <div id="bottom-button">
+          <button id="load">Loudanje</button>
+          <button id="save">Sejvanje</button>
+          <div id="section-clear">
+            <button id="button-clear">Izbriši sve! (izvršeno)</button>
+          </div>
+        </div>
+    </div>
+    </main>
+    <script src="skripta.js"></script>
+  </body>
+</html>

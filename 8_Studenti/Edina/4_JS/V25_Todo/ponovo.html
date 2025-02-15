@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parent">
+      <p id="child">Tu sam</p>
+    </div>
+    <script>
+      const parentEl = document.querySelector("#parent");
+      const childEl = document.querySelector("#child");
+      const newElement = document.createElement("section");
+      parentEl.insertBefore(newElement, childEl); //prije elementa childEl smo umetnuli element newElement
+      const newTxt = document.createTextNode("Bok");
+      parentEl.appendChild(newTxt);
+    </script>
+  </body>
+</html>

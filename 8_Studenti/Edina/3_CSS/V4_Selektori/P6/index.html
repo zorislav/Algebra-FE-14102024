@@ -30,7 +30,8 @@
         font-family: "Courier New", Courier, monospace;
       }
 
-      /* svaki treći p je označen plavom */
+      /* svaki treći p  (ali moraju biti djeca roditelja, ne potomci)
+      je označen plavom */
       p:nth-child(2n + 1) {
         color: blue;
       }
@@ -49,6 +50,7 @@
         text-transform: uppercase;
       }
 
+      /* svaki treći p (ne moraju biti djeca već svi potomci) je označen tirkiznom */
       p:nth-of-type(2n + 1) {
         color: darkturquoise;
       }

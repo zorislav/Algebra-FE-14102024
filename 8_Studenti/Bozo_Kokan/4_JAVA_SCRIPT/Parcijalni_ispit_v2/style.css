@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+}
+nav img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+nav #logoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+nav #inputContainer {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#loadingSpinner {
+    /* display: none; */
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
