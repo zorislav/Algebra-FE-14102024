@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupni Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #chat {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            background: #f4f4f4;
+        }
+        #input-area {
+            display: flex;
+            padding: 10px;
+            background: #ddd;
+        }
+        #input-area input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #input-area button {
+            margin-left: 10px;
+            padding: 10px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat"></div>
+    <div id="input-area">
+        <input type="text" id="message" placeholder="Upiši poruku...">
+        <button onclick="sendMessage()">Pošalji</button>
+    </div>
+
+    <script>
+        const ws = new WebSocket("ws://localhost:3000");
+        const chat = document.getElementById("chat");
+        const messageInput = document.getElementById("message");
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            const messageEl = document.createElement("div");
+
+            if (data.type === "info") {
+                messageEl.textContent = `[INFO] ${data.message}`;
+            } else if (data.type === "chat") {
+                messageEl.textContent = `[${data.username}] ${data.message}`;
+            } else if (data.type === "private") {
+                messageEl.textContent = `[Privatno od ${data.from}] ${data.message}`;
+            }
+
+            chat.appendChild(messageEl);
+            chat.scrollTop = chat.scrollHeight; // Automatski scroll na dno
+        };
+
+        function sendMessage() {
+            const message = messageInput.value;
+            if (message.trim() === "") return;
+            ws.send(JSON.stringify({ type: "chat", message }));
+            messageInput.value = "";
+        }
+    </script>
+</body>
+</html>
