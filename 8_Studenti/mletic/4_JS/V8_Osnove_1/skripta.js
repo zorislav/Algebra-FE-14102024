@@ -23,6 +23,8 @@ if (z === 2) {
 }
 console.log(x);
 
+//3. Napišite petlju koja će prolaziti kroz brojeve od 1 do 20. Za svaku će iteraciju provjeriti je li trenutni broj paran ili neparan, i console.log-ati rezultat (npr. "Broj 2 je paran").
+
 for (var i = 1; i <= 20; i++) {
   if (i % 2 === 0) {
     console.log("Broj: " + i + " je paran");
