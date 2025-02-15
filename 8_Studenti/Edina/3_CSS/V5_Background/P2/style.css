@@ -10,7 +10,7 @@ body {
   background-repeat: no-repeat;
 
   /* možemo staviti auto ili cover (da bude po cijeloj pozadini) ili 
-  contain (da se slika prilagodi velicini elementa */
+  contain (da se slika prilagodi velicini elementa) */
   background-size: 25%;
 
   background-position: center center;

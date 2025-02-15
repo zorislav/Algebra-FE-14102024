@@ -1,0 +1,13 @@
+.div1 {
+  background-color: blue;
+  width: 300px;
+  height: 300px;
+}
+%div2 {
+  background-color: green;
+  width: 300px;
+  height: 300px;
+}
+.div3 {
+  @include %div2;
+}

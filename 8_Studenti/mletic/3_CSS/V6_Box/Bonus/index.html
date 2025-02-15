@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box-sizing</title>
+    <style>
+      /* CSS Reset Pravila
+      */
+
+      * {
+        box-sizing: content-box;
+        margin: 0;
+      }
+      html {
+        background-color: green;
+      }
+      :root {
+        background-color: blue;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        background-color: yellow;
+        border: 10px solid red;
+        padding: 20px;
+        margin: 5px;
+        box-sizing: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "algebra-fe-14102024",
+  "version": "1.0.0",
+  "description": "Materijali za Algebra Front-End Developer tečaj - grupa od 14.10.2024.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "antonija",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^9.19.0"
+  }
+}

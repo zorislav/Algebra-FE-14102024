@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-sizing</title> /*https://www.youtube.com/watch?v=WlGQdgy-M6w tutorial box sizing*/
+    <style>
+        /*CSS Reset pravila*/
+
+        * /* selektira sve elemente, ako ne napravimo da selektira sve nego pojedino onda box-sizing treba pisat posebno u svakom elementu i napisati za svaki value */{
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        :root{
+            background-color: blue;
+        }
+
+        html {
+         background-color: green;
+        }
+
+        body > div:nth-child(1){
+          width: 500px;
+          height: 500px;
+          background-color: yellow;
+          border: 10px solid red;
+          padding: 20px;
+          margin: 5px;
+          /* box-sizing: border-box; */
+        }
+
+        body > div:nth-child(2){
+          width: 500px;
+          height: 500px;
+          background-color: yellow;
+          border: 10px solid red;
+          padding: 20px;
+          margin: 5px;
+          box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+</html>

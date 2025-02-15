@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.flex-container {
+  display: flex;
+  border: 1px dashed;
+  padding: 1rem;
+}
+
+.flex-item {
+  border: 1px solid;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: lightgray;
+  width: 10rem;
+  text-align: center;
+}

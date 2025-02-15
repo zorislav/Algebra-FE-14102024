@@ -18,3 +18,12 @@ h3 {
 h4 {
   color: rgb(102, 94, 212);
 }
+p {
+  text-align: justify;
+}
+em {
+  color: red;
+}
+strong {
+  text-decoration: underline wavy red;
+}

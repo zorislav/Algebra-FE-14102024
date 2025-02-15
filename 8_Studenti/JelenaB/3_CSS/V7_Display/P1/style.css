@@ -1,0 +1,36 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  background-color: orange;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.box {
+  width: 300px;
+  height: 100px;
+}
+
+.none {
+  display: none;
+}
+
+em {
+  background-color: pink;
+}
+
+.block {
+  display: block;
+}
