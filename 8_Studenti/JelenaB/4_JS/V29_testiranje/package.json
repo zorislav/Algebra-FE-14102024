@@ -1,0 +1,14 @@
+{
+  "name": "v29_testiranje",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
