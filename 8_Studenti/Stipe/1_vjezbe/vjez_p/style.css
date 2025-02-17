@@ -1,0 +1,120 @@
+html{
+    background: url("https://scontent.fzag1-2.fna.fbcdn.net/v/t1.6435-9/47265873_2028225233911739_8896178078171004928_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=077Xw_6PaesQ7kNvgFY0lCy&_nc_oc=AdiMV4s1guEhN0igpy8ctipSP-v6TIE0vQqpHF__aFah_ei_YZAfMEshB7WiKarh0xk&_nc_zt=23&_nc_ht=scontent.fzag1-2.fna&_nc_gid=AkrAo3TXxf45E4FL4F7o5tz&oh=00_AYBbieXwXDmxBviEjc7lL9JzHVIfB7QLBv3JdecnwQxRgA&oe=67D0677C") no-repeat center center fixed;
+    background-size: cover;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+header input{
+    font: inherit;
+    border: 1px solid #3c3c44;
+    border-radius: 15px;
+    font-size: 1rem;
+    padding: 5px 15px;
+}
+
+header button{
+    font: inherit;
+    border: none;
+    color: #eee;
+    background-color: #3c3c44;
+    border-radius: 50px;
+    font-size: 1rem;
+    padding: 5px 15px;
+}
+
+header button:hover{
+    background-color: #151518;
+    cursor: pointer;
+}
+
+header .place-container{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    color: #fff;
+}
+
+header #input-location{
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header .place-container .time-zone{
+    font-size: 24;
+    font-weight: 100;
+}
+
+header .place-container .country{
+    font-size: 24;
+    font-weight: 700;
+}
+
+main{
+    color: #fff;
+}
+
+main .current-info-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .date-container{
+    font-weight: 100;
+}
+
+main .date-container .date{
+    font-size: 30px;
+}
+
+main .date-container .time{
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+main .current-info-container .today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+main .current-info .others{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(24,24,27,0.6);
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+main .today .day{
+    padding: 5px 15px;
+    background-color: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+main .today .temp{
+    font-size: 18px;
+    padding-top: 15px;
+}

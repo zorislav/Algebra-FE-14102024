@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4%;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;  
+    flex-wrap: wrap;        
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;          
+}
+
+header img {
+    width: 25%;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    flex-grow: 1;
+}
+
+header div nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+header div nav button {
+    padding: 3.5%;
+    margin-left: 4%;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav button {
+    margin-right: 3%;
+    border-radius: 30%;
+    padding: 2%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: #53535c;
+    color: #eee;
+}
+
+header nav button:hover {
+    color: #eee;
+    background-color: #151518;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1% 1%;
+}
+
+.kategorije {
+    display: flex;
+    flex-direction: column;
+    margin: 3.5% 0;
+    border: 2px solid #151518;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    flex-grow: 1;
+}
+
+.kategorija_flex {
+    text-align: center;
+    position: relative;
+    flex-grow: 1;
+    margin-top: 1%;
+}
+
+.kategorije button {
+    margin: 6.5% 6%;
+    padding: 3%;
+    border-radius: 30%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: #53535c;
+    color: #eee;
+}
+
+.kategorije button:hover {
+    color: #eee;
+    background-color: #151518;
+    cursor: pointer;
+}
+
+.info_proizvod {
+    position: relative;
+    border: 2px solid #151518;
+    align-items: flex-start;
+    text-align: start;
+    padding: 1% 1%; 
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.lista_proizvoda {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.proizvod_flex {
+    text-align: center;
+    position: relative;
+    width: 75%;
+    flex-grow: 1;
+}
+
+.title {
+    margin: 1% 1%;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.proizvod {
+    margin: 1%;
+    padding: 1%;
+    width: 28.21%;
+    border: 1px solid #151518;
+    list-style: none;
+}
+
+.ime {
+    margin-top: 1%;
+    font-size: 1.5rem;
+    text-align: start;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.slika_proizvoda {
+    margin-top: 3%;
+    margin-bottom: 0.5%;
+    width: 100%;
+}
+
+.proizvod_info_market {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.proizvod_info_market_2 {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cijena {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-size: 1.5rem;
+    text-align: start;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.add_to_cart {
+    border-radius: 10%;
+    margin-top: 2%;
+    padding: 1%;
+    justify-content: end;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #53535c;
+    color: #eee;
+    cursor: pointer;
+}
+
+.add_to_cart:hover {
+    cursor: pointer;
+    background-color: #151518;
+    color: #eee ;
+}
+
+.btn_style {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+.dodaj_prozivod{
+    padding: 0.5%;
+    border-radius: 20%;
+    background-color: #53535c;
+    color: #eee;
+}
+
+.dodaj_prozivod:hover{
+    cursor: pointer;
+    background-color: #151518;
+    color: #eee ;
+}
+
+.save_button {
+    padding: 0 2%;
+    border-radius: 20%;
+    background-color: #53535c;
+    color: #eee;  
+    width: 25%;
+    margin-top: 5.5%;
+}
+
+.save_button:hover {
+    cursor: pointer;
+    background-color: #151518;
+    color: #eee ;    
+}
+
+.input_ime_proizvoda {
+    margin-top: 1%;
+}
+
+.upload_image {
+    margin-top: 5.5%;
+}
+
+.input_cijena {
+    margin-top: 5.5%;
+}
+
+@media (max-width: 768px) {
+    header {
+        margin: auto;   
+        justify-content: center;
+        align-items: center;  
+    }
+
+    header div {
+        display: flex;
+        flex-direction: column;  
+        flex-wrap: wrap;        
+        justify-content: center; 
+        align-items: center;     
+        text-align: center;          
+    }
+
+    header div img {
+        width: 200px;
+    }
+
+    header div h1 {
+        width: 100%;
+    }
+
+    header div nav {
+        margin-top: 5%;
+        width: 100%;
+        height: 100%;
+        button {
+            margin-top: 4%;
+        }
+    }
+
+    .kategorija_flex {
+        width: 100%;
+        margin-top: 5%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .kategorije {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1%;
+    }
+
+    .kategorije button {
+        margin: 1.5%;
+        padding: 0.8%;
+    }
+
+    .proizvod {
+        width: 45%;
+    }
+}
+
+@media (max-width: 425px) {
+    .lista_proizvoda {
+        justify-content: center;
+        align-items: center;
+    }
+    .proizvod {
+        padding: 7%;
+        margin-top: 5%;
+        width: 75%;
+    }
+}
+
+@media (max-width: 375px) {
+    header div nav {
+        display: flex;
+        flex-direction: column;
+    }
+}

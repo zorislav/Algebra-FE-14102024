@@ -1,0 +1,15 @@
+body {
+  font: Tahoma;
+  color: #333;
+}
+
+h1 {
+  color: #800;
+}
+
+article {
+  border: #800 1px solid;
+}
+article a {
+  color: #800;
+}/*# sourceMappingURL=style.css.map */

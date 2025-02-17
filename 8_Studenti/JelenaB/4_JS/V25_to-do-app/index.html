@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My tasks</h1>
+      <div id="buttonGroup">
+        <button class="Button" disabled>All</button>
+        <button class="Button">Active</button>
+        <button class="Button">Completed</button>
+      </div>
+    </header>
+    <main>
+      <section>
+        <input placeholder="Add todo" id="input-todo" autofocus />
+        <button class="addButton" id="input-add" type="submit">Add</button>
+      </section>
+
+      <ul class="todoList"></ul>
+
+      <div>
+        <button class="removeButton">Clear completed</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Vijesti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+        .rss-feed {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .rss-item {
+            display: flex;
+            flex-direction: row;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .rss-item img {
+            width: 200px;
+            height: 120px;
+            object-fit: cover;
+        }
+        .rss-item-content {
+            padding: 10px;
+        }
+        .rss-item-content h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+        .rss-item-content p {
+            margin: 0 0 10px;
+            color: #555;
+        }
+        .rss-item-content a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .rss-item-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sport Vijesti</h1>
+    <div class="rss-feed" id="rss-feed">Učitavanje sportskih vijesti...</div>
+
+    <script>
+        const rssUrl = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://net.hr/feed");
+
+        async function fetchRSS() {
+            try {
+                const response = await fetch(rssUrl);
+                const data = await response.json();
+
+                const parser = new DOMParser();
+                const rssDoc = parser.parseFromString(data.contents, "text/xml");
+                const items = rssDoc.querySelectorAll("item");
+                let html = "";
+
+                items.forEach((item, index) => {
+                    const title = item.querySelector("title").textContent;
+                    const link = item.querySelector("link").textContent;
+
+                    let imageUrl = "https://via.placeholder.com/200x120?text=Nema+slike";
+                    const enclosure = item.querySelector("enclosure");
+                    const mediaContent = item.querySelector("media\\:content, content");
+
+                    if (enclosure && enclosure.getAttribute("url")) {
+                        imageUrl = enclosure.getAttribute("url");
+                    } else if (mediaContent && mediaContent.getAttribute("url")) {
+                        imageUrl = mediaContent.getAttribute("url");
+                    } else {
+                        const description = item.querySelector("description")?.textContent || "";
+                        const imageMatch = description.match(/<img.*?src="(.*?)"/);
+                        if (imageMatch) {
+                            imageUrl = imageMatch[1];
+                        }
+                    }
+
+                    const descriptionText = item.querySelector("description")
+                        ?.textContent.replace(/<[^>]+>/g, "")
+                        .substring(0, 200) || "...";
+
+                    // Dinamičko kreiranje HTML sadržaja
+                    html += `
+                        <div class="rss-item">
+                            <img src="${imageUrl}" alt="Slika vijesti">
+                            <div class="rss-item-content">
+                                <h3>${title}</h3>
+                                <p>${descriptionText}</p>
+                                <a href="#" onclick="openArticle(${index})">Pročitaj više</a>
+                            </div>
+                        </div>
+                    `;
+
+                    // Pohrani podatke o vijesti u localStorage
+                    const articleData = {
+                        title,
+                        imageUrl,
+                        description: descriptionText,
+                        link
+                    };
+                    localStorage.setItem(`article-${index}`, JSON.stringify(articleData));
+                });
+
+                document.getElementById("rss-feed").innerHTML = html;
+            } catch (error) {
+                console.error("Greška pri dohvaćanju RSS-a:", error);
+                document.getElementById("rss-feed").textContent = "Ne mogu učitati RSS feed.";
+            }
+        }
+
+        function openArticle(index) {
+            window.location.href = `article.html?index=${index}`;
+        }
+
+        fetchRSS();
+    </script>
+</body>
+</html>

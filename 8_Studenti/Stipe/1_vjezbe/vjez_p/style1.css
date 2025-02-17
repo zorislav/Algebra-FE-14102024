@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+}
+
+#contener{
+    display: flex;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+#box{
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(93,93,93, 0.4);
+   
+}
+
+#box2{
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(93,93,93, 0.4);
+   
+}
+
+nav{
+    display: flex;
+    padding: 20px;
+    margin: 20px 20px;
+}
+
+a{
+    padding: 50px;
+}

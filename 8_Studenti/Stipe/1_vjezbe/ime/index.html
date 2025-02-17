@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrazac za unos imena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Unesite ime i prezime</h2>
+            <form id="imeForm">
+                <input type="text" id="imePrezime" placeholder="Ime i Prezime" required>
+                <button type="submit">Dodaj</button>
+            </form>
+        </div>
+        <div class="list-container">
+            <h2>Unesena imena</h2>
+            <ul id="imeLista"></ul>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Unesite detalje</h2>
+            <form id="detailsForm">
+                <input type="number" id="godine" placeholder="Godine" required>
+                <input type="text" id="mjesto" placeholder="Mjesto rođenja" required>
+                <input type="text" id="drzava" placeholder="Država" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="tel" id="telefon" placeholder="Broj telefona" required>
+                <button type="submit">Spremi</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

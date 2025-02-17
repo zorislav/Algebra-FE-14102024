@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iTunes Pretraživač</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div id="headerContainer">
+        <img src="apple.png" alt="Apple Logo" id="logo" />
+        <h1>Pretraživač Pjesama</h1>
+      </div>
+      <div id="searchContainer">
+        <input type="text" id="searchInput" placeholder="Pretraži pjesme" />
+      </div>
+    </nav>
+    <main>
+      <h3 id="noResultsMessage">Nema rezultata za pretragu</h3>
+      <div id="loadingSpinner"></div>
+      <ul id="resultList"></ul>
+    </main>
+    <script src="bundle.min.js"></script>
+  </body>
+</html>

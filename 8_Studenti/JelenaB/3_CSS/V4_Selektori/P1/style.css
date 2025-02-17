@@ -1,0 +1,27 @@
+body {
+  color: #333;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.3rem; /*komentar */
+  text-align: center;
+}
+
+h2 {
+  color: orange;
+  font-size: 1.8rem;
+}
+
+em {
+  color: red;
+}
+
+strong {
+  text-decoration-line: underline;
+}
+
+span {
+  font-weight: normal;
+}
