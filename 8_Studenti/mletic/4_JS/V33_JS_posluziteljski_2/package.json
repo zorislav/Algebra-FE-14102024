@@ -1,0 +1,15 @@
+{
+  "name": "v33_js_posluziteljski_2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "prvipaket": "^1.0.0"
+  }
+}
