@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vremenska prognoza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Vremenska prognoza</h1>
+    <p>Unesite ime grada da biste saznali trenutne vremenske uvjete:</p>
+    <input type="text" id="cityInput" placeholder="Unesite ime grada">
+    <button onclick="getWeather()">Pretraži</button>
+
+    <div id="weather">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon" alt="Ikona vremena">
+        <p id="description"></p>
+        <p><strong>Temperatura:</strong> <span id="temperature"></span> °C</p>
+        <p><strong>Osjećaj temperature:</strong> <span id="feelsLike"></span> °C</p>
+        <p><strong>Vlažnost:</strong> <span id="humidity"></span>%</p>
+        <p><strong>Brzina vjetra:</strong> <span id="windSpeed"></span> m/s</p>
+        <p><strong>Vidljivost:</strong> <span id="visibility"></span> m</p>
+        <p><strong>Oblaci:</strong> <span id="clouds"></span>%</p>
+        <p><strong>Tlak zraka:</strong> <span id="pressure"></span> hPa</p>
+        <p><strong>Izlazak sunca:</strong> <span id="sunrise"></span></p>
+        <p><strong>Zalazak sunca:</strong> <span id="sunset"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

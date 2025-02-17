@@ -1,0 +1,56 @@
+html{
+    background: url("https://scied.ucar.edu/sites/default/files/media/images/weather_0.jpg") no-repeat center;
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+   
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#weather {
+    float: left;
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: rgb(rgb(221, 163, 163), green, blue);
+    opacity: 0.5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#chartContainer {
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+#errorMessage {
+    color: red;
+    margin-top: 20px;
+}

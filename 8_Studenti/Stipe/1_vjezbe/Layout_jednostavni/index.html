@@ -5,8 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+    <script>
+        // Dohvaćanje osnovnih informacija za navigaciju
+        async function getWeatherForNav() {
+            const city = "Livno"; // Možeš koristiti dinamički grad
+            const apiKey = "0fb2eb35622bdaaaa3d2ff6dfa9076e8"; // Zamijeni svojim API ključem
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error("Ne mogu dohvatiti vrijeme!");
+                }
+                const data = await response.json();
+
+                // Prikaz imena grada, temperature i ikone u navigaciji
+                const weatherNav = document.getElementById("weatherNav");
+                const temp = data.main.temp.toFixed(1);
+                const icon = data.weather[0].icon;
+
+                weatherNav.innerHTML = `
+                    <span>${data.name}</span>
+                    <span>${temp}°C</span>
+                    <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Ikona vremena">
+                `;
+            } catch (error) {
+                console.error("Greška u dohvaćanju vremenskih podataka za navigaciju:", error);
+                document.getElementById("weatherNav").innerHTML = "<span>Vrijeme nije dostupno</span>";
+            }
+        }
+
+        // Poziv funkcije pri učitavanju stranice
+        getWeatherForNav();
+    </script>
     <header>
         <h2>Zaglavlje</h2>
     </header>
@@ -34,10 +68,10 @@
         </section>
 
         <article>
-            <h2>Ovo je artikl</h2>
-            <p>Nostrud veniam reprehenderit nisi nostrud dolore aliqua dolore quis aliquip id irure ipsum. Ut ullamco ulla
-                mco Lorem aliqua qui nisi ipsum officia id sint ea. Dolore consectetur laborum laborum eu aute eiusmod laboris ut Lorem duis aliquip ea. Proident sit ex dolore voluptate aliquip nulla cillum ut labore culpa do do minim. Ad adipisicing duis excepteur aliqua Lorem laborum est esse laboris nulla magna ex do incididunt. Laborum non reprehenderit sint reprehenderit aliquip officia consequat fugiat amet nulla incididunt labore Lorem. Laboris adipisicing Lorem elit ut magna et velit nisi irure ullamco eiusmod.</p>
-            <p>Mollit reprehenderit exercitation ut sit aliqua culpa reprehenderit anim occaecat. Minim aliqua sint anim ullamco proident esse ea enim exercitation nulla velit. Culpa non id laborum exercitation do velit mollit cillum. Quis nulla irure magna amet aliquip culpa adipisicing non officia. Dolor magna et enim dolor consequat veniam voluptate dolore laboris laboris elit. Incididunt amet mollit ut amet proident ea dolore pariatur ut eu est sit. Sint minim qui voluptate amet nisi labore.</p>
+            <h2>Trenutno vrijeme</h2>
+            <div id="weatherNav" onclick="window.location.href='index1.html'">
+                <!-- Informacije o vremenu bit će dodane putem JavaScripta -->
+            </div>
         </article>
        
     </main>

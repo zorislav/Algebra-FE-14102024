@@ -1,6 +1,7 @@
 var mojeImePrezime;
 
 var firstName, lastName, price, discount, fullPrice;
+var x, a;
 
 firstName = "John";
 lastName = "Doe";

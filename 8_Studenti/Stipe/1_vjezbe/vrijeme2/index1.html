@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vremenska prognoza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #weather {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: aquamarine;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #chartContainer {
+            width: 90%;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        #errorMessage {
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vremenska prognoza</h1>
+    <p>Unesite ime grada da biste saznali trenutne vremenske uvjete:</p>
+    <input type="text" id="cityInput" placeholder="Unesite ime grada">
+    <button onclick="getWeather()">Pretraži</button>
+
+    <div id="weather">
+        <h2 id="cityName"></h2>
+        <img id="weatherIcon" alt="Ikona vremena">
+        <p id="description"></p>
+        <p><strong>Temperatura:</strong> <span id="temperature"></span> °C</p>
+        <p><strong>Osjećaj temperature:</strong> <span id="feelsLike"></span> °C</p>
+        <p><strong>Vlažnost:</strong> <span id="humidity"></span>%</p>
+        <p><strong>Brzina vjetra:</strong> <span id="windSpeed"></span> m/s</p>
+        <p><strong>Vidljivost:</strong> <span id="visibility"></span> m</p>
+        <p><strong>Oblaci:</strong> <span id="clouds"></span>%</p>
+        <p><strong>Tlak zraka:</strong> <span id="pressure"></span> hPa</p>
+        <p><strong>Izlazak sunca:</strong> <span id="sunrise"></span></p>
+        <p><strong>Zalazak sunca:</strong> <span id="sunset"></span></p>
+    </div>
+
+    <script>
+        async function getWeather() {
+            const city = document.getElementById("cityInput").value;
+            const apiKey = "0fb2eb35622bdaaaa3d2ff6dfa9076e8"; // Zamijeni sa svojim API ključem
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error("Grad nije pronađen!");
+                }
+                const data = await response.json();
+
+                // Popunjavanje podataka
+                document.getElementById("cityName").textContent = `${data.name}, ${data.sys.country}`;
+                document.getElementById("temperature").textContent = data.main.temp;
+                document.getElementById("feelsLike").textContent = data.main.feels_like;
+                document.getElementById("humidity").textContent = data.main.humidity;
+                document.getElementById("windSpeed").textContent = data.wind.speed;
+                document.getElementById("visibility").textContent = data.visibility;
+                document.getElementById("clouds").textContent = data.clouds.all;
+                document.getElementById("pressure").textContent = data.main.pressure;
+
+                // Pretvaranje Unix vremena za izlazak i zalazak sunca
+                const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+                const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+                document.getElementById("sunrise").textContent = sunrise;
+                document.getElementById("sunset").textContent = sunset;
+
+                // Postavljanje ikone vremena
+                const icon = data.weather[0].icon;
+                document.getElementById("weatherIcon").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+                document.getElementById("description").textContent = data.weather[0].description;
+
+                // Prikaz sekcije s vremenom
+                document.getElementById("weather").style.display = "block";
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+    </script>
+</body>
+</html>
