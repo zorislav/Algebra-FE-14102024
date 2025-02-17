@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Yellow Pokemons</title>
+  </head>
+  <body>
+	<script id="pokemon-list" type="text/x-handlebars-template">
+		<table>
+			<tr>
+				<th>#</th>
+				<th>Ime</th>
+			</tr>
+			{{#each pokemon}}
+		  		<tr>
+					<td>{{@index}}</td>
+					<td><a href="{{this.url}}">{{this.name}}</a></td>
+				</tr>
+			{{/each}}
+		</table>
+	</script>
+	<div id="result"></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="index.js"></script>
+  </body>
+</html>
