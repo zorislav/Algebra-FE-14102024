@@ -1,0 +1,20 @@
+.element{
+    background-color: #4cb944;
+    border: 5px solid #e0607e;
+    width: 100px;
+    height: 100px;
+}
+
+.container{
+    border: 5px solid gray;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+   
+}
+
+.element-1{
+    align-self: flex-start;
+}

@@ -1,0 +1,39 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header > input {
+  display: flex;
+  width: 40%;
+  margin: 1rem 30% 0 30%;
+}
+
+#loading-spinner {
+  display: none;
+  border: 1rem solid #f3f3f3;
+  border-top: 1rem solid black;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  animation: spin linear 2s infinite;
+}
+
+#no-songs {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

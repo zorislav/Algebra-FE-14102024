@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: url("https://scied.ucar.edu/sites/default/files/media/images/weather_0.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header input {
+    font: inherit;
+    border: 1px solid #3C3C44;
+    border-radius: 15px;
+    font-size: 1rem;
+    padding: 5px 15px;
+}
+
+header button {
+    font: inherit;
+    border: none;
+    color: #EEE;
+    background-color: #3C3C44;
+    border-radius: 50px;
+    font-size: 1rem;
+    padding: 5px 15px;
+}
+
+header button:hover {
+    background-color: #151518;
+    cursor: pointer;
+}
+
+header .place-container {
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+header #input-location {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header .place-container .time-zone {
+    font-size: 24px;
+    font-weight: 100;
+}
+
+header .place-container .country {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+main {
+    color: #FFF;
+}
+
+main .current-info-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .date-container {
+    font-weight: 100;
+}
+
+main .date-container .date {
+    font-size: 30px;
+}
+
+main .date-container .time {
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+main .current-info-container .today {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #EEE;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+main .current-info-container .others {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(24,24,27,0.6);
+    padding: 20px;
+    border: 1px solid #EEE;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+main .today .day {
+    padding: 5px 15px;
+    background-color: #3C3C44;
+    border-radius: 50px;
+    text-align: center;
+}
+
+main .today .temp {
+    font-size: 18px;
+    padding-top: 15px;
+}

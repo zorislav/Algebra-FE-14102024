@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2.6rem 0 1.4rem 0;
+  color: rgb(68, 69, 68);
+}
+
+#buttonGroup {
+  font-size: 0;
+}
+
+.Button {
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid rgb(68, 69, 68);
+  background-color: lightgray;
+  padding: 1rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.Button:disabled {
+  background-color: rgb(109, 110, 110);
+  color: white;
+}
+
+.Button:not(:disabled):hover {
+  background-color: greenyellow;
+  cursor: pointer;
+}
+
+section {
+  width: 60%;
+  height: 2rem;
+  margin: 0 20% 0 20%;
+  display: flex;
+  padding: 2rem 0 0 0;
+}
+
+input {
+  width: 70%;
+  text-align: left;
+  border: 1px solid rgb(68, 69, 68);
+}
+
+.addButton {
+  width: 30%;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(68, 69, 68);
+  background-color: whitesmoke;
+  cursor: pointer;
+  border: 1px solid;
+}
+
+.addButton:hover {
+  background-color: greenyellow;
+  color: darkslategray;
+}
+
+.removeButton {
+  display: inline-block;
+  margin-left: 50%;
+  border: 0px;
+  /* width: 10px;
+  height: 10px; */
+  border: 1px solid rgb(68, 69, 68);
+  /* background: red; */
+}
+
+.removeButton:hover {
+  font-weight: bold;
+}
+
+.todoList {
+  width: 60%;
+  margin: 0 20% 0 20%;
+  border: 1px solid;
+  padding: 0;
+  box-shadow: 2px 2px 4px rgb(173, 175, 173);
+}
+
+.todoList li {
+  list-style-type: none;
+  padding: 0;
+}
+
+.li-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.li-cont-int {
+  display: inline-flex;
+}
+
+.li-cont-int input {
+  margin-left: 1.2rem;
+  margin-right: 1rem;
+}
+
+.remove-button {
+  display: inline-block;
+}
+
+.todoList li.done {
+  text-decoration: line-through;
+}
