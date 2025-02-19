@@ -25,8 +25,13 @@ async function getPokemons(){
         const html = template(context);
         destination.innerHTML = html;
         $('[data-toggle="popover"]').popover();
+        afterRender();
     }
 
+function afterRender(){
+    $("table th").css("color", "darkBlue");
+    $("table tr:nth-child(3)").addClass(striped);
+}
 
 getPokemons().then(pkmns => {
     fillList(pkmns);
