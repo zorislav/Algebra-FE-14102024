@@ -21,7 +21,15 @@ function main(){
         const context = {pokemon: pokemons};
         const html = template(context);
         destination.innerHTML = html;
+        $('[data-toggle="popover]').popover();
 
+        afterRender();
+
+    }
+
+    function afterRender(){
+        $("table th").css("color", "darkBlue");
+        $("table tr:nth-child(odd)").addClass("stripped");
     }
 
     getPokemons().then(pkmns => {
