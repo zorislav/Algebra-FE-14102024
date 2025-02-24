@@ -24,6 +24,14 @@ function main() {
     };
     const html = template(context);
     destination.innerHTML = html;
+    $('[data-toggle="popover"]').popover();
+
+    afterRender();
+  }
+
+  function afterRender() {
+    $("table th").css("color", "darkBlue");
+    $("table tr:nth-child(even)").addClass("striped");
   }
 
   getPokemons().then((pkmns) => {
