@@ -1,7 +1,0 @@
-git init = za kreiranje direktorija
-git status
-git add . = za dodavanje svih filova za commit
-git rm --cached "File name" = oklanjanje iz commita
-git commit -m "Opis" = commitaj u lokalni repozitorij
-git branch "branch name" = kreiranje novog brancha
-git checkout "branch name" = pozicioniranje na odredenog brancha

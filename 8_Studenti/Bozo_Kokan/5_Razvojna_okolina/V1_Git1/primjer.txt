@@ -1,3 +1,0 @@
-git --global --list = list usera
-git --global user.name / user.email = add user
-git --global --version = verzija gita (provjera jeli instaliran)
