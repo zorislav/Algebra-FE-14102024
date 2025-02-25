@@ -24,6 +24,7 @@ function main() {
     };
     const html = template(context);
     destination.innerHTML = html;
+    $('[data-toggle="popover"]').popover();
   }
 
   getPokemons().then((pkmns) => {
