@@ -30,14 +30,23 @@ function addStripes() {
         const html = template(context);
         destination.innerHTML = html;
         $('[data-toggle="popover"]').popover();
+
         afterRender();
     }
+    function afterRender() {
+		$('[data-toggle="popover"]').popover();
+		$("table th").css("color", "darkBlue");	
+
+
+    $("table tr").on('mouseenter', event => {
+        $(event.currentTarget).css("backgroundColor", "yellow");
+    });
+    
+    $("table tr").on("mouseleave", event => {
+        $(event.currentTarget).removeAttr("style");
+    });
+
     addStripes();
-
-function afterRender(){
-    $("table th").css("color", "darkBlue");
-
-    $("table tr:nth-child(3)").addClass(striped);
 
      // nakon 2 sekunde brišemo sve pokemone koji počinju s 'p'
 
@@ -60,6 +69,10 @@ function afterRender(){
 getPokemons().then(pkmns => {
     fillList(pkmns);
     
+});
+
+$(window).resize(() => {
+    console.log($( window ).width());
 });
 
 }
