@@ -30,6 +30,14 @@ function main() {
     $("table th").css("color", "darkBlue");
     addStripes();
 
+    $('table tr').on("mouseenter", (event) => {
+      $(event.currentTarget).css('backgroundColor', 'yellow');
+    });
+
+    $('table tr').on("mouseleave", (event) => {
+      $(event.currentTarget).removeAttr('style');
+    });
+
     // Nakon 2 sec brisemo sve pokemone koji pocinju sa p
     setTimeout(function(){
       const hideElements = $("table td a:contains('p')").filter(function(){
@@ -51,5 +59,9 @@ function main() {
 
   getPomemons().then((pkmns) => {
     fillList(pkmns);
+  });
+
+  $(window).resize(() => {
+    console.log($(window).width());
   });
 }
