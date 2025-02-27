@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dodavanje Imena</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Unesi Imena</h1>
+    <input type="text" id="imeInput" placeholder="Unesite ime" />
+    <button id="dodajIme">Dodaj novo ime</button>
+    <ul id="listaImena"></ul>
+  </div>
+
+  <!-- Modal za unos podataka -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Unesite podatke</h2>
+      <label>Godine:</label>
+      <input type="number" id="godine">
+      
+      <label>Grad:</label>
+      <input type="text" id="grad">
+
+      <label>Država:</label>
+      <input type="text" id="drzava">
+
+      <label>Email:</label>
+      <input type="email" id="email">
+
+      <label>Broj telefona:</label>
+      <input type="tel" id="telefon">
+
+      <button id="spremiPodatke">Spremi</button>
+    </div>
+  </div>
+
+  <!-- Modal za potvrdu brisanja -->
+  <div id="deleteModal" class="modal">
+    <div class="modal-content">
+      <h3>Jeste li sigurni da želite obrisati?</h3>
+      <button id="potvrdiBrisanje">Da</button>
+      <button id="odustaniBrisanje">Ne</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

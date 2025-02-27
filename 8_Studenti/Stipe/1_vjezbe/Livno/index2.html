@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relax Livno Vijesti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .rss-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .rss-item h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+        .rss-item p {
+            margin: 0 0 10px;
+        }
+        .rss-item a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .rss-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Relax Livno Vijesti</h1>
+    <div id="rss-feed">Učitavanje vijesti...</div>
+
+    <script>
+        // Zamijeni URL s pravim RSS feedom
+        const rssUrl = "https://cors-anywhere.herokuapp.com/https://www.dnevno.hr/feed";
+
+        async function fetchRSS() {
+            try {
+                const response = await fetch(rssUrl);
+                const text = await response.text();
+
+                // Parsiraj XML sadržaj
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(text, "application/xml");
+                const items = xmlDoc.querySelectorAll("item");
+
+                let html = "";
+                items.forEach(item => {
+                    const title = item.querySelector("title")?.textContent || "Nema naslova";
+                    const link = item.querySelector("link")?.textContent || "#";
+                    const description = item.querySelector("description")?.textContent || "Nema opisa";
+
+                    html += `
+                        <div class="rss-item">
+                            <h3>${title}</h3>
+                            <p>${description}</p>
+                            <a href="${link}" target="_blank">Pročitaj više</a>
+                        </div>
+                    `;
+                });
+
+                document.getElementById("rss-feed").innerHTML = html;
+            } catch (error) {
+                console.error("Greška pri dohvaćanju RSS feeda:", error);
+                document.getElementById("rss-feed").textContent = "Ne mogu učitati RSS feed.";
+            }
+        }
+
+        fetchRSS();
+    </script>
+</body>
+</html>
