@@ -1,14 +1,12 @@
 * {
   box-sizing: border-box;
 }
-
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-
 header div {
   display: flex;
   align-items: center;
@@ -31,20 +29,19 @@ ul li {
 }
 
 ul li:hover {
+  padding: 10px;
   font-weight: bold;
   cursor: pointer;
 }
-
 .out-flex-container {
   display: flex;
   justify-content: space-between;
-  margin: 30px auto;
+  margin: 40px auto;
 }
 
 .in-flex-container {
   display: flex;
 }
-
 .box {
   width: 50px;
   height: 50px;
@@ -52,12 +49,12 @@ ul li:hover {
   background-color: lightblue;
   font-weight: bold;
   text-align: center;
-  padding: 15px 0;
+  padding: 15px 0px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   row-gap: 10px;
   column-gap: 15px;
   margin-top: 30px;
@@ -68,5 +65,5 @@ ul li:hover {
 }
 
 .grid-item .box {
-  margin: 10px auto;
+  margin: 0px auto;
 }
