@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { users } from "./data/dummyData";
+import { UserFunction, UserClass, UserChildren, NovaKomponenta } from "./user";
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>React aplikacija</h1>
+        <p>Ovo zaista radi</p>
+        {/* <UserFunction user={users[0]} /> */}
+        <UserFunction ime={users[0].name} years={users[0].years} />
+        <UserClass name={users[1].name} years={users[1].years} />
+        <UserChildren name={users[2].name} years={users[2].years}>
+          I hobi mi je skijanje
+          <NovaKomponenta />
+        </UserChildren>
+        {/*  users.map(user => <ListItem name={user.name} years={user.years} />)  */}
+      </div>
+    );
+  }
 }
-
-export default App;
