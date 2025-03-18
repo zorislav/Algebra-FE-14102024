@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pogodi broj</title>
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        function checkGuess() {
+            const userGuess = parseInt(document.getElementById('guessInput').value);
+            const result = document.getElementById('result');
+
+            if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+                result.textContent = "Unesi broj od 1 do 100.";
+            } else if (userGuess === randomNumber) {
+                result.textContent = "Pogodio si broj!";
+            } else if (userGuess < randomNumber) {
+                result.textContent = "Broj je veći od " + userGuess + ".";
+            } else {
+                result.textContent = "Broj je manji od " + userGuess + ".";
+            }
+        }
+
+        function resetGame() {
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+            document.getElementById('guessInput').value = "";
+            document.getElementById('result').textContent = "";
+        }
+    </script>
+</head>
+<body>
+    <h1>Pogodi broj</h1>
+    <p>Unesi broj od 1 do 100:</p>
+    <input type="number" id="guessInput" min="1" max="100">
+    <button onclick="checkGuess()">Pogodi</button>
+    <button onclick="resetGame()">Resetiraj igru</button>
+    <p id="result"></p>
+</body>
+</html>

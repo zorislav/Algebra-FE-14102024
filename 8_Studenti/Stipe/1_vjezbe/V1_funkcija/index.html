@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Naslov</h1>
+    <p>Neki tekst ovdje</p>
+    <script>
+        var fale = "Neki string ovvdje";
+        document.write(fale);
+
+        function fun1()
+        {
+            alert("skočni prozor");
+        }
+        fun1();
+        fun1();
+    </script>
+    <form>
+        <input type="button" value="Klikni me" onclick="fun1()">
+    </form>
+    <h1>Drugi naslov</h1>
+    <script>
+        function fun2(x){
+            alert(x);
+            document.write(x);
+            document.write("<hr>");
+            document.write(x);
+            document.write("<table><tr><td>1</td></tr></table>")
+
+            
+        }
+        fun2("----5555-------")
+    </script>
+</body>
+</html>
