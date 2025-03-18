@@ -1,51 +1,58 @@
 import React from "react";
 
 export default class NewUser extends React.Component {
+  constructor(props) {
+    super(props);
 
-    constructor(props){
-        super(props);
-
-        this.state = {
-            name: "",
-            age: 0
-        };
-    }
-
-    nameChangeHandler = (event) => {
-        this.setState({ name: event.target.value });
+    this.state = {
+      name: "",
+      age: 0,
     };
+  }
 
-    ageChangeHandler = (event) => {
-        this.setState({ age: +event.target.value });
-    };
+  nameChangeHandler = (event) => {
+    this.setState({ name: event.target.value });
+  };
 
-    userSubmitHandler = (event) => {
+  ageChangeHandler = (event) => {
+    this.setState({ age: +event.target.value });
+  };
 
-        event.preventDefault();
-                
-        const { onAddUser } = this.props;
-        const { name,age } = this.state;
-        
-        if(name && age){
-            onAddUser({name: name, age: age });
-            this.setState({name: "", age: 0});
-        } else {
-            alert("Please enter name and age");
-        }
+  userSubmitHandler = (event) => {
+    event.preventDefault();
+
+    const { onAddUser } = this.props;
+    const { name, age } = this.state;
+
+    if (name && age) {
+      onAddUser({name, age });
+      this.setState({name: "", age: 0});
+    } else {
+      alert("Please enter name and age");
     }
+  };
 
-    render(){
+  render() {
+    const { name, age } = this.state;
 
-        const { name, age } = this.state;
-
-        return (
-            <form onSubmit={this.userSubmitHandler}>
-                <label htmlFor="">Ime: </label>
-                <input id="ime" type="text" value={name} onChange={this.nameChangeHandler} />
-                <label htmlFor=""> Godine: </label>
-                <input id="godine" type="number" value={age} onChange={this.ageChangeHandler} />
-                <button type="submit">Submit</button>
-            </form>
-        )
-    }
+    return (
+      <form onSubmit={this.userSubmitHandler}>
+        <label htmlFor="ime">Ime: </label>
+        <input
+          id="ime"
+          type="text"
+          value={name}
+          onChange={this.nameChangeHandler}
+        />
+        <label htmlFor="godine"> Godine: </label>
+        <input
+          id="godine"
+          type="number"
+          value={age}
+          onChange={this.ageChangeHandler}
+        />
+        <button>Submit</button>
+      </form>
+    );
+  }
 }
