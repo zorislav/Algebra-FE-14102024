@@ -10,4 +10,4 @@ function Komponenta2() {
   );
 }
 
-export default Komponenta2;
+export default Komponenta2; 

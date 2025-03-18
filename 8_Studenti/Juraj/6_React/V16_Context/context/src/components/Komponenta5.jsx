@@ -12,7 +12,7 @@ export default class Komponenta5 extends React.Component {
 
         return(
             <>
-            <h2>Komponenta5</h2>
+            <h2>Komponenta 5</h2>
             <Consumer>
                 {ctx => <p>{ctx.text}</p>}
             </Consumer>
