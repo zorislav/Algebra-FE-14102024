@@ -14,7 +14,7 @@ class AddUserForm extends Component {
   };
 
   handleYearsChange = (event) => {
-    this.setState({ years: event.target.value });
+    this.setState({ years: event.target.value});
   };
 
   handleSubmit = (event) => {

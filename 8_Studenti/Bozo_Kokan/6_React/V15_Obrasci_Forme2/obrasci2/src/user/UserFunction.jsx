@@ -12,7 +12,7 @@ export default function UserFunction({ime, years = 100, onNameChange}){
     return (
         <>
     <p>
-        Pozdrav moje ime je {ime} i imam nesto {years} godina (Function)
+        Pozdrav moje ime je {ime} i imam nesto {years} godina
     </p>
     <input type="text" value={ime} onChange={onNameChange}/>
         </>
