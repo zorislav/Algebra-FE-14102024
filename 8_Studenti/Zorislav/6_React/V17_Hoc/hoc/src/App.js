@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+function MyButton(props) {
+  return <button {...props}></button>;
+}
+
+function withColor(Element) {
+  return function ({ boja, ...otherProps }) {
+    return <Element {...otherProps} style={{ backgroundColor: boja }} />;
+  };
+}
+
+const ColoredElement = withColor(MyButton);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 style={styles.h1stil}>Hello</h1>
+      <h2 style={{ color: "yellow", backgroundColor: "green" }}>Hello again</h2>
+      <ColoredElement  boja="red">Bok ja sam crven</ColoredElement>
+      <ColoredElement boja="green">Bok ja sam zelen</ColoredElement>
     </div>
   );
 }
 
 export default App;
+
+const styles = {
+  h1stil: {
+    color: "blue",
+    backgroundColor: "lightGray",
+  },
+};
