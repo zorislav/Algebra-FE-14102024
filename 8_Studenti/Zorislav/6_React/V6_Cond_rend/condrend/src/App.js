@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import ConditionalRendering from "./components/ConditionalRendering";
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      number: null,
+    };
+  }
+
+  handleButtonClick(br) {
+    this.setState({ number: br });
+  }
+
+  render() {
+
+    const { number } = this.state;
+
+    return (
+      <div className="App">
+        <h1>Hello Conditional Rendering</h1>
+        <button onClick={() => this.handleButtonClick(1)}>1</button>
+        <button onClick={() => this.handleButtonClick(2)}>2</button>
+        <button onClick={() => this.handleButtonClick(3)}>3</button>
+        <ConditionalRendering broj={number} />
+      </div>
+    );
+  }
 }
 
 export default App;
