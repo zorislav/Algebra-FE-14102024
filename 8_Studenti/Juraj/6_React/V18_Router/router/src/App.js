@@ -1,59 +1,29 @@
-import { Routes, Route, Link } from 'react-router-dom';
-
-function Index() {
-
-  return(
-    <>
-      <h1>Welcome to Router!</h1>
-      <p>Ovo je primjer korištenja React Router-a.</p>
-      <p>Sad sam na početnoj stranici.</p>
-    </>
-  );
-}
-
-function Komponenta1() {
-  return(
-    <>
-      <h1>Welcome to Router!</h1>
-      <p>Ovo je primjer korištenja React Router-a.</p>
-      <p>Sad sam na Komponenti1.</p>
-    </>
-  );
-}
-
-function Komponenta2() {
-  return(
-    <>
-      <h1>Welcome to Router!</h1>
-      <p>Ovo je primjer korištenja React Router-a.</p>
-      <p>Sad sam na Komponenti2.</p>
-    </>
-  );
-}
-
+import './App.css';
+import Index from './components/Index';
+import { Routes, Route } from "react-router-dom"
+import Komponenta1 from './components/komponenta1';
+import Komponenta2 from './components/komponenta2';
 
 function App() {
   return (
-    <>
+    <div className="App">
       <nav>
         <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/k1">Komponenta 1</Link>
-          </li>
-          <li>
-            <Link to="/k2">Komponenta 2</Link>
-          </li>
+          <li><Link to="/"></Link>Home</li>
+          <li><Link to="/k1"></Link>Komponenta1</li>
+          <li><Link to="/k2"></Link>Komponenta2</li>
         </ul>
+
+
       </nav>
+
       <Routes>
-        <Route path="/" element={<Index />}/>
-        <Route path="/k1" element={<Komponenta1 />} />
-        <Route path="/k2" element={<Komponenta2 />} />
-      </Routes>
-    </>
+        <Route path="/" element={<Index />} />
+        <Route path="/k1" element={<Komponenta1/>} />
+        <Route path="/k2" element={<Komponenta2/>} />
+        </Routes>
+    
+    </div>
   );
 }
 
