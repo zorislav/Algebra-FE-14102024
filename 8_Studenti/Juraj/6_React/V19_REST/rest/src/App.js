@@ -1,47 +1,42 @@
-import { useState, useEffect, useCallback } from 'react';
+import {useEffect, useState} from 'react';
+import './App.css';
 
-function  App() {
+const NASA_API_KEY = "F7NDSvVq6xtFLM8IDjYHPEd7bG0GzdVH501agwwn"
 
-  const [data, setData] = useState(null);
 
-  // Opcija 3
-  const getData = useCallback (async () => {
-    const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=F7NDSvVq6xtFLM8IDjYHPEd7bG0GzdVH501agwwn');
-    const responseData = await response.json();
-    setData(responseData);
-  }, []);
+function App() {
 
-  useEffect(() => {
-    
-    // Opcija 1
-    // fetch('https://api.nasa.gov/planetary/apod?api_key=F7NDSvVq6xtFLM8IDjYHPEd7bG0GzdVH501agwwn')
-    //   .then(response => response.json().then(resObj => {
-    //     setData(resObj);
-    //   }));
-    
-    // Opcija 2
-    // const getData = async () => {
-    //   const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=F7NDSvVq6xtFLM8IDjYHPEd7bG0GzdVH501agwwn');
-    //   const responseData = await response.json();
-    //   setData(responseData);
-    // };
+ const [data, setData] = useState(null);
 
-    getData();
-  }, [getData]);
+const getData = async () => {
 
-  if(!data){
-    return <p>Loading NASA data...</p>;
-  }
+ const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`);
+ const responseData = await response.json();
 
-  return (
-    <>
-      <h1>NASA picture of the day</h1>
-      <h3>{data.title}</h3>
-      <img src={data.url} alt={data.title} width={500} />
-      <p>{data.explanation}</p>
-    </>
-  );
-  
+ setData(responseData);
+
+};
+
+useEffect(() => {
+
+  getData();
+}, []);
+
+const renderContent = data ? (
+  <>
+    <h1>NASA Picture of the day</h1>
+  <h3>{data.title}</h3>
+  <img src={data.url} alt={data.title} width={500} />
+  <p>{data.explanation}</p>
+
+  </>
+
+
+) : (
+<p>Loading NASA data...</p>
+);
+
+return <div className="App">{renderContent}</div>;
 
 }
 
