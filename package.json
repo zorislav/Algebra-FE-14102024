@@ -10,7 +10,9 @@
   "author": "antonija",
   "license": "ISC",
   "dependencies": {
-    "eslint": "^9.19.0"
+    "eslint": "^9.19.0",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1"
   },
   "repository": {
     "type": "git",
