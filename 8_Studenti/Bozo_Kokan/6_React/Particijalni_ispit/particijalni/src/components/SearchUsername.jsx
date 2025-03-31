@@ -26,7 +26,6 @@ export default function SearchUsername({ onSearch }) {
             onSearch(data, repos);  // Pass the fetched data and repos to parent component
         } catch (error) {
             alert('Error fetching data: ' + error.message);
-            console.error(error);
         }
     };
 
