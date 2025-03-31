@@ -1,0 +1,4 @@
+instalacija bootstrapa, handlebars i jquery preko npma.
+ostala je samo css datoteka koju nismo prikljucili nasoj css datoteci kao link element
+webpack prespojio sve skripte u jednu unutar dist folder u myScripts.js
+gulp pretvara scss u css i stavlja ga u folder di mu odredimo
