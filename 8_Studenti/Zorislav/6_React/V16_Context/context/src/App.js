@@ -12,7 +12,13 @@ function App() {
 
   return (
     <div className="App">
-      <Provider value={{ text: "Komponenta 4 je najbolja", number: number, reset: ()=>setNumber(0) }}>
+      <Provider
+        value={{
+          text: "Komponenta 4 je najbolja",
+          number: number,
+          reset: (noviBroj) => setNumber(noviBroj),
+        }}
+      >
         <h1>App Komponenta</h1>
         <label htmlFor="broj">Postavi u kontekst:</label>
         <input
