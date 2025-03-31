@@ -14,13 +14,17 @@ class AddTodoForm extends React.Component {
 
   handleChange(event) {
     const newItem = event.target.value;
-    console.log(newItem);
     this.setState({ newItem: newItem });
   }
 
   handleAddTodoClick(event) {
     event.preventDefault();
-    // Dodaj u listu
+    const { addTodo } = this.props;
+    const { newItem } = this.state;
+
+    addTodo(newItem);
+
+    this.setState({ newItem: "" });
   }
 
   render() {
@@ -35,7 +39,7 @@ class AddTodoForm extends React.Component {
         ></FormControl>
         <Button
           type="submit"
-          variant="secondary"
+          variant="primary"
           onClick={this.handleAddTodoClick.bind(this)}
         >
           Add
