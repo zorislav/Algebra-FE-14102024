@@ -22,6 +22,11 @@ class AddTodoForm extends React.Component {
     const { addTodo } = this.props;
     const { newItem } = this.state;
 
+    if(newItem === ""){
+      alert("Please add Todo item");
+      return;
+    }
+
     addTodo(newItem);
 
     this.setState({ newItem: "" });
