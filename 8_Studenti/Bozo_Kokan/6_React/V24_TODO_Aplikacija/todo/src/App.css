@@ -59,9 +59,16 @@
   font-weight: 500;
   cursor: pointer;
   position: absolute;
-  right: 29px;
+  bottom: 5px;
+  right: 30px;
   margin: 0 48px;
 }
 .clear-completed:hover{
   font-weight: bold;
+}
+.clear-completed-wrapper {
+  width: 100%;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 10px 0;
 }

@@ -21,13 +21,17 @@ class App extends React.Component {
 
   handleAddTodo(value) {
     const { todos } = this.state;
-
-    const newTodo = {
-      id: Math.random().toString(16).substr(2,9),
-      text: value,
-      completed: false
-    };
-    this.setState( { todos: [...todos, newTodo] } );
+    
+    if(value){      
+      const newTodo = {
+        id: Math.random().toString(16).substr(2,9),
+        text: value,
+        completed: false
+      };
+      this.setState( { todos: [...todos, newTodo] } );
+    } else{
+      alert("Please enter a task!");
+    }
   }
 
   handleToggleTodo(id){
@@ -84,8 +88,10 @@ class App extends React.Component {
           removeTodo={this.handleRemoveTodo.bind(this)}/>
         </div>
         {
-          hasCompletedTodos && (            
-            <span className="clear-completed" onClick={this.handleRemoveCompleted.bind(this)}>Clear Completed</span>
+          hasCompletedTodos && (        
+            <div className="clear-completed-wrapper"> 
+              <span className="clear-completed" onClick={this.handleRemoveCompleted.bind(this)}>Clear Completed</span>
+            </div>    
           )
         }
       </div>
