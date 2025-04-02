@@ -20,13 +20,15 @@ class TodoItem extends React.Component{
     render(){
 
         const { todo } = this.props;
-        const textClass = todo.completed ? "todo-item-text todo-item-completed" : "todo-item-text"
+        const textClass = todo.completed 
+        ? "todo-item-text todo-item-completed" 
+        : "todo-item-text";
 
         return (
             <ListGroupItem className="todo-item">
-                <span className={textClass} onClick={this.handleToggleTodoClick.bind(this)}>
+                <span className="todo-item-item" onClick={this.handleToggleTodoClick.bind(this)}>
                     <FormCheck readOnly checked={todo.completed}/>
-                    <span className="todo-item-text">{todo.text}</span>
+                    <span className={textClass}>{todo.text}</span>
                 </span>
                 <span className="todo-item-delete" onClick={this.handleRemoveTodoClick.bind(this)}>X</span>                                   
             </ListGroupItem>

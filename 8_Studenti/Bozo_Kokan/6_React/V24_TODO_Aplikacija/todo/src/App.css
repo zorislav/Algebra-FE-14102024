@@ -30,7 +30,7 @@
 .todo-item{
   display: flex;
   padding: 10px;
-  font: 20px;
+  font-size: 20px;
   line-height: 30px;
   justify-content: space-between;
 }
