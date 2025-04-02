@@ -71,6 +71,8 @@ class App extends React.Component {
   render() {
     const { todos, visibility } = this.state;
     const visibleTodos = this.getVisibleTodos();
+    const showClearCompleted = VISIBILITY_TYPES.ALL || VISIBILITY_TYPES.COMPLETED;
+    const hasCompleted =  todos.filter(todo => !!todo.completed).length > 0;
 
     return (
       <div className="app">
@@ -87,12 +89,14 @@ class App extends React.Component {
             removeTodo={this.handleRemoveTodo.bind(this)}
           />
         </div>
-        <span
-          className="btn-clear-all"
-          onClick={this.handleRemoveCompeted.bind(this)}
-        >
-          Clear completed
-        </span>
+        { visibleTodos && showClearCompleted && hasCompleted && (
+          <span
+            className="btn-clear-all"
+            onClick={this.handleRemoveCompeted.bind(this)}
+          >
+            Clear completed
+          </span>
+        )}
       </div>
     );
   }
