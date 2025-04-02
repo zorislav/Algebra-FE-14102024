@@ -19,5 +19,45 @@
   width: 500px;
   margin: 40px auto 24px;
   border-radius: 8px;
-  box-shadow: 0 0 8px 1px rgba(130, 100, 120, 1);
+  box-shadow: 1px 1px 5px rgba(130, 100, 120, 1);
+}
+
+.form-control:focus {
+  border: 1px solid rgba(130, 100, 120, 1);
+  box-shadow: none;
+}
+
+.todo-item {
+  display: flex;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 30px;
+  justify-content: space-between;
+}
+
+.todo-item-item {
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+}
+
+.todo-item-text {
+  margin-left: 20px;
+}
+
+.todo-item-delete {
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.todo-item-completed {
+  text-decoration: line-through;
+}
+
+.btn-clear-all {
+  font-size: 12px;
+  cursor: pointer;
+  position: absolute;
+  margin: 0 48px;
+  right: 29px;
 }
