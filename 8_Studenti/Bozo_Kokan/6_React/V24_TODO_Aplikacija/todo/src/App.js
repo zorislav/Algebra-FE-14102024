@@ -65,10 +65,12 @@ class App extends React.Component {
     const newTodos = todos.filter(todo => !todo.completed);
     this.setState({ todos: newTodos });
   }
+  
 
   render() {
     const { todos, visibility } = this.state;
     const visibleTodos = this.getVisibleTodos();
+    const hasCompletedTodos = todos.some(todo => todo.completed);
 
     return (
       <div className="app">
@@ -81,7 +83,11 @@ class App extends React.Component {
           toggleTodo={this.handleToggleTodo.bind(this)} 
           removeTodo={this.handleRemoveTodo.bind(this)}/>
         </div>
-          <span className="clear-completed" onClick={this.handleRemoveCompleted.bind(this)}>Clear Completed</span>
+        {
+          hasCompletedTodos && (            
+            <span className="clear-completed" onClick={this.handleRemoveCompleted.bind(this)}>Clear Completed</span>
+          )
+        }
       </div>
     );
   }
