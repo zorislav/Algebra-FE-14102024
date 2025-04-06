@@ -67,7 +67,7 @@ section {
 /* Svi uređaji širine veće od 1024px */
 @media (min-width: 1024px) {
   section {
-    flex: 0 24%;
-    height: 100%;
+    flex: 0 24% !important;
+    height: 100% !important;
   }
 }

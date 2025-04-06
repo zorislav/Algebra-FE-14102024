@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>iTunes Traži</title>
+  </head>
+  <body>
+    <nav>
+      <div id="logo-container">
+        <img src="apple.png" alt="apple logo" />
+        <h1>iTunes pretraživač pjesama</h1>
+      </div>
+      <div id="input-container">
+        <input
+          type="text"
+          placeholder="Upišite ime izvođača"
+          id="search-term"
+        />
+      </div>
+    </nav>
+    <hr />
+    <main id="songs">
+      <h3 id="no-songs">Nema pronađenih pjesama</h3>
+      <div id="loading-spinner"></div>
+      <ul id="songs-list"></ul>
+    </main>
+    <!-- <script type="module" src="index.js"></script> -->
+    <script type="module" src="bundle.min.js"></script>
+  </body>
+</html>

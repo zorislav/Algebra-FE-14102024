@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  font-size: 48px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.btnGrupa {
+  font-size: 0;
+}
+
+.btnGrupa button {
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid rgb(69, 69, 68);
+  color: rgb(69, 69, 68);
+  background-color: rgb(204, 207, 204);
+  padding: 10px 24px;
+}
+.btnGrupa button:not(:last-child) {
+  border-right: none;
+}
+
+.btnGrupa button:disabled {
+  background-color: rgb(68, 69, 68);
+  color: rgb(204, 207, 204);
+}
+
+.btnGrupa button:not(:disabled):hover {
+  background-color: rgb(173, 175, 173);
+  cursor: pointer;
+}
+
+#todo {
+  border: 1px solid rgb(68, 69, 68);
+  width: 60%;
+  margin: 50px auto 0px auto;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgb(173, 175, 173);
+}
+
+#section-input {
+  display: flex;
+}
+
+#input-text {
+  width: 70%;
+  text-align: left;
+  border: 1px solid rgb(69, 69, 68);
+}
+
+#input-text:focus {
+  outline: none;
+}
+
+#input-add {
+  width: 30%;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(68, 69, 79);
+  background-color: rgb(204, 207, 204);
+  padding: 5px 20px;
+  cursor: pointer;
+  border: 1px solid rgb(68, 69, 68);
+}
+
+#input-add:hover {
+  background-color: rgb(173, 175, 173);
+}
+
+#button-clear {
+  border: 0;
+  color: rgb(68, 69, 79);
+  background-color: white;
+  margin-top: 20px;
+  float: right;
+}
+
+#section-clear {
+  width: 60%;
+  margin: auto;
+}
+
+#button-clear:hover {
+  font-weight: bold;
+  cursor: crosshair;
+}
+
+#todo ul {
+  padding-left: 0;
+}
+
+.ul-todo li {
+  list-style-type: none;
+  color: rgb(68, 69, 68);
+  font-weight: bold;
+}
+
+.removeButton {
+  display: inline-block;
+  margin: 20px;
+  color: rgb(68, 69, 68);
+  font-weight: bold;
+  cursor: grab;
+}
+
+.li-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.li-container-int input{
+ margin: 20px; 
+}

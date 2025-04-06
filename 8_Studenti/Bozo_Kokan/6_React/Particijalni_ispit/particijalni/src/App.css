@@ -1,0 +1,61 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+*{  
+  background-color: rgb(177, 177, 177);
+}
+
+.liColor{
+  background-color: rgb(177, 177, 177);  
+  border-color: black;
+}
+
+.App {
+  text-align: center;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchTitle{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.mainTitle{
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.searchButton{
+  width: 100%;
+}
+
+.inputSearch{
+  width: 134%;
+}
+
+.resetStyle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  h2{
+    margin-left: 1%;
+  }
+  p{
+    margin-left: 6%;
+  }
+}

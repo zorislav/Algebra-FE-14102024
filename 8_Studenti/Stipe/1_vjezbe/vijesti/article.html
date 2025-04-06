@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalji Vijesti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .article-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .article-container h1 {
+            font-size: 24px;
+            color: #222;
+        }
+        .article-container p {
+            margin-top: 10px;
+            color: #555;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="article-container">
+        <img id="article-image" src="" alt="Slika vijesti">
+        <h1 id="article-title"></h1>
+        <p id="article-description"></p>
+        <a id="article-link" href="" target="_blank">Pročitaj originalni članak</a>
+        <br>
+        <a href="index.html" class="back-link">Natrag na sve vijesti</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const index = params.get("index");
+
+        const articleData = JSON.parse(localStorage.getItem(`article-${index}`));
+        if (articleData) {
+            document.getElementById("article-image").src = articleData.imageUrl;
+            document.getElementById("article-title").textContent = articleData.title;
+            document.getElementById("article-description").textContent = articleData.description;
+            document.getElementById("article-link").href = articleData.link;
+        } else {
+            document.querySelector(".article-container").innerHTML = "<p>Greška: Nema podataka o vijesti.</p>";
+        }
+    </script>
+</body>
+</html>
