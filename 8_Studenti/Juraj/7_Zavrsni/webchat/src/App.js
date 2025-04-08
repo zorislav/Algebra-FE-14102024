@@ -1,23 +1,37 @@
-import React, { Component } from 'react';
-import { Input, Message } from './components';
-import { MemberGenerator } from './services';
-import './App.css';
+import React, { Component } from "react";
+import { Input, Message } from "./components";
+import { MemberGenerator, Scaledrone } from "./services";
+import "./App.css";
 
 export default class App extends Component {
   state = {
     messages: [],
-    currentMember: MemberGenerator.get(),
+    currentMemberId: null
   };
 
-  handleSendMessage = newMessage => {
+  constructor(props) {
+    super(props);
+
+    const config = {
+      member: MemberGenerator.get(),
+      onInit: this.onInit,
+      onMessageReceived: this.onMessageReceived
+    };
+
+    this.drone = new Scaledrone(config);
+  }
+
+  onInit = currentMemberId => this.setState({ currentMemberId });
+
+  onMessageReceived = newMessage => {
     const { messages } = this.state;
     this.setState({
-      messages: [...messages, newMessage],
+      messages: [...messages, newMessage]
     });
   };
 
   render() {
-    const { messages, currentMember } = this.state;
+    const { messages, currentMemberId } = this.state;
 
     return (
       <div className="app">
@@ -26,11 +40,11 @@ export default class App extends Component {
         </div>
         <ul className="message-list">
           {messages.map(message => (
-            <Message message={message} member={currentMember}/>
+            <Message message={message} currentMemberId={currentMemberId} />
           ))}
         </ul>
-        <Input onSendMessage={this.handleSendMessage} />
+        <Input onSendMessage={this.drone.sendMessage} />
       </div>
-    )
-  };
+    );
+  }
 }
