@@ -1,0 +1,94 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.header {
+  background-color: #262626;
+  width: 100%;
+  text-align: center;
+  color: white;
+  overflow: visible;
+}
+
+.message-list {
+  padding: 20px 0;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+input {
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid lightcoral;
+  flex-grow: 1;
+}
+
+button {
+  padding: 5x 20px;
+  font-size: 16px;
+  background-color: lightcoral;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.message {
+  display: flex;
+  margin-top: 30px;
+}
+
+.message.current {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.message-content {
+  display: inline-block;
+}
+
+.message > .avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.message-content > .username {
+  display: block;
+  color: grey;
+  font-size: 17px;
+  padding-bottom: 4px;
+}
+
+.message-content > .text {
+  padding: 8px 8px;
+  max-width: 400px;
+  margin: 0;
+  font-size: 20px;
+  border-radius: 12px;
+  background-color: cornflowerblue;
+  color: white;
+  display: inline-block;
+}
+
+.current > .message-content .text {
+  background-color: lightcoral;
+}
