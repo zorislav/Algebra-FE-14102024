@@ -31,11 +31,11 @@
             <td class="d-none d-sm-table-cell">{{@index}}</td>
             <td><a
                 href="{{url}}"
-                data-trigger="hover"
-                data-toggle="popover"
+                data-bs-trigger="hover"
+                data-bs-toggle="popover"
                 title="{{name}}"
-                data-content="{{this.url}}"
-                data-placement="top"
+                data-bs-content="{{this.url}}"
+                data-bs-placement="top"
                 class="d-table-cell"
               >{{this.name}}</a></td>
             <td class="d-none d-sm-table-cell">{{this.habitat}}</td>
@@ -48,9 +48,15 @@
     <div id="hb-result"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
-    <script
+    <!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
       integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>

@@ -11,8 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "eslint": "^9.19.0",
-    "react-bootstrap": "^2.10.9"
+
   },
   "repository": {
     "type": "git",
